@@ -17,4 +17,7 @@
     /* 아이콘 사이즈 */
     --iconSize01 : 40px;
     --iconSize02 : 38px;
+    /* 아이템 이미지 크기 */
+    --itemImgHieght01 : 275px;
+    --itemImgHieght02 : 270px;
 }

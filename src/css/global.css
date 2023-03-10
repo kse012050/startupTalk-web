@@ -17,7 +17,7 @@ mark{color: var(--colorPoint);}
 /* 아이템 */
 .itemBox{display: block;}
 .itemBox .imgBox{width: 100%; border-radius: 20px;}
-.itemBox.basic .imgBox{height: 270px;}
+.itemBox.basic .imgBox{height: var(--itemImgHieght02);}
 .itemBox.basic .itemText{font-weight: 500; margin-top: 20px;}
 .itemBox.basic .itemText strong{display: block; font-size: var(--font01);  margin-bottom: 10px;}
 .itemBox.basic .itemText div{display: flex; align-items: center;}
@@ -29,7 +29,7 @@ mark{color: var(--colorPoint);}
 .itemBox.basic .itemText div span:nth-child(2)::after{content: '억원';}
 .itemBox.basic .itemText div span:nth-child(3)::before{background-image: url('../images/icon-taik.png');}
 .itemBox.basic .itemText div span:nth-child(3)::after{content: '천';}
-.itemBox.best .imgBox{height: 275px;}
+.itemBox.best .imgBox{height: var(--itemImgHieght01);}
 
 .bestList :is(.swiper-slide){counter-increment: bestItem;}
 .bestList :is(.swiper-slide) .itemText{margin-top: 16px; padding: 5px 0 12px 64px; position: relative;}
@@ -54,3 +54,11 @@ header > div nav ul li a:is(.active , :hover){color: var(--colorPoint); font-wei
 header > div div{margin-left: auto; gap: 20px;}
 header > div div .icon-search{width: var(--iconSize02); height: var(--iconSize02);}
 header > div div a:not([class]){color: var(--colorGray);}
+
+/* 푸터 */
+footer{box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.1); padding: 30px 0 40px; margin-top: 150px;}
+footer div{display: flex; justify-content: space-between; align-items: center;}
+footer div img{width: 80px;}
+footer div ul{display: flex; align-items: center; gap: 30px;}
+footer div ul li{font-size: var(--font06);}
+footer div ul li:last-child{font-weight: 700;}
