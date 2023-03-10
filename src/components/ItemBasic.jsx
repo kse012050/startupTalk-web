@@ -1,13 +1,13 @@
 import React from 'react';
 
-export default function ItemBasic() {
+export default function ItemBasic({info}) {
     return (
         <div className='itemText'>
-            <strong>하노이 맥주 밤거리</strong>
+            <strong>{info.title}</strong>
             <div>
-                <span>72</span>
-                <span>1</span>
-                <span>3</span>
+                <span>{info.shop}</span>
+                <span>{info.cost}</span>
+                <span>{info.taik}</span>
             </div>
         </div>
     );

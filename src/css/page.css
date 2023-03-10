@@ -32,3 +32,7 @@
 /* 메인 페이지 - 추천 슬라이더 */
 .itemArea .sliderArea .itemSwiper .swiper-wrapper{}
 .itemArea .sliderArea .itemSwiper .swiper-slide:not(:last-child){}
+
+/* 메인 페이지 - 마케팅 */
+.mainPage .marketingArea div{display: flex; gap: 20px;}
+.mainPage .marketingArea div a img{width: 100%;}

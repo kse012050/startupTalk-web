@@ -95,28 +95,79 @@ export default function Main() {
                             className="itemSwiper"
                         >
                             <SwiperSlide>
-                                <Item img={require('../images/item01.png')}/>
+                                <Item img={require('../images/item01.png')} info={{title : '하노이 맥주 밤거리' , shop : 72 , cost : 1 , taik : 3}}/>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Item img={require('../images/item02.png')}/>
+                                <Item img={require('../images/item02.png')} info={{title : '지금 보고싶다' , shop : 120 , cost : 1, taik : 1}}/>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Item img={require('../images/item01.png')}/>
+                                <Item img={require('../images/item01.png')} info={{title : '하노이 맥주 밤거리' , shop : 72 , cost : 1 , taik : 3}}/>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Item img={require('../images/item02.png')}/>
+                                <Item img={require('../images/item02.png')} info={{title : '지금 보고싶다' , shop : 120 , cost : 1, taik : 1}}/>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Item img={require('../images/item02.png')}/>
+                                <Item img={require('../images/item01.png')} info={{title : '하노이 맥주 밤거리' , shop : 72 , cost : 1 , taik : 3}}/>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Item img={require('../images/item02.png')}/>
+                                <Item img={require('../images/item02.png')} info={{title : '지금 보고싶다' , shop : 120 , cost : 1, taik : 1}}/>
                             </SwiperSlide>
                         </Swiper>
                         <div className="navigation-circle">
                             <div className='prev imgBox'></div>
                             <div className='next imgBox'></div>
                         </div>
+                    </div>
+                </div>
+
+                <div className='bastArea'>
+                    <h3>지금 핫한 창업아이템</h3>
+                    <div className='sliderArea'>
+                        <Swiper 
+                            navigation={{
+                                prevEl : '.bastArea .navigation-circle .prev',
+                                nextEl : '.bastArea .navigation-circle .next',
+                            }}
+                            slidesPerView={3}
+                            spaceBetween={20}
+                            modules={[Navigation]}
+                            className="itemSwiper bestList"
+                        >
+                            <SwiperSlide>
+                                <Item img={require('../images/item-best01.png')} type="best"/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Item img={require('../images/item-best02.png')} type="best"/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Item img={require('../images/item-best01.png')} type="best"/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Item img={require('../images/item-best02.png')} type="best"/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Item img={require('../images/item-best01.png')} type="best"/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Item img={require('../images/item-best02.png')} type="best"/>
+                            </SwiperSlide>
+                        </Swiper>
+                        <div className="navigation-circle">
+                            <div className='prev imgBox'></div>
+                            <div className='next imgBox'></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='marketingArea'>
+                    <h3>연계 마케팅 정보</h3>
+                    <div>
+                        <Link to={'/marketing'}>
+                            <img src={require('../images/main-marketing01.png')} alt="" />
+                        </Link>
+                        <Link to={'/marketing'}>
+                            <img src={require('../images/main-marketing02.png')} alt="" />
+                        </Link>
                     </div>
                 </div>
             </div>
