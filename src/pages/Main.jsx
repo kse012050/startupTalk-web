@@ -6,6 +6,7 @@ import { Navigation , FreeMode } from "swiper";
 // Import Swiper styles
 import 'swiper/css';
 import { Link } from 'react-router-dom';
+import Item from '../components/Item';
 
 export default function Main() {
     return (
@@ -27,7 +28,7 @@ export default function Main() {
                             관심 창업아이템<br />
                             저장하기
                         </strong>
-                        <a href="">바로가기</a>
+                        <a href="/">바로가기</a>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide style={{backgroundImage: `url(${require('../images/mainSliderImg.png')})`}}>
@@ -37,7 +38,7 @@ export default function Main() {
                             관심 창업아이템<br />
                             저장하기
                         </strong>
-                        <a href="">바로가기</a>
+                        <a href="/">바로가기</a>
                     </div>
                 </SwiperSlide>
                 <div className="navigation-basic">
@@ -52,26 +53,26 @@ export default function Main() {
                     <div className='sliderArea'>
                         <Swiper 
                             navigation={{
-                                prevEl : '.sliderArea .navigation-circle .prev',
-                                nextEl : '.sliderArea .navigation-circle .next',
+                                prevEl : '.popularArea .sliderArea .navigation-circle .prev',
+                                nextEl : '.popularArea .sliderArea .navigation-circle .next',
                             }}
                             slidesPerView={"auto"}
                             freeMode={true}
                             modules={[FreeMode ,Navigation]}
                             className="popularSwiper"
                         >
-                            <SwiperSlide><Link>한식</Link></SwiperSlide>
-                            <SwiperSlide><Link>타일</Link></SwiperSlide>
-                            <SwiperSlide><Link>양식</Link></SwiperSlide>
-                            <SwiperSlide><Link>디저트</Link></SwiperSlide>
-                            <SwiperSlide><Link>독서실</Link></SwiperSlide>
-                            <SwiperSlide><Link>퓨전요리</Link></SwiperSlide>
-                            <SwiperSlide><Link>제과제빵</Link></SwiperSlide>
-                            <SwiperSlide><Link>스터디카페</Link></SwiperSlide>
-                            <SwiperSlide><Link>한식</Link></SwiperSlide>
-                            <SwiperSlide><Link>타일</Link></SwiperSlide>
-                            <SwiperSlide><Link>타일</Link></SwiperSlide>
-                            <SwiperSlide><Link>타일</Link></SwiperSlide>
+                            <SwiperSlide><Link to={'/'}>한식</Link></SwiperSlide>
+                            <SwiperSlide><Link to={'/'}>타일</Link></SwiperSlide>
+                            <SwiperSlide><Link to={'/'}>양식</Link></SwiperSlide>
+                            <SwiperSlide><Link to={'/'}>디저트</Link></SwiperSlide>
+                            <SwiperSlide><Link to={'/'}>독서실</Link></SwiperSlide>
+                            <SwiperSlide><Link to={'/'}>퓨전요리</Link></SwiperSlide>
+                            <SwiperSlide><Link to={'/'}>제과제빵</Link></SwiperSlide>
+                            <SwiperSlide><Link to={'/'}>스터디카페</Link></SwiperSlide>
+                            <SwiperSlide><Link to={'/'}>한식</Link></SwiperSlide>
+                            <SwiperSlide><Link to={'/'}>타일</Link></SwiperSlide>
+                            <SwiperSlide><Link to={'/'}>타일</Link></SwiperSlide>
+                            <SwiperSlide><Link to={'/'}>타일</Link></SwiperSlide>
                         </Swiper>
                         <div className="navigation-circle">
                             <div className='prev imgBox'></div>
@@ -80,31 +81,37 @@ export default function Main() {
                     </div>
                 </div>
 
-                <div>
+                <div className='itemArea'>
                     <h3>홍길동님에게 추천하는 창업아이템</h3>
                     <div className='sliderArea'>
                         <Swiper 
                             navigation={{
-                                prevEl : '.sliderArea .navigation-circle .prev',
-                                nextEl : '.sliderArea .navigation-circle .next',
+                                prevEl : '.itemArea .navigation-circle .prev',
+                                nextEl : '.itemArea .navigation-circle .next',
                             }}
-                            slidesPerView={"auto"}
-                            freeMode={true}
-                            modules={[FreeMode ,Navigation]}
-                            className="popularSwiper"
+                            slidesPerView={4}
+                            spaceBetween={20}
+                            modules={[Navigation]}
+                            className="itemSwiper"
                         >
-                            <SwiperSlide><Link>한식</Link></SwiperSlide>
-                            <SwiperSlide><Link>타일</Link></SwiperSlide>
-                            <SwiperSlide><Link>양식</Link></SwiperSlide>
-                            <SwiperSlide><Link>디저트</Link></SwiperSlide>
-                            <SwiperSlide><Link>독서실</Link></SwiperSlide>
-                            <SwiperSlide><Link>퓨전요리</Link></SwiperSlide>
-                            <SwiperSlide><Link>제과제빵</Link></SwiperSlide>
-                            <SwiperSlide><Link>스터디카페</Link></SwiperSlide>
-                            <SwiperSlide><Link>한식</Link></SwiperSlide>
-                            <SwiperSlide><Link>타일</Link></SwiperSlide>
-                            <SwiperSlide><Link>타일</Link></SwiperSlide>
-                            <SwiperSlide><Link>타일</Link></SwiperSlide>
+                            <SwiperSlide>
+                                <Item img={require('../images/item01.png')}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Item img={require('../images/item02.png')}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Item img={require('../images/item01.png')}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Item img={require('../images/item02.png')}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Item img={require('../images/item02.png')}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Item img={require('../images/item02.png')}/>
+                            </SwiperSlide>
                         </Swiper>
                         <div className="navigation-circle">
                             <div className='prev imgBox'></div>
