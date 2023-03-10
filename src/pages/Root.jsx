@@ -1,10 +1,13 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
 export default function Root() {
+    let location = useLocation();
+    location = location.pathname.substring(1).split('/')[0]
+    location = location ? location : 'main'
     return (
-        <div>
+        <div className={location + 'Page'}>
             <Navbar />
             <Outlet />
         </div>

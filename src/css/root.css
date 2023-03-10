@@ -1,0 +1,20 @@
+:root{
+    --contentSize : 1180px;
+    /* 타이틀 */
+    --title01 : 42px;
+    --title02 : 28px;
+    --title03 : 20px;
+    /* 본문 */
+    --font01 : 20px;
+    --font02 : 19px;
+    --font03 : 18px;
+    --font04 : 17px;
+    --font05 : 16px;
+    --font06 : 15px;
+    /* 색상 */
+    --colorGray: #999;
+    --colorPoint: #0cbf5d;
+    /* 아이콘 사이즈 */
+    --iconSize01 : 40px;
+    --iconSize02 : 38px;
+}

@@ -1,29 +1,15 @@
-:root{
-    /* 타이틀 */
-    --title01 : 42px;
-    --title02 : 28px;
-    --title03 : 20px;
-    /* 본문 */
-    --font01 : 20px;
-    --font02 : 19px;
-    --font03 : 18px;
-    --font04 : 17px;
-    --font05 : 16px;
-    --font06 : 15px;
-    /* 색상 */
-    --colorGray: #999;
-    --colorPoint: #0cbf5d;
-    /* 아이콘 사이즈 */
-    --iconSize01 : 40px;
-    --iconSize02 : 38px;
-}
-
 /* 컨텐츠 사이즈 */
-.contentSize{max-width: 1180px; width: calc(100% - 40px); margin: 0 auto;}
+.contentSize{max-width: var(--contentSize); width: calc(100% - 40px); margin: 0 auto;}
+
+/* 접근성 */
+.textHidden{position: absolute; top: 0; height: 0.05px; overflow: hidden;}
 
 /* 아이콘 */
 [class|="icon"]{text-indent: -9999px; background-repeat: no-repeat; background-position: center; background-size: cover;}
 .icon-search{background-image: url('../images/icon-search.png');}
+
+/* 이미지 박스 */
+.imgBox{text-indent: -9999px; background-repeat: no-repeat; background-position: center; background-size: cover;}
 
 /* 해더 */
 header{position: sticky; top: 0; font-size: var(--font04); box-shadow: inset 0 -1px 0 0 #dedede;}
@@ -35,8 +21,8 @@ header > div h1{width: 96px;}
 header > div h1 a{display: block;}
 header > div h1 a img{width: 100%;}
 header > div nav{flex: 1;}
-header > div nav ul{color: black;}
-header > div nav ul li a{line-height: 86px;}
+header > div nav ul{color: black; font-weight: 700;}
+header > div nav ul li a{line-height: 86px; font-weight: 400;}
 header > div nav ul li a:is(.active , :hover){color: var(--colorPoint); font-weight: 700;}
 header > div div{margin-left: auto; gap: 20px;}
 header > div div .icon-search{width: var(--iconSize02); height: var(--iconSize02);}
