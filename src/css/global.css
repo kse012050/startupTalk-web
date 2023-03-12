@@ -36,7 +36,7 @@ mark{color: var(--colorPoint);}
 .bestList :is(.swiper-slide) .itemText::before{content: '베스트' counter(bestItem); position: absolute; left: 0; top: 0; width: 52px; height: 62px; padding: 6px 5px; font-size: 14px; font-weight: 500; color: white; line-height: 20px; text-align: center; background: url('../images/icon-best.png') no-repeat center / cover; box-sizing: border-box;}
 .bestList :is(.swiper-slide) .itemText mark{display: block; font-size: var(--font06); font-weight: 700; margin-bottom: 10px;}
 .bestList :is(.swiper-slide) .itemText strong{font-size: var(--font01); font-weight: 500;}
-
+ 
 
 /* 해더 */
 header{position: sticky; top: 0; font-size: var(--font04); background-color: white; box-shadow: inset 0 -1px 0 0 #dedede; z-index: 10;}
