@@ -58,11 +58,19 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 .inputBox{font-size: var(--font06); text-align: left;}
 .inputBox ul li{}
 .inputBox ul li:not(:last-child){margin-bottom: 20px;}
-.inputBox ul li label{display: block; font-weight: 500; color: #666; margin-bottom: 15px;}
-.inputBox ul li input{width: 100%; height: 54px; background-color: rgba(241, 244, 246, 0.5); padding: 20px; border: none; border-radius: 10px; box-sizing: border-box;}
-.inputBox ul li input::placeholder{color: rgba(33, 33, 33, 0.3);}
+.inputBox ul li label{display: block; font-weight: 500; line-height: 22px; color: #666; margin-bottom: 15px; white-space: pre-line;}
+.inputBox ul li :is(input , textarea){width: 100%; background-color: rgba(241, 244, 246, 0.5); padding: 20px; border: none; border-radius: 10px; box-sizing: border-box;}
+.inputBox ul li input{height: 54px;}
+.inputBox ul li textarea{height: 200px;}
+.inputBox ul li :is(input , textarea)::placeholder{color: rgba(33, 33, 33, 0.3);}
 .inputBox ul li.requi label::after{content: '*'; color: var(--colorPoint);}
 .inputBox input[type="submit"]{margin-top: 60px;}
+
+/* 탭 */
+.tabBox{display: flex; background-color: #f1f4f6; border-radius: 14px;}
+.tabBox li{flex: 1;}
+.tabBox li a{font-size: var(--font03); color: var(--colorGray); font-weight: 600; height: 60px; display: flex; justify-content: center; align-items: center; border: 1.5px solid transparent; border-radius: 14px;}
+.tabBox li a.active{border-color: #e6e6e6; color: inherit; background-color: white;}
  
 
 /* 해더 */

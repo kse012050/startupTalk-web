@@ -4,7 +4,6 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 export default function Navbar() {
     let location = useLocation();
     location = location.pathname.substring(1).split('/')[0];
-    console.log(location);
     return (
         <header>
             <div className='contentSize'>
