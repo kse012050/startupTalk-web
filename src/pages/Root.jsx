@@ -5,12 +5,14 @@ import Navbar from '../components/Navbar';
 
 export default function Root() {
     let location = useLocation();
-    location = location.pathname.substring(1).split('/')[0]
-    location = location ? location : 'main'
+    location = location.pathname.substring(1).split('/');
+    location[0] = location[0] ? location[0] : 'main'
     return (
-        <div className={location + 'Page'}>
+        <div className={location[0] + 'Page'}>
             <Navbar />
-            <Outlet />
+            <section className={location[1] && location[1] + 'Page'}>
+                <Outlet/>
+            </section>
             <Footer />
         </div>
     );

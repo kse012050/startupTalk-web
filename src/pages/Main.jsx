@@ -10,7 +10,7 @@ import Item from '../components/Item';
 
 export default function Main() {
     return (
-        <section>
+        <>
             <h2 className='textHidden'>메인 페이지</h2>
 
             <Swiper 
@@ -171,7 +171,7 @@ export default function Main() {
                     </div>
                 </div>
             </div>
-        </section>
+        </>
     );
 }
 

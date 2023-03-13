@@ -1,11 +1,12 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import NotFound from './pages/NotFound';
 import Root from './pages/Root';
+// import SignRoot from './pages/sign/Root';
 import Main from './pages/Main';
-import SignIn from './pages/SignIn';
 import Category from './pages/Category';
 import Ranking from './pages/Ranking';
 import Marketing from './pages/Marketing';
+import SignIn from './pages/sign/SignIn';
 
 const router = createBrowserRouter([
   {
@@ -17,9 +18,17 @@ const router = createBrowserRouter([
       { path : '/category' , element : <Category />},
       { path : '/ranking' , element : <Ranking />},
       { path : '/marketing' , element : <Marketing />},
-      { path : '/singin' , element : <SignIn />},
+      { path : '/sign/signin' , element : <SignIn />},
     ]
-  }
+  },
+  /* {
+    path : '/sign',
+    element : <SignRoot />,
+    errorElement : <NotFound />,
+    children : [
+      { path : '/sign/signin' , element : <SignIn />},
+    ]
+  } */
 ])
 
 function App() {
