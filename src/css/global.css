@@ -1,6 +1,6 @@
 /* 컨텐츠 사이즈 */
 .contentSize{max-width: var(--contentSize); width: calc(100% - 40px); margin: 0 auto;}
-.signPage [class$="Page"]{max-width: 390px; width: calc(100% - 40px); margin: 0 auto;}
+.signPage [class$="Page"]{max-width: 390px; width: calc(100% - 40px); margin: 190px auto 0;}
 
 /* 접근성 */
 .textHidden{position: absolute; top: 0; height: 0.05px; overflow: hidden;}

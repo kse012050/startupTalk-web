@@ -16,7 +16,7 @@ export default function Navbar() {
                     {location.pathname === '/singin' ||
                         <div>
                             <NavLink to='/category' className='icon-search'>검색</NavLink>
-                            <Link to='/sign/signin'>로그인</Link>
+                            <Link to='/sign/select'>로그인</Link>
                         </div>
                     }
                 </nav>

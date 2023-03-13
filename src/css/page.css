@@ -42,3 +42,18 @@
 /* 메인 페이지 - 마케팅 */
 .mainPage .marketingArea div{display: flex; gap: 20px;}
 .mainPage .marketingArea div a img{width: 100%;}
+
+
+/* 로그인 페이지 */
+.signPage > section{text-align: center;}
+.signPage > section h2{font-size: var(--title01); font-weight: 700;}
+.signPage > section h2 + p{font-size: var(--font03); font-weight: 400; line-height: 26px; margin: 30px 0 50px;}
+/* 로그인 페이지 - 로그인 방식 선택 */
+.signPage > .selectPage li{border: 1px solid #e6e6e6; border-radius: 10px;}
+.signPage > .selectPage li:not(:last-child){margin-bottom: 16px;}
+.signPage > .selectPage li a{width: 100%; font-size: var(--font03); font-weight: 700; line-height: 60px; position: relative;}
+.signPage > .selectPage li a::before{content: ''; position: absolute; left: 26px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background-repeat: no-repeat; background-position: center; background-size: cover;}
+.signPage > .selectPage li:nth-child(1) a::before{background-image: url('../images/icon-naver.png');}
+.signPage > .selectPage li:nth-child(2) a::before{background-image: url('../images/icon-kakao.png');}
+.signPage > .selectPage li:nth-child(3) a::before{background-image: url('../images/icon-apple.png');}
+.signPage > .selectPage li:nth-child(4) a::before{background-image: url('../images/icon-email.png');}
