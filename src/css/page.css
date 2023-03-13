@@ -46,7 +46,6 @@
 
 /* 로그인 페이지 */
 .signPage > section{text-align: center;}
-.signPage > section h2{font-size: var(--title01); font-weight: 700;}
 .signPage > section h2 + p{font-size: var(--font03); font-weight: 400; line-height: 26px; margin: 30px 0 50px;}
 .signPage > section h2 + form{margin-top: 50px;}
 /* 로그인 페이지 - 로그인 방식 선택 */
@@ -62,3 +61,12 @@
 .signPage > .signUpPage fieldset > div{color: var(--colorGray); font-weight: 600; line-height: 26px; text-align: center; margin-top: 30px;}
 .signPage > .signUpPage fieldset > div label mark{text-decoration: underline; text-decoration-thickness: 2px;}
 .signPage > .findPage .tabBox{margin: 50px 0;}
+.signPage > .findPage fieldset ul li label{}
+
+
+/* 카테고리 */
+.categoryPage .mainPage h2{display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px;}
+.categoryPage .mainPage h2 a{font-size: var(--font04); font-weight: 400; display: flex;}
+.categoryPage .mainPage h2 a::after{content: ''; width: 20px; height: 20px; background: url('../images/icon-category.png') no-repeat center / cover; margin-left: 4px;}
+.categoryPage .mainPage .searchBox{margin-bottom: 50px;}
+.categoryPage .mainPage .categoryType:not(:last-of-type){margin-bottom: 60px;}
