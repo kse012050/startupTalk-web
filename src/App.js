@@ -7,6 +7,7 @@ import Ranking from './pages/Ranking';
 import Marketing from './pages/Marketing';
 import SignIn from './pages/sign/SignIn';
 import Select from './pages/sign/Select';
+import SignEmail from './pages/sign/Email';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       { path : '/ranking' , element : <Ranking />},
       { path : '/marketing' , element : <Marketing />},
       { path : '/sign/select' , element : <Select />},
+      { path : '/sign/email' , element : <SignEmail />},
       { path : '/sign/signin' , element : <SignIn />},
     ]
   },

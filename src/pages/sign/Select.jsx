@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import InputLayout from '../../components/InputLayout';
 
 export default function Select() {
     return (
@@ -14,7 +13,7 @@ export default function Select() {
                 <li><Link>네이버로 시작하기</Link></li>
                 <li><Link>카카오톡으로 시작하기</Link></li>
                 <li><Link>Apple로 시작하기</Link></li>
-                <li><Link>이메일로 로그인</Link></li>
+                <li><Link to={'/sign/email'}>이메일로 로그인</Link></li>
             </ul>
         </>
     );

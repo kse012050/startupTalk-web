@@ -77,6 +77,8 @@ input[type="search"]::-webkit-search-results-decoration{
     display:none;
 }
 
+input[type="checkbox"] , input[type="radio"]{display: none;}
+
 a{text-decoration: none; color: inherit; display: inline-block;}
 
 button{background-color: transparent; border: none; cursor: pointer; padding: 0; font: inherit; color: inherit;}
