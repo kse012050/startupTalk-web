@@ -48,6 +48,7 @@
 .signPage > section{text-align: center;}
 .signPage > section h2{font-size: var(--title01); font-weight: 700;}
 .signPage > section h2 + p{font-size: var(--font03); font-weight: 400; line-height: 26px; margin: 30px 0 50px;}
+.signPage > section h2 + form{margin-top: 50px;}
 /* 로그인 페이지 - 로그인 방식 선택 */
 .signPage > .selectPage ul li{border: 1px solid #e6e6e6; border-radius: 10px;}
 .signPage > .selectPage ul li:not(:last-child){margin-bottom: 16px;}
@@ -57,4 +58,6 @@
 .signPage > .selectPage ul li:nth-child(2) a::before{background-image: url('../images/icon-kakao.png');}
 .signPage > .selectPage ul li:nth-child(3) a::before{background-image: url('../images/icon-apple.png');}
 .signPage > .selectPage ul li:nth-child(4) a::before{background-image: url('../images/icon-email.png');}
-.signPage > .emailPage fieldset > div{display: flex; justify-content: space-between; font-size: var(--font06); font-weight: 600; margin-top: 16px;}
+.signPage > .emailPage fieldset > div{display: flex; justify-content: space-between; font-weight: 600; margin-top: 16px;}
+.signPage > .signUpPage fieldset > div{color: var(--colorGray); font-weight: 600; line-height: 26px; text-align: center; margin-top: 30px;}
+.signPage > .signUpPage fieldset > div label mark{text-decoration: underline; text-decoration-thickness: 2px;}

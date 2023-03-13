@@ -8,6 +8,7 @@ import Marketing from './pages/Marketing';
 import SignIn from './pages/sign/SignIn';
 import Select from './pages/sign/Select';
 import SignEmail from './pages/sign/Email';
+import SignUp from './pages/sign/SignUp';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
       { path : '/marketing' , element : <Marketing />},
       { path : '/sign/select' , element : <Select />},
       { path : '/sign/email' , element : <SignEmail />},
+      { path : '/sign/signUp' , element : <SignUp />},
       { path : '/sign/signin' , element : <SignIn />},
     ]
   },

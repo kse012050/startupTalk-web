@@ -22,7 +22,7 @@ export default function Email() {
                     <Link>ID / PW 찾기</Link>
                 </div>
                 <input type="submit" value={'로그인'} className={'btn-color'}/>
-                <Link className='btn-border'>이메일 회원가입</Link>
+                <Link to={'/sign/signUp'} className='btn-border'>이메일 회원가입</Link>
             </InputLayout>
         </>
     );
