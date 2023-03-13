@@ -5,6 +5,7 @@ export default function ItemBest() {
         <div className='itemText'>
             <mark>양식</mark>
             <strong>리얼 파스타</strong>
+            <span>200</span>
         </div>
     );
 }

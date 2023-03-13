@@ -95,19 +95,19 @@ export default function Main() {
                             className="itemSwiper"
                         >
                             <SwiperSlide>
-                                <Item img={require('../images/item01.png')} info={{title : '하노이 맥주 밤거리' , shop : 72 , cost : 1 , taik : 3}}/>
+                                <Item img={require('../images/item01.png')} info={{title : '하노이 맥주 밤거리' , shop : 72 , cost : 1 , taik : 3}} support={true}/>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Item img={require('../images/item02.png')} info={{title : '지금 보고싶다' , shop : 120 , cost : 1, taik : 1}}/>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Item img={require('../images/item01.png')} info={{title : '하노이 맥주 밤거리' , shop : 72 , cost : 1 , taik : 3}}/>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Item img={require('../images/item02.png')} info={{title : '지금 보고싶다' , shop : 120 , cost : 1, taik : 1}}/>
+                                <Item img={require('../images/item02.png')} info={{title : '지금 보고싶다' , shop : 120 , cost : 1, taik : 1}} support={true}/>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Item img={require('../images/item01.png')} info={{title : '하노이 맥주 밤거리' , shop : 72 , cost : 1 , taik : 3}}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Item img={require('../images/item02.png')} info={{title : '지금 보고싶다' , shop : 120 , cost : 1, taik : 1}} support={true}/>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <Item img={require('../images/item01.png')} info={{title : '하노이 맥주 밤거리' , shop : 72 , cost : 1 , taik : 3}} support={true}/>
                             </SwiperSlide>
                             <SwiperSlide>
                                 <Item img={require('../images/item02.png')} info={{title : '지금 보고싶다' , shop : 120 , cost : 1, taik : 1}}/>

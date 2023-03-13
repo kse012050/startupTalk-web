@@ -9,7 +9,7 @@ export default function CategoryType({info}) {
                 {info.typeList.map((c)=>
                     <li key={c.title}>
                         <Link>{c.title}
-                            {c.count && <mark>{c.count}</mark>}
+                            {!!c.count && <mark>{c.count}</mark>}
                         </Link>
                     </li>
                 )}
