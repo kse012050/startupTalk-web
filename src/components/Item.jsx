@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ItemBasic from './ItemBasic';
 import ItemBest from './ItemBest';
+import ItemPrice from './ItemPrice';
 import ItemRank from './ItemRank';
 
 export default function Item({img , type , info , support , bookmark}) {
@@ -9,7 +10,6 @@ export default function Item({img , type , info , support , bookmark}) {
         e.preventDefault();
         alert('북마크')
     }
-    console.log(!!bookmark);
     return (
         <Link to={'/ranking'} className={`itemBox ${!type ? 'basic' : type}`}>
             <div className='imgBox' style={{backgroundImage : `url(${img})`}}>
@@ -26,6 +26,7 @@ export default function Item({img , type , info , support , bookmark}) {
             {!type && <ItemBasic info={info}/>}
             {type === 'best' && <ItemBest />}
             {type === 'rank' && <ItemRank />}
+            {type === 'price' && <ItemPrice />}
         </Link>
     );
 }

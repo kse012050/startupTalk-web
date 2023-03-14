@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Tab from '../../components/Tab';
+import Info from './Info';
 
 export default function Detail() {
     const [content , setContent] = useState('')
@@ -15,6 +16,7 @@ export default function Detail() {
 
     useEffect(()=>{
         setContent(tabList[0].path)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     return (
@@ -51,7 +53,7 @@ export default function Detail() {
 
             <Tab tabList={tabList} content={[content ,setContent]}/>
 
-            {content === 'info' && <div>브랜드 정보</div>}
+            {content === 'info' && <Info/>}
             {content === 'counsel' && <div>창업 개요</div>}
         </>
     );

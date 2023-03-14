@@ -36,8 +36,8 @@
 .popularArea .sliderArea .navigation-circle .prev::before{transform: rotate(180deg);}
 
 /* 메인 페이지 - 추천 슬라이더 */
-.itemArea .sliderArea .itemSwiper .swiper-wrapper{}
-.itemArea .sliderArea .itemSwiper .swiper-slide:not(:last-child){}
+/* .itemArea .sliderArea .itemSwiper .swiper-wrapper{}
+.itemArea .sliderArea .itemSwiper .swiper-slide:not(:last-child){} */
 
 /* 메인 페이지 - 마케팅 */
 .mainPage .marketingArea div{display: flex; gap: 20px;}
@@ -61,7 +61,7 @@
 .signPage > .signUpPage fieldset > div{color: var(--colorGray); font-weight: 600; line-height: 26px; text-align: center; margin-top: 30px;}
 .signPage > .signUpPage fieldset > div label mark{text-decoration: underline; text-decoration-thickness: 2px;}
 .signPage > .findPage .tabBox{margin: 50px 0;}
-.signPage > .findPage fieldset ul li label{}
+/* .signPage > .findPage fieldset ul li label{} */
 
 
 /* 카테고리 - 메인 */
@@ -104,7 +104,6 @@
 .marketingPage .mainPage ul li a p{font-size: 30px; font-weight: 500; line-height: 36px; margin-top: 15px;}
 
 /* 마케팅 - 상세 페이지 */
-.marketingPage .detailPage{}
 .marketingPage .detailPage figure{display: flex; justify-content: space-between; margin-bottom: 40px;}
 .marketingPage .detailPage figure > .imgBox{width: 370px; height: 370px; border-radius: 20px; margin-right: 40px;}
 .marketingPage .detailPage figure figcaption{width: 310px; display: flex; flex-direction: column; padding-top: 10px;}
@@ -119,3 +118,22 @@
 .marketingPage .detailPage figure figcaption ul li strong{display: block; font-size: var(--font02); font-weight: 600; line-height: 23px; color: var(--colorBasic); margin-bottom: 6px;}
 .marketingPage .detailPage figure figcaption div{margin-top: auto; display: flex;}
 .marketingPage .detailPage figure figcaption div button{flex-shrink: 0; width: 56px; height: 56px; background:#e6f8ee url('../images/icon-bookmark-green.png') no-repeat center / 24px; border: 1.2px solid #c5f0d8; border-radius: 10px; text-indent: -9999px; margin-left: 8px;}
+
+.marketingPage .detailPage .tabBox{margin-bottom: 50px;}
+
+/* 마케팅 - 상세 페이지 - 브랜드 정보 */
+.marketingPage .detailPage .infoArea > div:not(:last-child){margin-bottom: 70px;}
+.marketingPage .detailPage .infoArea > div h3{font-size: var(--font01); font-weight: 700; margin-bottom: 14px;}
+.marketingPage .detailPage .infoArea mark.support{display: flex; align-items: center; font-size: var(--font06); font-weight: 700; color: var(--colorPoint); background-color: rgba(12, 191, 93, 0.1); border-radius: 14px 0; margin-bottom: 30px;}
+.marketingPage .detailPage .infoArea mark.support strong{padding: 10px 30px; color: white; background-color: #0cbf5d; border-radius: 14px 0; margin-right: 30px;}
+/* .marketingPage .detailPage .videoArea{height: 340px; border-radius: 12px; background-color: #f4f4f4; display: flex; justify-content: center; align-items: center; font-size: var(--title01);} */
+.marketingPage .detailPage .videoArea iframe{width: 100%; height: 340px; border-radius: 12px;}
+.marketingPage .detailPage .detailArea div{height: 1000px; background-color: #f4f4f4; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 18%, #fff); display: flex; justify-content: center; align-items: center; font-size: var(--title01);}
+.marketingPage .detailPage .detailArea button{width: 100%; height: 60px; display: flex; justify-content: center; align-items: center; font-size: var(--font03); font-weight: 700; border: 1px solid #ccc; border-radius: 10px;}
+.marketingPage .detailPage .detailArea button::after{content: ''; width: 34px; height: 34px; background: url('../images/icon-category-more.png') no-repeat center / cover; margin-left: 2px;}
+.marketingPage .detailPage .menuArea .swiper-slide{width: 210px;}
+.marketingPage .detailPage .menuArea .swiper-slide:not(:last-child){margin-right: 20px;}
+.marketingPage .detailPage .interiorArea .swiper-slide .imgBox{height: 340px; border-radius: 18px;}
+.marketingPage .detailPage .locationArea iframe{width: 100%; height: 340px; margin-bottom: 16px;}
+.marketingPage .detailPage .locationArea p{display: flex; align-items: center; font-size: var(--font06);}
+.marketingPage .detailPage .locationArea p::before{content: ''; width: 18px; height: 18px; background: url('../images/icon-location.png') no-repeat center / cover; margin-right: 2px;}

@@ -53,6 +53,10 @@ mark:not([class]){color: var(--colorPoint);}
 .itemBox.basic .itemText div span:nth-child(2)::after{content: '억원';}
 .itemBox.basic .itemText div span:nth-child(3)::before{background-image: url('../images/icon-taik-gray.png');}
 .itemBox.basic .itemText div span:nth-child(3)::after{content: '천';}
+.itemBox.price .imgBox{height: 210px; margin-bottom: 12px;}
+.itemBox.price .itemText{text-align: center; font-size: 16px; line-height: 20px;}
+.itemBox.price .itemText p{margin-bottom: 4px;}
+.itemBox.price .itemText strong{font-weight: 700;}
 /* 북마크 */
 .itemBox .imgBox{height: var(--itemImgHieght01);}
 .itemBox .imgBox button{position: absolute; right: 20px; top: 18px; text-indent: inherit; width: 30px; height: 30px; background: url('../images/icon-bookmark-white.png') no-repeat center / cover;}
@@ -77,7 +81,7 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 
 /* input */
 .inputBox{font-size: var(--font06); text-align: left;}
-.inputBox ul li{}
+/* .inputBox ul li{} */
 .inputBox ul li:not(:last-child){margin-bottom: 20px;}
 .inputBox ul li label{display: block; font-weight: 500; line-height: 22px; color: #666; margin-bottom: 15px; white-space: pre-line;}
 .inputBox ul li :is(input , textarea){width: 100%; background-color: rgba(241, 244, 246, 0.5); padding: 20px; border: none; border-radius: 10px; box-sizing: border-box;}
@@ -94,7 +98,7 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 
 /* 탭 */
 .tabBox{display: flex; background-color: #f1f4f6; border-radius: 14px;}
-.tabBox li{flex: 1; font-size: var(--font03); color: var(--colorGray); font-weight: 600; height: 60px; display: flex; justify-content: center; align-items: center; border: 1.5px solid transparent; border-radius: 14px;}
+.tabBox li{flex: 1; font-size: var(--font03); color: var(--colorGray); font-weight: 600; height: 60px; display: flex; justify-content: center; align-items: center; border: 1.5px solid transparent; border-radius: 14px; cursor: pointer;}
 .tabBox li.active{border-color: #e6e6e6; color: inherit; background-color: white;}
 /* .tabBox li a{font-size: var(--font03); color: var(--colorGray); font-weight: 600; height: 60px; display: flex; justify-content: center; align-items: center; border: 1.5px solid transparent; border-radius: 14px;}
 .tabBox li a.active{border-color: #e6e6e6; color: inherit; background-color: white;} */
