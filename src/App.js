@@ -11,7 +11,9 @@ import Find from './pages/sign/Find';
 import CategoryMain from './pages/category/Main';
 import Show from './pages/category/Show';
 import MarketingMain from './pages/marketing/Main';
-import Marketing from './pages/marketing/Marketing';
+// import Marketing from './pages/marketing/Marketing';
+import MarketingDetail from './pages/marketing/Detail';
+import MarketingCounsel from './pages/marketing/Counsel';
 
 const router = createBrowserRouter([
   {
@@ -32,7 +34,8 @@ const router = createBrowserRouter([
       { path : '/category' , element : <CategoryMain />},
       { path : '/category/show' , element : <Show />},
       { path : '/marketing' , element : <MarketingMain />},
-      { path : '/marketing/:test' , element : <Marketing />},
+      { path : '/marketing/detail/:test' , element : <MarketingDetail />},
+      { path : '/marketing/counsel' , element : <MarketingCounsel />},
     ]
   },
 ])
