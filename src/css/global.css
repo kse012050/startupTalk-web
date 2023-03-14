@@ -51,7 +51,7 @@ mark:not([class]){color: var(--colorPoint);}
 .itemBox.basic .itemText div span:nth-child(1)::before{background-image: url('../images/icon-shop.png');}
 .itemBox.basic .itemText div span:nth-child(2)::before{background-image: url('../images/icon-cost.png');}
 .itemBox.basic .itemText div span:nth-child(2)::after{content: '억원';}
-.itemBox.basic .itemText div span:nth-child(3)::before{background-image: url('../images/icon-taik.png');}
+.itemBox.basic .itemText div span:nth-child(3)::before{background-image: url('../images/icon-taik-gray.png');}
 .itemBox.basic .itemText div span:nth-child(3)::after{content: '천';}
 /* 북마크 */
 .itemBox .imgBox{height: var(--itemImgHieght01);}
@@ -94,9 +94,10 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 
 /* 탭 */
 .tabBox{display: flex; background-color: #f1f4f6; border-radius: 14px;}
-.tabBox li{flex: 1;}
-.tabBox li a{font-size: var(--font03); color: var(--colorGray); font-weight: 600; height: 60px; display: flex; justify-content: center; align-items: center; border: 1.5px solid transparent; border-radius: 14px;}
-.tabBox li a.active{border-color: #e6e6e6; color: inherit; background-color: white;}
+.tabBox li{flex: 1; font-size: var(--font03); color: var(--colorGray); font-weight: 600; height: 60px; display: flex; justify-content: center; align-items: center; border: 1.5px solid transparent; border-radius: 14px;}
+.tabBox li.active{border-color: #e6e6e6; color: inherit; background-color: white;}
+/* .tabBox li a{font-size: var(--font03); color: var(--colorGray); font-weight: 600; height: 60px; display: flex; justify-content: center; align-items: center; border: 1.5px solid transparent; border-radius: 14px;}
+.tabBox li a.active{border-color: #e6e6e6; color: inherit; background-color: white;} */
  
 /* 카테고리 */
 .categoryType h3{font-size: var(--title03); font-weight: 700; margin-bottom: 20px;}

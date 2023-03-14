@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function Email({label}) {
-    console.log(label);
     return (
         <>
             <label htmlFor="userEmail">

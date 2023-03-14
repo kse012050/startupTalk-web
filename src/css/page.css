@@ -102,3 +102,20 @@
 .marketingPage .mainPage ul li a mark{font-size: var(--font03); font-weight: 700;}
 .marketingPage .mainPage ul li a mark.blue{color: #51aad7;}
 .marketingPage .mainPage ul li a p{font-size: 30px; font-weight: 500; line-height: 36px; margin-top: 15px;}
+
+/* 마케팅 - 상세 페이지 */
+.marketingPage .detailPage{}
+.marketingPage .detailPage figure{display: flex; justify-content: space-between; margin-bottom: 40px;}
+.marketingPage .detailPage figure > .imgBox{width: 370px; height: 370px; border-radius: 20px; margin-right: 40px;}
+.marketingPage .detailPage figure figcaption{width: 310px; display: flex; flex-direction: column; padding-top: 10px;}
+.marketingPage .detailPage figure figcaption h2{font-size: var(--title02); font-weight: 700; margin-bottom: 16px;}
+.marketingPage .detailPage figure figcaption h2 mark{display: block; font-size: var(--font06); margin-bottom: 10px;}
+.marketingPage .detailPage figure figcaption p{font-size: var(--font06); display: flex; align-items: center; margin-bottom: 40px;}
+.marketingPage .detailPage figure figcaption p::before{content: ''; width: 18px; height: 18px; background: url('../images/icon-taik.png') no-repeat center / cover; margin-right: 3px;}
+.marketingPage .detailPage figure figcaption p mark{font-weight: 700;}
+.marketingPage .detailPage figure figcaption ul{display: flex; text-align: center;}
+.marketingPage .detailPage figure figcaption ul li{flex: 1; font-size: 13px; font-weight: 400; color: var(--colorGray); padding: 2px 0;}
+.marketingPage .detailPage figure figcaption ul li:not(:last-child){border-right: 1px solid #ececec;}
+.marketingPage .detailPage figure figcaption ul li strong{display: block; font-size: var(--font02); font-weight: 600; line-height: 23px; color: var(--colorBasic); margin-bottom: 6px;}
+.marketingPage .detailPage figure figcaption div{margin-top: auto; display: flex;}
+.marketingPage .detailPage figure figcaption div button{flex-shrink: 0; width: 56px; height: 56px; background:#e6f8ee url('../images/icon-bookmark-green.png') no-repeat center / 24px; border: 1.2px solid #c5f0d8; border-radius: 10px; text-indent: -9999px; margin-left: 8px;}
