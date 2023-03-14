@@ -3,16 +3,20 @@
 
 /* 개별 페이지 컨텐츠 사이즈 */
 .signPage [class$="Page"]{max-width: 390px; width: calc(100% - 40px); margin: 190px auto 0;}
-.categoryPage [class$="Page"]{max-width: var(--contentSize); width: calc(100% - 40px); margin: 60px auto 0;}
+:is(.categoryPage , .rankingPage) [class$="Page"],
+.marketingPage .mainPage{max-width: var(--contentSize); width: calc(100% - 40px); margin: 60px auto 0;}
 
 /* 서브 페이지 타이틀 공통 */
-:is(.signPage , .categoryPage) > section h2{font-size: var(--title01); font-weight: 700;}
+:is(.signPage , .categoryPage , .rankingPage) > section h2,
+.marketingPage .mainPage h2{font-size: var(--title01); font-weight: 700;}
+:is(.categoryPage , .rankingPage) > section h2,
+.marketingPage .mainPage h2{margin-bottom: 30px;}
 
 /* 접근성 */
 .textHidden{position: absolute; top: 0; height: 0.05px; overflow: hidden;}
 
 /* 포인트 색상 */
-mark{color: var(--colorPoint);}
+mark:not([class]){color: var(--colorPoint);}
 
 /* 아이콘 */
 [class|="icon"]{text-indent: -9999px; background-repeat: no-repeat; background-position: center; background-size: cover;}

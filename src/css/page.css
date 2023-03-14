@@ -65,7 +65,7 @@
 
 
 /* 카테고리 - 메인 */
-.categoryPage .mainPage h2{display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px;}
+.categoryPage .mainPage h2{display: flex; justify-content: space-between; align-items: flex-end;}
 .categoryPage .mainPage h2 a{font-size: var(--font04); font-weight: 400; display: flex;}
 .categoryPage .mainPage h2 a::after{content: ''; width: 20px; height: 20px; background: url('../images/icon-category.png') no-repeat center / cover; margin-left: 4px;}
 .categoryPage .mainPage .searchBox{margin-bottom: 50px;}
@@ -85,3 +85,20 @@
 .categoryPage .showPage .itemArea > li:not(:nth-child(4n)){margin-right: 20px;}
 .categoryPage .showPage .itemArea > li:nth-child(n + 5){margin-top: 40px;}
 
+
+/* 랭킹 */
+.rankingPage .mainPage .tabArea{display: flex;}
+.rankingPage .mainPage .tabArea li{flex: 1; font-size: var(--font03); text-align: center; padding: 20px 0; cursor: pointer;}
+.rankingPage .mainPage .tabArea li:not([class] , :hover){font-weight: 600; color: var(--colorGray);}
+.rankingPage .mainPage .tabArea li:is(.active , :hover){font-weight: 700; box-shadow: inset 0 -2px 0 0 #0cbf5d;}
+
+
+/* 마케팅 - 메인 */
+.marketingPage .mainPage ul{display: flex; gap: 20px;}
+.marketingPage .mainPage ul li{flex: 1; background-repeat: no-repeat; background-position: right bottom; background-size: cover; border-radius: 18px;}
+.marketingPage .mainPage ul li:nth-child(1){background-image: url('../images/marketing-main01.png');}
+.marketingPage .mainPage ul li:nth-child(2){background-image: url('../images/marketing-main02.png');}
+.marketingPage .mainPage ul li a{display: block; height: 560px; padding: 45px 40px; box-sizing: border-box;}
+.marketingPage .mainPage ul li a mark{font-size: var(--font03); font-weight: 700;}
+.marketingPage .mainPage ul li a mark.blue{color: #51aad7;}
+.marketingPage .mainPage ul li a p{font-size: 30px; font-weight: 500; line-height: 36px; margin-top: 15px;}

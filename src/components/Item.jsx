@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ItemBasic from './ItemBasic';
 import ItemBest from './ItemBest';
+import ItemRank from './ItemRank';
 
 export default function Item({img , type , info , support , bookmark}) {
     const bookMark = (e) =>{
@@ -24,6 +25,7 @@ export default function Item({img , type , info , support , bookmark}) {
             </div>
             {!type && <ItemBasic info={info}/>}
             {type === 'best' && <ItemBest />}
+            {type === 'rank' && <ItemRank />}
         </Link>
     );
 }
