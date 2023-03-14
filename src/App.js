@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       // { path : '/sign/Find/:pageName' , element : <Find />},
       { path : '/sign/Find/email' , element : <Find />},
       { path : '/sign/Find/inquiry' , element : <Find />},
-      { path : '/category/main' , element : <CategoryMain />},
+      { path : '/category' , element : <CategoryMain />},
       { path : '/category/show' , element : <Show />},
     ]
   },

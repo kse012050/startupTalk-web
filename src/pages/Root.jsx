@@ -10,7 +10,7 @@ export default function Root() {
     return (
         <div className={location[0] + 'Page'}>
             <Navbar />
-            <section className={location[1] && location[1] + 'Page'}>
+            <section className={location[1] ? location[1] + 'Page' : 'mainPage'}>
                 <Outlet/>
             </section>
             <Footer />
