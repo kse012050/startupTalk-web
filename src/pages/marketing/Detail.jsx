@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Tab from '../../components/Tab';
+import Counsel from './Counsel';
 import Info from './Info';
 
 export default function Detail() {
@@ -54,7 +55,7 @@ export default function Detail() {
             <Tab tabList={tabList} content={[content ,setContent]}/>
 
             {content === 'info' && <Info/>}
-            {content === 'counsel' && <div>창업 개요</div>}
+            {content === 'counsel' && <Counsel />}
         </>
     );
 }

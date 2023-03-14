@@ -122,18 +122,30 @@
 .marketingPage .detailPage .tabBox{margin-bottom: 50px;}
 
 /* 마케팅 - 상세 페이지 - 브랜드 정보 */
-.marketingPage .detailPage .infoArea > div:not(:last-child){margin-bottom: 70px;}
-.marketingPage .detailPage .infoArea > div h3{font-size: var(--font01); font-weight: 700; margin-bottom: 14px;}
+.marketingPage .detailPage > div > div:not(:last-child){margin-bottom: 70px;}
+.marketingPage .detailPage > div > div h3{font-size: var(--font01); font-weight: 700; margin-bottom: 14px;}
 .marketingPage .detailPage .infoArea mark.support{display: flex; align-items: center; font-size: var(--font06); font-weight: 700; color: var(--colorPoint); background-color: rgba(12, 191, 93, 0.1); border-radius: 14px 0; margin-bottom: 30px;}
 .marketingPage .detailPage .infoArea mark.support strong{padding: 10px 30px; color: white; background-color: #0cbf5d; border-radius: 14px 0; margin-right: 30px;}
 /* .marketingPage .detailPage .videoArea{height: 340px; border-radius: 12px; background-color: #f4f4f4; display: flex; justify-content: center; align-items: center; font-size: var(--title01);} */
-.marketingPage .detailPage .videoArea iframe{width: 100%; height: 340px; border-radius: 12px;}
-.marketingPage .detailPage .detailArea div{height: 1000px; background-color: #f4f4f4; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 18%, #fff); display: flex; justify-content: center; align-items: center; font-size: var(--title01);}
-.marketingPage .detailPage .detailArea button{width: 100%; height: 60px; display: flex; justify-content: center; align-items: center; font-size: var(--font03); font-weight: 700; border: 1px solid #ccc; border-radius: 10px;}
-.marketingPage .detailPage .detailArea button::after{content: ''; width: 34px; height: 34px; background: url('../images/icon-category-more.png') no-repeat center / cover; margin-left: 2px;}
-.marketingPage .detailPage .menuArea .swiper-slide{width: 210px;}
-.marketingPage .detailPage .menuArea .swiper-slide:not(:last-child){margin-right: 20px;}
-.marketingPage .detailPage .interiorArea .swiper-slide .imgBox{height: 340px; border-radius: 18px;}
-.marketingPage .detailPage .locationArea iframe{width: 100%; height: 340px; margin-bottom: 16px;}
-.marketingPage .detailPage .locationArea p{display: flex; align-items: center; font-size: var(--font06);}
-.marketingPage .detailPage .locationArea p::before{content: ''; width: 18px; height: 18px; background: url('../images/icon-location.png') no-repeat center / cover; margin-right: 2px;}
+.marketingPage .detailPage .infoArea .videoArea iframe{width: 100%; height: 340px; border-radius: 12px;}
+.marketingPage .detailPage .infoArea .detailArea div{height: 1000px; background-color: #f4f4f4; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 18%, #fff); display: flex; justify-content: center; align-items: center; font-size: var(--title01);}
+.marketingPage .detailPage .infoArea .detailArea button{width: 100%; height: 60px; display: flex; justify-content: center; align-items: center; font-size: var(--font03); font-weight: 700; border: 1px solid #ccc; border-radius: 10px;}
+.marketingPage .detailPage .infoArea .detailArea button::after{content: ''; width: 34px; height: 34px; background: url('../images/icon-category-more.png') no-repeat center / cover; margin-left: 2px;}
+.marketingPage .detailPage .infoArea .menuArea .swiper-slide{width: 210px;}
+.marketingPage .detailPage .infoArea .menuArea .swiper-slide:not(:last-child){margin-right: 20px;}
+.marketingPage .detailPage .infoArea .interiorArea .swiper-slide .imgBox{height: 340px; border-radius: 18px;}
+.marketingPage .detailPage .infoArea .locationArea iframe{width: 100%; height: 340px; margin-bottom: 16px;}
+.marketingPage .detailPage .infoArea .locationArea p{display: flex; align-items: center; font-size: var(--font06);}
+.marketingPage .detailPage .infoArea .locationArea p::before{content: ''; width: 18px; height: 18px; background: url('../images/icon-location.png') no-repeat center / cover; margin-right: 2px;}
+.marketingPage .detailPage .counselArea div small{font-size: var(--font06); font-weight: 400; color: var(--colorGray);}
+.marketingPage .detailPage .counselArea div h3:has(small){display: flex; justify-content: space-between; align-items: flex-end;}
+.marketingPage .detailPage .counselArea div table{width: 100%; border-top: 1px solid #222;}
+.marketingPage .detailPage .counselArea div table tbody tr{display: flex; justify-content: space-between; font-size: 16px; line-height: 70px; border-bottom: 1px solid #dedede;}
+.marketingPage .detailPage .counselArea div table tbody tr th{width: 236px; font-weight: 700;}
+.marketingPage .detailPage .counselArea div table tbody tr td{width: 264px; text-align: center;}
+.marketingPage .detailPage .counselArea div table tfoot{text-align: right;}
+.marketingPage .detailPage .counselArea div table tfoot tr{background-color: rgba(241, 244, 246, 0.5);}
+.marketingPage .detailPage .counselArea div table tfoot tr th{padding: 33px 50px;}
+.marketingPage .detailPage .counselArea div table tfoot tr th strong{display: block; font-size: var(--font01); font-weight: 600; margin-bottom: 8px;}
+.marketingPage .detailPage .counselArea div > small{display: block; text-align: right; margin-top: 12px;}
+.marketingPage .detailPage .counselArea div > small mark{font-weight: 600;}
