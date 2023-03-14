@@ -10,6 +10,7 @@ import SignEmail from './pages/sign/Email';
 import SignUp from './pages/sign/SignUp';
 import Find from './pages/sign/Find';
 import CategoryMain from './pages/category/Main';
+import Show from './pages/category/Show';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
       { path : '/sign/Find/email' , element : <Find />},
       { path : '/sign/Find/inquiry' , element : <Find />},
       { path : '/category/main' , element : <CategoryMain />},
+      { path : '/category/show' , element : <Show />},
     ]
   },
 ])

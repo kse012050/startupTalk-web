@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import ItemBasic from './ItemBasic';
 import ItemBest from './ItemBest';
 
-export default function Item({img , type , info , support}) {
+export default function Item({img , type , info , support , bookmark}) {
     const bookMark = (e) =>{
         e.preventDefault();
         alert('북마크')
     }
+    console.log(!!bookmark);
     return (
         <Link to={'/ranking'} className={`itemBox ${!type ? 'basic' : type}`}>
             <div className='imgBox' style={{backgroundImage : `url(${img})`}}>
@@ -17,7 +18,7 @@ export default function Item({img , type , info , support}) {
                         <li>프로모션</li>
                     </ul>
                 }
-                {type === 'best' &&
+                {!!bookmark &&
                     <button onClick={bookMark}>북마크</button>
                 }
             </div>

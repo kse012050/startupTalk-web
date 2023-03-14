@@ -48,8 +48,9 @@ mark{color: var(--colorPoint);}
 .itemBox.basic .itemText div span:nth-child(2)::after{content: '억원';}
 .itemBox.basic .itemText div span:nth-child(3)::before{background-image: url('../images/icon-taik.png');}
 .itemBox.basic .itemText div span:nth-child(3)::after{content: '천';}
-.itemBox.best .imgBox{height: var(--itemImgHieght01);}
-.itemBox.best .imgBox button{position: absolute; right: 20px; top: 18px; text-indent: inherit; width: 30px; height: 30px; background: url('../images/icon-bookmark-white.png') no-repeat center / cover;}
+/* 북마크 */
+.itemBox .imgBox{height: var(--itemImgHieght01);}
+.itemBox .imgBox button{position: absolute; right: 20px; top: 18px; text-indent: inherit; width: 30px; height: 30px; background: url('../images/icon-bookmark-white.png') no-repeat center / cover;}
 
 .bestList :is(.swiper-slide){counter-increment: bestItem;}
 .bestList :is(.swiper-slide) .itemText{margin-top: 16px; padding: 5px 0 12px 64px; position: relative;}
@@ -99,6 +100,19 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 .categoryType ul li a mark{font-weight: 700;}
 .categoryType ul li a mark::before{content: ' (';}
 .categoryType ul li a mark::after{content: ')';}
+
+/* 드랍박스 */
+[class|="dropBox"]{position: relative;}
+[class|="dropBox"] ul{position: absolute; background-color: white; border: 1px solid #e6e6e6; border-radius: 10px; z-index: 1;}
+[class|="dropBox"] ul li a{font-weight: 500; white-space: nowrap;}
+[class|="dropBox"] button{display: flex; align-items: center;}
+[class|="dropBox"] button::after{content: ''; background: url('../images/icon-category-more.png') no-repeat center / cover;}
+.dropBox-big ul{top: calc(100% + 20px); left: 0; padding: 14px 0;}
+.dropBox-big ul li a{display: block; padding: 0 22px; font-size: var(--font01); line-height: 52px;}
+.dropBox-big button::after{width: 34px; height: 34px; margin-left: 8px;}
+.dropBox-small ul{top: calc(100% + 14px); right: 0; padding: 13px 0;}
+.dropBox-small ul li a{display: block; padding: 0 26px 0 20px; font-size: var(--font04); line-height: 46px;}
+.dropBox-small button::after{width: 20px; height: 20px; margin-left: 4px;}
 
 /* 해더 */
 header{position: sticky; top: 0; font-size: var(--font04); background-color: white; box-shadow: inset 0 -1px 0 0 #dedede; z-index: 10;}

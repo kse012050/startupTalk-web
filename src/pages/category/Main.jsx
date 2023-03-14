@@ -96,7 +96,7 @@ export default function Main() {
                 <Link>전체 카테고리 보기</Link>
             </h2>
             <Search />
-            {test.map((c)=><CategoryType info={c} key={c.title}/>)}
+            {test.map((c)=><CategoryType info={c} key={c.title} title={true}/>)}
         </>
     );
 }

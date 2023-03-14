@@ -64,9 +64,24 @@
 .signPage > .findPage fieldset ul li label{}
 
 
-/* 카테고리 */
+/* 카테고리 - 메인 */
 .categoryPage .mainPage h2{display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px;}
 .categoryPage .mainPage h2 a{font-size: var(--font04); font-weight: 400; display: flex;}
 .categoryPage .mainPage h2 a::after{content: ''; width: 20px; height: 20px; background: url('../images/icon-category.png') no-repeat center / cover; margin-left: 4px;}
 .categoryPage .mainPage .searchBox{margin-bottom: 50px;}
 .categoryPage .mainPage .categoryType:not(:last-of-type){margin-bottom: 60px;}
+
+/* 카테고리 - 보기 */
+.categoryPage .showPage .dropBox-big button{font-size: var(--title01); font-weight: 700;}
+.categoryPage .showPage .dropBox-big + .categoryType{margin: 30px 0;}
+.categoryPage .showPage .dropBox-big + .totalArea{margin: 50px 0 20px;}
+.categoryPage .showPage .totalArea{display: flex; justify-content: space-between; align-items: center; font-size: var(--font04); margin-bottom: 22px;}
+.categoryPage .showPage .totalArea p{font-weight: 500;}
+.categoryPage .showPage .totalArea p mark{font-weight: 700;}
+.categoryPage .showPage .totalArea p mark::after{content: '개';}
+.categoryPage .showPage .totalArea .dropBox-small{margin-left: auto;}
+.categoryPage .showPage .itemArea{display: flex; flex-wrap: wrap;}
+.categoryPage .showPage .itemArea > li{width: calc((100% - 60px) / 4);}
+.categoryPage .showPage .itemArea > li:not(:nth-child(4n)){margin-right: 20px;}
+.categoryPage .showPage .itemArea > li:nth-child(n + 5){margin-top: 40px;}
+

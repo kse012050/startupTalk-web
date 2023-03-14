@@ -134,22 +134,22 @@ export default function Main() {
                             className="itemSwiper bestList"
                         >
                             <SwiperSlide>
-                                <Item img={require('../images/item-best01.png')} type="best"/>
+                                <Item img={require('../images/item-best01.png')} type="best" bookmark={true}/>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Item img={require('../images/item-best02.png')} type="best"/>
+                                <Item img={require('../images/item-best02.png')} type="best" bookmark={true}/>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Item img={require('../images/item-best01.png')} type="best"/>
+                                <Item img={require('../images/item-best01.png')} type="best" bookmark={true}/>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Item img={require('../images/item-best02.png')} type="best"/>
+                                <Item img={require('../images/item-best02.png')} type="best" bookmark={true}/>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Item img={require('../images/item-best01.png')} type="best"/>
+                                <Item img={require('../images/item-best01.png')} type="best" bookmark={true}/>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <Item img={require('../images/item-best02.png')} type="best"/>
+                                <Item img={require('../images/item-best02.png')} type="best" bookmark={true}/>
                             </SwiperSlide>
                         </Swiper>
                         <div className="navigation-circle">
