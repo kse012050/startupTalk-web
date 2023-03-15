@@ -2,9 +2,13 @@ import React from 'react';
 import InputLayout from '../../components/input/InputLayout';
 import InputEmail from '../../components/input/Email';
 import InputPassword from '../../components/input/Password';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Email() {
+    const navigate = useNavigate();
+    const test = () =>{
+        navigate('/my')
+    }
     return (
         <>
             <h2>이메일 로그인</h2>
@@ -21,7 +25,7 @@ export default function Email() {
                     <input type="checkbox" id='autoLogin'/><label htmlFor="autoLogin">로그인</label>
                     <Link to={'/sign/find'}>ID / PW 찾기</Link>
                 </div>
-                <input type="submit" value={'로그인'} className={'btn-basic'}/>
+                <input type="submit" value={'로그인'} className={'btn-basic'} onClick={test}/>
                 <Link to={'/sign/signUp'} className='btn-border'>이메일 회원가입</Link>
             </InputLayout>
         </>

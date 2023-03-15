@@ -4,7 +4,7 @@
 /* 개별 페이지 컨텐츠 사이즈 */
 :is(.signPage , .receiptPage) [class$="Page"],
 .marketingPage .counselPage{max-width: 390px; width: calc(100% - 40px); margin: 100px auto 0;}
-:is(.categoryPage , .rankingPage ) [class$="Page"],
+:is(.categoryPage , .rankingPage , .myPage ) [class$="Page"],
 .marketingPage .mainPage{max-width: var(--contentSize); width: calc(100% - 40px); margin: 60px auto 0;}
 .detailPage > section{max-width: 720px; width: calc(100% - 40px); margin: 60px auto 0;}
 
@@ -113,6 +113,10 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 .tabBox{display: flex; background-color: #f1f4f6; border-radius: 14px;}
 .tabBox li{flex: 1; font-size: var(--font03); color: var(--colorGray); font-weight: 600; height: 60px; display: flex; justify-content: center; align-items: center; border: 1.5px solid transparent; border-radius: 14px; cursor: pointer;}
 .tabBox li.active{border-color: #e6e6e6; color: inherit; background-color: white;}
+.tabBox li mark{color: var(--colorGray); white-space: pre-wrap;}
+.tabBox li mark::before{content: ' (';}
+.tabBox li mark::after{content: ')';}
+.tabBox li.active mark{color: var(--colorPoint);}
 /* .tabBox li a{font-size: var(--font03); color: var(--colorGray); font-weight: 600; height: 60px; display: flex; justify-content: center; align-items: center; border: 1.5px solid transparent; border-radius: 14px;}
 .tabBox li a.active{border-color: #e6e6e6; color: inherit; background-color: white;} */
  
@@ -136,6 +140,19 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 .dropBox-small ul{top: calc(100% + 14px); right: 0; padding: 13px 0;}
 .dropBox-small ul li a{display: block; padding: 0 26px 0 20px; font-size: var(--font04); line-height: 46px;}
 .dropBox-small button::after{width: 20px; height: 20px; margin-left: 4px;}
+
+/* 레이아웃 */
+/* 레이아웃 - 4개*/
+.horizontal4{display: flex; flex-wrap: wrap;}
+.horizontal4 > li{width: calc((100% - 60px) / 4);}
+.horizontal4 > li:not(:nth-child(4n)){margin-right: 20px;}
+.horizontal4 > li:nth-child(n + 5){margin-top: 40px;}
+
+/* 게시판 */
+.boardBox{font-size: var(--font06); border-top: 1px solid var(--colorDarker);}
+.boardBox li{border-bottom: 1px solid #dedede;}
+.boardBox li:not([class]){height: 70px;}
+.boardBox li.titleArea{height: 55px;}
 
 /* 해더 */
 header{position: sticky; top: 0; font-size: var(--font04); background-color: white; box-shadow: inset 0 -1px 0 0 #dedede; z-index: 10;}

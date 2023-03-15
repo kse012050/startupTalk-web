@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import CategoryType from '../../components/CategoryType';
 import DropBox from '../../components/DropBox';
 import Item from '../../components/item/Item';
+import Horizontal4 from '../../components/layout/Horizontal4';
 
 export default function Show() {
     const [firstType , setFirstType] = useState('전체 카테고리')
@@ -71,14 +72,14 @@ export default function Show() {
                 <DropBox type='small'  first={[firstOrder , setFirstOrder]} list={order}/>
             </div>
             
-            <ul className='itemArea'>
+            <Horizontal4>
                 <li><Item img={require('../../images/item01.png')} info={{title : '하노이 맥주 밤거리' , shop : 72 , cost : 1 , taik : 3}} support={true} bookmark={true}/></li>
                 <li><Item img={require('../../images/item02.png')} info={{title : '지금 보고싶다' , shop : 120 , cost : 1, taik : 1}} support={true} bookmark={true}/></li>
                 <li><Item img={require('../../images/item01.png')} info={{title : '하노이 맥주 밤거리' , shop : 72 , cost : 1 , taik : 3}} support={true} bookmark={true}/></li>
                 <li><Item img={require('../../images/item02.png')} info={{title : '지금 보고싶다' , shop : 120 , cost : 1, taik : 1}} support={true} bookmark={true}/></li>
                 <li><Item img={require('../../images/item01.png')} info={{title : '하노이 맥주 밤거리' , shop : 72 , cost : 1 , taik : 3}} support={true} bookmark={true}/></li>
                 <li><Item img={require('../../images/item02.png')} info={{title : '지금 보고싶다' , shop : 120 , cost : 1, taik : 1}} support={true} bookmark={true}/></li>
-            </ul>
+            </Horizontal4>
         </>
     );
 }

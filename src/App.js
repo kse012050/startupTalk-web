@@ -13,6 +13,7 @@ import MarketingMain from './pages/marketing/Main';
 import Detail from './pages/detail/Detail';
 import MarketingCounsel from './pages/marketing/Counsel';
 import SimpleReceipt from './pages/SimpleReceipt';
+import MyMain from './pages/my/Main';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
       { path : '/detail/:test' , element : <Detail />},
       { path : '/receipt' , element : <SimpleReceipt />},
       { path : '/marketing/counsel' , element : <MarketingCounsel />},
+      { path : '/my' , element : <MyMain />},
     ]
   },
 ])
