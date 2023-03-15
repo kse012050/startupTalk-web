@@ -176,8 +176,9 @@
 .myPage .topArea div ul li:first-child a{position: relative;}
 .myPage .topArea div ul li:first-child a::after{content: ''; position: absolute; right: -9px; top: -2px; width: 6px; height: 6px; background-color: rgba(255, 255, 255, 0.7); border-radius: 100%;}
 
-/* my 페이지 - 메인 - 관심 아이템 */
+/* my 페이지 - 메인 */
 .myPage .mainPage .tabBox{margin-bottom: 40px;}
+/* my 페이지 - 메인 - 관심 아이템 */
 .myPage .mainPage > button{display: block; width: 205px; height: 60px; font-size: var(--font04); font-weight: 500; border: 1px solid #e6e6e6; border-radius: 30px; margin: 60px auto 0;}
 /* my 페이지 - 메인 - 상담 접수 내역 */
 .myPage .mainPage .boardBox li div{justify-content: space-between; text-align: center;}
@@ -186,15 +187,43 @@
 .myPage .mainPage .boardBox li div strong{font-weight: 700;}
 .myPage .mainPage .boardBox li div time{color: var(--colorGray);}
 
-/* my 페이지 - 공지사항 */
-.myPage .noticePage .boardBox li button{padding: 0 20px;}
-.myPage .noticePage .boardBox li button span{padding: 0 20px;}
-.myPage .noticePage .boardBox li button time{color: var(--colorGray); margin-left: auto;}
-.myPage .noticePage .boardBox li button::after{content: ''; width: 24px; height: 24px; background: url('../images/icon-more.png') no-repeat center / cover; margin-left: 40px;}
-.myPage .noticePage .boardBox li div{min-height: 320px; padding: 40px; border-top: 1px solid #dedede; box-sizing: border-box;}
-.myPage .noticePage .boardBox li.active button span{font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px;}
-.myPage .noticePage .boardBox li.active button::after{transform: rotate(180deg);}
+/* my 페이지 - 공지사항 , my 페이지 - 서비스 - 문의 내역*/
+.myPage :is(.noticePage , .servicePage) .boardBox li button{padding: 0 20px;}
+.myPage :is(.noticePage , .servicePage) .boardBox li button strong{width: 92px; color: var(--colorPoint); font-weight: 700; text-align: left; padding: 0 20px; margin-right: 40px;}
+.myPage :is(.noticePage , .servicePage) .boardBox li button strong.fin{color: var(--colorGray);}
+.myPage :is(.noticePage , .servicePage) .boardBox li button span{padding: 0 20px;}
+.myPage :is(.noticePage , .servicePage) .boardBox li button time{color: var(--colorGray); margin-left: auto;}
+.myPage :is(.noticePage , .servicePage) .boardBox li button::after{content: ''; width: 24px; height: 24px; background: url('../images/icon-more.png') no-repeat center / cover; margin-left: 40px;}
+.myPage :is(.noticePage , .servicePage) .boardBox li > div{padding: 30px 40px 40px; box-sizing: border-box;}
+.myPage :is(.noticePage , .servicePage) .boardBox li > div:first-of-type{border-top: 1px solid #dedede;}
+.myPage :is(.noticePage , .servicePage) .boardBox li div.detailArea{min-height: 320px; display: flex; flex-direction: column;}
+.myPage :is(.noticePage , .servicePage) .boardBox li div.detailArea .imgArea{display: flex; margin-top: auto;}
+.myPage :is(.noticePage , .servicePage) .boardBox li div.detailArea .imgArea .imgBox{width: 100px; height: 100px; border-radius: 10px;}
+.myPage :is(.noticePage , .servicePage) .boardBox li div.detailArea .imgArea .imgBox:not(:last-child){margin-right: 14px;}
+.myPage :is(.noticePage , .servicePage) .boardBox li div.answerArea{min-height: 180px; background-color: #f1f4f6;}
+.myPage :is(.noticePage , .servicePage) .boardBox li div.answerArea b{display: block; font-weight: 600; margin-bottom: 12px;}
+.myPage :is(.noticePage , .servicePage) .boardBox li.active button span{font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px;}
+.myPage :is(.noticePage , .servicePage) .boardBox li.active button::after{transform: rotate(180deg);}
 
 /* my 페이지 - 계정정보 */
 .myPage .accountPage .inputBox fieldset > .kakao{font-size: var(--font06); font-weight: 700; display: flex; align-items: center; margin-top: 30px;}
 .myPage .accountPage .inputBox fieldset > .kakao::before{content: ''; width: 20px; height: 20px; background: url('../images/icon-kakao2.png') no-repeat center / cover; margin-right: 6px;}
+
+/* my 페이지 - 서비스 */
+.myPage .servicePage .tabBox{margin-bottom: 50px;}
+/* my 페이지 - 서비스 - 문의하기 */
+.myPage .servicePage .inputBox fieldset div{display: flex; margin-top: 30px;}
+.myPage .servicePage .inputBox fieldset div span{width: 100px; height: 100px; background: url('../images/icon-camera.png') no-repeat center / 30px; border: 1px solid #e6e6e6; border-radius: 10px; box-sizing: border-box;}
+.myPage .servicePage .inputBox fieldset div span:not(:last-child){margin-right: 15px;}
+.myPage .servicePage .inputBox fieldset p{font-size: var(--font06); color: var(--colorGray); display: flex; align-items: center; margin-top: 14px;}
+.myPage .servicePage .inputBox fieldset p::before{content: ''; width: 18px; height: 18px; background: url('../images/icon-notice.png') no-repeat center / cover; margin-right: 6px;}
+.myPage .servicePage .inputBox fieldset input[type="submit"]{display: block; max-width: 390px; margin-right: auto; margin-left: auto;}
+
+/* my 페이지 - 서비스 - 문의 내역 */
+/* .myPage .servicePage .boardBox li button{padding: 0 20px;}
+.myPage .servicePage .boardBox li button span{padding: 0 20px;}
+.myPage .servicePage .boardBox li button time{color: var(--colorGray); margin-left: auto;}
+.myPage .servicePage .boardBox li button::after{content: ''; width: 24px; height: 24px; background: url('../images/icon-more.png') no-repeat center / cover; margin-left: 40px;}
+.myPage .servicePage .boardBox li div{min-height: 320px; padding: 40px; border-top: 1px solid #dedede; box-sizing: border-box;}
+.myPage .servicePage .boardBox li.active button span{font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px;}
+.myPage .servicePage .boardBox li.active button::after{transform: rotate(180deg);} */

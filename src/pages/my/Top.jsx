@@ -10,7 +10,7 @@ export default function Top() {
                 <ul>
                     <li><Link to={'/my/notice'}>공지사항</Link></li>
                     <li><Link to={'/my/account'}>계정정보</Link></li>
-                    <li><Link>서비스 문의</Link></li>
+                    <li><Link to={'/my/service'}>서비스 문의</Link></li>
                 </ul>
             </div>
         </div>
