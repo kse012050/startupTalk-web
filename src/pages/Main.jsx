@@ -6,7 +6,7 @@ import { Navigation , FreeMode } from "swiper";
 // Import Swiper styles
 import 'swiper/css';
 import { Link } from 'react-router-dom';
-import Item from '../components/Item';
+import Item from '../components/item/Item';
 
 export default function Main() {
     return (

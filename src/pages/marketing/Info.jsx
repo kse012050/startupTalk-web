@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Item from '../../components/Item';
+import Item from '../../components/item/Item';
 
 export default function Info() {
     return (

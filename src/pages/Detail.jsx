@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Tab from '../../components/Tab';
-import Counsel from './Counsel';
-import Info from './Info';
+import Tab from '../components/Tab';
+import Counsel from './marketing/Counsel';
+import Info from './marketing/Info';
 
 export default function Detail() {
     const [content , setContent] = useState('')
@@ -23,7 +23,7 @@ export default function Detail() {
     return (
         <>
             <figure>
-                <div className='imgBox' style={{backgroundImage : `url(${require('../../images/item01.png')})`}}>
+                <div className='imgBox' style={{backgroundImage : `url(${require('../images/item01.png')})`}}>
                 </div>
                 <figcaption>
                     <h2>

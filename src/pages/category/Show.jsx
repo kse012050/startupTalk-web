@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import CategoryType from '../../components/CategoryType';
 import DropBox from '../../components/DropBox';
-import Item from '../../components/Item';
+import Item from '../../components/item/Item';
 
 export default function Show() {
     const [firstType , setFirstType] = useState('전체 카테고리')
-    const [type , setType] = useState([
+    const type = [
         '전체보기' , '음식/주점' , '카페/디저트' , '서비스'
-    ])
+    ]
     const [firstOrder , setFirstOrder] = useState('톡순');
-    const [order , setOrder] = useState([
+    const order = [
         '톡순' , '관심순' , '신규등록순' , '비용낮은순' , '비용높은순'
-    ])
+    ]
 
     const test = [
         {
@@ -62,7 +61,6 @@ export default function Show() {
         },
     ]
 
-    // const
     return (
         <>
             <h2 className='textHidden'>전체 카테고리</h2>
