@@ -4,6 +4,7 @@
 /* 개별 페이지 컨텐츠 사이즈 */
 :is(.signPage , .receiptPage) [class$="Page"],
 .marketingPage .counselPage{max-width: 390px; width: calc(100% - 40px); margin: 100px auto 0;}
+.myPage .accountPage .inputBox{max-width: 390px; width: calc(100% - 40px); margin: 0 auto;}
 :is(.categoryPage , .rankingPage , .myPage ) [class$="Page"],
 .marketingPage .mainPage{max-width: var(--contentSize); width: calc(100% - 40px); margin: 60px auto 0;}
 .detailPage > section{max-width: 720px; width: calc(100% - 40px); margin: 60px auto 0;}

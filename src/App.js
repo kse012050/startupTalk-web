@@ -15,6 +15,7 @@ import MarketingCounsel from './pages/marketing/Counsel';
 import SimpleReceipt from './pages/SimpleReceipt';
 import MyMain from './pages/my/Main';
 import MyNotice from './pages/my/Notice';
+import MyAccount from './pages/my/Account';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
       { path : '/marketing/counsel' , element : <MarketingCounsel />},
       { path : '/my' , element : <MyMain />},
       { path : '/my/notice' , element : <MyNotice />},
+      { path : '/my/account' , element : <MyAccount />},
     ]
   },
 ])

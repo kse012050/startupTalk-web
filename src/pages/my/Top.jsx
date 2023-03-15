@@ -9,7 +9,7 @@ export default function Top() {
                 <button className='logout'>로그아웃</button>
                 <ul>
                     <li><Link to={'/my/notice'}>공지사항</Link></li>
-                    <li><Link>계정정보</Link></li>
+                    <li><Link to={'/my/account'}>계정정보</Link></li>
                     <li><Link>서비스 문의</Link></li>
                 </ul>
             </div>
