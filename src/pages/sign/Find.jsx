@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
 import Tab from '../../components/Tab';
 import FindEmail from './FindEmail';
 import FindInquiry from './FindInquiry';
 
 export default function Find() {
     const [content , setContent] = useState('')
-    const location = useLocation();
-    // let pageName = location.pathname.substring(1).split('/').at(-1);
     const tabList = [{
             name : '이메일 주소로 찾기',
             path : 'email'
@@ -19,6 +16,7 @@ export default function Find() {
 
     useEffect(()=>{
         setContent(tabList[0].path)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
     return (
         <>

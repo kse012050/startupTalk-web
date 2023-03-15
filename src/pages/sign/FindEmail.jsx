@@ -12,7 +12,7 @@ export default function FindEmail() {
                     />
                 </li>
             </ul>
-            <input type="submit" value="확인" className='btn-color'/>
+            <input type="submit" value="확인" className='btn-basic'/>
         </InputLayout>
     );
 }

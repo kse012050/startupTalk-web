@@ -8,7 +8,7 @@ import 'swiper/css';
 import { Link } from 'react-router-dom';
 import Item from '../components/item/Item';
 
-export default function Main() {
+export default function Home() {
     return (
         <>
             <h2 className='textHidden'>메인 페이지</h2>

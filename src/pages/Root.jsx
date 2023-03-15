@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar';
 export default function Root() {
     let location = useLocation();
     location = location.pathname.substring(1).split('/');
-    location[0] = location[0] ? location[0] : 'main'
+    location[0] = location[0] ? location[0] : 'home'
     return (
         <div className={location[0] + 'Page'}>
             <Navbar />

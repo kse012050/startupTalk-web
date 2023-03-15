@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Tab from '../components/Tab';
-import Counsel from './marketing/Counsel';
-import Info from './marketing/Info';
+import Tab from '../../components/Tab';
+import Counsel from './Counsel';
+import Info from './Info';
 
 export default function Detail() {
     const [content , setContent] = useState('')
@@ -23,7 +23,7 @@ export default function Detail() {
     return (
         <>
             <figure>
-                <div className='imgBox' style={{backgroundImage : `url(${require('../images/item01.png')})`}}>
+                <div className='imgBox' style={{backgroundImage : `url(${require('../../images/item01.png')})`}}>
                 </div>
                 <figcaption>
                     <h2>
@@ -46,7 +46,7 @@ export default function Detail() {
                         </li>
                     </ul>
                     <div>
-                        <Link className='btn-color'>간편 상담 접수</Link>
+                        <Link to={'/receipt'} className='btn-basic'>간편 상담 접수</Link>
                         <button>북마크</button>
                     </div>
                 </figcaption>

@@ -10,7 +10,7 @@ export default function FindInquiry() {
                     <Inquiry />
                 </li>
             </ul>
-            <input type="submit" value="등록하기" className='btn-color'/>
+            <input type="submit" value="등록하기" className='btn-basic'/>
         </InputLayout>
     );
 }

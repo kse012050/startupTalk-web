@@ -31,7 +31,7 @@ export default function SignUp() {
                         <mark>개인정보 정책 및 마케팅 정보</mark> 수신동의하는 것으로 간주합니다.<br/>
                     </label>
                 </div>
-                <input type="submit" value={'회원가입'} className={'btn-color'}/>
+                <input type="submit" value={'회원가입'} className={'btn-basic'}/>
             </InputLayout>
         </>
     );

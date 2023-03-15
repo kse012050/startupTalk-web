@@ -21,7 +21,7 @@ export default function Email() {
                     <input type="checkbox" id='autoLogin'/><label htmlFor="autoLogin">로그인</label>
                     <Link to={'/sign/find'}>ID / PW 찾기</Link>
                 </div>
-                <input type="submit" value={'로그인'} className={'btn-color'}/>
+                <input type="submit" value={'로그인'} className={'btn-basic'}/>
                 <Link to={'/sign/signUp'} className='btn-border'>이메일 회원가입</Link>
             </InputLayout>
         </>
