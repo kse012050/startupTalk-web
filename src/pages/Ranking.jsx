@@ -20,14 +20,16 @@ export default function Ranking() {
                 <li>점포 수</li>
             </ul>
             <ol>
-                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true}/></li>
-                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true}/></li>
-                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true}/></li>
-                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true}/></li>
-                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true}/></li>
-                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true}/></li>
-                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true}/></li>
-                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true}/></li>
+                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true} rankType='taik'/></li>
+                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true} rankType='shop'/></li>
+                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true} rankType='interest'/></li>
+                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true} rankType='taik'/></li>
+                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true} rankType='taik'/></li>
+                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true} rankType='taik'/></li>
+                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true} rankType='taik'/></li>
+                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true} rankType='taik'/></li>
+                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true} rankType='taik'/></li>
+                <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true} rankType='taik'/></li>
             </ol>
         </>
     );

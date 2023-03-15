@@ -10,9 +10,10 @@
 /* 서브 페이지 타이틀 공통 */
 :is(.signPage , .categoryPage , .rankingPage , .receiptPage) > section h2,
 .marketingPage .mainPage h2{font-size: var(--title01); font-weight: 700;}
-:is(.categoryPage , .rankingPage) > section h2,
 :is(.signPage , .receiptPage) > section h2 + form{margin-top: 50px;}
+:is(.categoryPage , .rankingPage) > section h2,
 .marketingPage .mainPage h2{margin-bottom: 30px;}
+
 
 /* 접근성 */
 .textHidden{position: absolute; top: 0; height: 0.05px; overflow: hidden;}
@@ -37,7 +38,7 @@ mark:not([class]){color: var(--colorPoint);}
 
 /* 아이템 */
 .itemBox{display: block;}
-.itemBox .imgBox{width: 100%; border-radius: 20px;}
+.itemBox:not(.rank) .imgBox{width: 100%; border-radius: 20px;}
 .itemBox.basic .imgBox{height: var(--itemImgHieght02);}
 .itemBox.basic .imgBox:has(ul , button){position: relative;}
 .itemBox.basic .imgBox ul{position: absolute; left: 0; bottom: -8px; text-indent: 0; display: flex;}
@@ -50,18 +51,28 @@ mark:not([class]){color: var(--colorPoint);}
 .itemBox.basic .itemText div span{font-size: var(--font06); color: var(--colorGray); display: flex; align-items: center;}
 .itemBox.basic .itemText div span:not(:last-child){margin-right: 8px;}
 .itemBox.basic .itemText div span::before{content: ''; width: 18px; height: 18px; background-repeat: no-repeat; background-position: center; background-size: cover; margin-right: 3px;}
-.itemBox.basic .itemText div span:nth-child(1)::before{background-image: url('../images/icon-shop.png');}
+.itemBox.basic .itemText div span:nth-child(1)::before{background-image: url('../images/icon-shop-gray.png');}
 .itemBox.basic .itemText div span:nth-child(2)::before{background-image: url('../images/icon-cost.png');}
 .itemBox.basic .itemText div span:nth-child(2)::after{content: '억원';}
 .itemBox.basic .itemText div span:nth-child(3)::before{background-image: url('../images/icon-taik-gray.png');}
 .itemBox.basic .itemText div span:nth-child(3)::after{content: '천';}
+.itemBox.rank{display: flex; position: relative; background-color: white; border-radius: 18px;  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1); overflow: hidden;}
+.itemBox.rank .imgBox{width: 138px; height: 138px;}
+.itemBox.rank .itemText{flex: 1; padding: 30px; display: flex; flex-direction: column; justify-content: center;}
+.itemBox.rank .itemText mark{font-size: var(--font06); font-weight: 700; margin-bottom: 5px;}
+.itemBox.rank .itemText strong{font-size: var(--font01); font-weight: 700; margin-bottom: 17px;}
+.itemBox.rank .itemText span{font-size: var(--font06); font-weight: 500; display: flex; align-items: center;}
+.itemBox.rank .itemText span::before{content: ''; width: 16px; height: 16px; background-repeat: no-repeat; background-position: center; background-size: cover; margin-right: 4px;}
+.itemBox.rank .itemText span.taik::before{background-image: url('../images/icon-taik.png');}
+.itemBox.rank .itemText span.shop::before{background-image: url('../images/icon-shop.png');}
+.itemBox.rank .itemText span.interest::before{background-image: url('../images/icon-interest.png');}
 .itemBox.price .imgBox{height: 210px; margin-bottom: 12px;}
 .itemBox.price .itemText{text-align: center; font-size: 16px; line-height: 20px;}
 .itemBox.price .itemText p{margin-bottom: 4px;}
 .itemBox.price .itemText strong{font-weight: 700;}
 /* 북마크 */
-.itemBox .imgBox{height: var(--itemImgHieght01);}
 .itemBox .imgBox button{position: absolute; right: 20px; top: 18px; text-indent: inherit; width: 30px; height: 30px; background: url('../images/icon-bookmark-white.png') no-repeat center / cover;}
+.itemBox.rank .imgBox button{top: 20px; width: 44px; height: 44px; background: url('../images/icon-bookmark-border.png') no-repeat center / cover;}
 
 .bestList :is(.swiper-slide){counter-increment: bestItem;}
 .bestList :is(.swiper-slide) .itemText{margin-top: 16px; padding: 5px 0 12px 64px; position: relative;}
@@ -69,7 +80,6 @@ mark:not([class]){color: var(--colorPoint);}
 .bestList :is(.swiper-slide) .itemText mark{display: block; font-size: var(--font06); font-weight: 700; margin-bottom: 10px;}
 .bestList :is(.swiper-slide) .itemText strong{font-size: var(--font01); font-weight: 500;}
 .bestList :is(.swiper-slide) .itemText span{position: absolute; right: 0; top: 0; font-size: var(--font06); font-weight: 700; display: flex; align-items: center;}
-/* .bestList :is(.swiper-slide) .itemText span::before{content: ''; width: 16px; height: 16px; background: url('../images/'); margin-right: 4px;} */
 .bestList :is(.swiper-slide) .itemText span::after{content: ''; width: 12px; height: 12px; background: url('../images/icon-up.png') no-repeat center / cover; margin-left: 4px;}
 
 /* 체크박스 , 라디오 박스 */

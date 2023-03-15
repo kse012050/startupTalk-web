@@ -5,7 +5,7 @@ import ItemBest from './ItemBest';
 import ItemPrice from './ItemPrice';
 import ItemRank from './ItemRank';
 
-export default function Item({img , type , info , support , bookmark}) {
+export default function Item({img , type , info , support , bookmark , rankType}) {
     const bookMark = (e) =>{
         e.preventDefault();
         alert('북마크')
@@ -25,7 +25,7 @@ export default function Item({img , type , info , support , bookmark}) {
             </div>
             {!type && <ItemBasic info={info}/>}
             {type === 'best' && <ItemBest />}
-            {type === 'rank' && <ItemRank />}
+            {type === 'rank' && <ItemRank rankType={rankType}/>}
             {type === 'price' && <ItemPrice />}
         </Link>
     );
