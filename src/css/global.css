@@ -2,15 +2,15 @@
 .contentSize{max-width: var(--contentSize); width: calc(100% - 40px); margin: 0 auto;}
 
 /* 개별 페이지 컨텐츠 사이즈 */
-:is(.signPage , .receiptPage) [class$="Page"]{max-width: 390px; width: calc(100% - 40px); margin: 100px auto 0;}
-:is(.categoryPage , .rankingPage) [class$="Page"],
+:is(.signPage , .receiptPage) [class$="Page"],
+.marketingPage .counselPage{max-width: 390px; width: calc(100% - 40px); margin: 100px auto 0;}
+:is(.categoryPage , .rankingPage ) [class$="Page"],
 .marketingPage .mainPage{max-width: var(--contentSize); width: calc(100% - 40px); margin: 60px auto 0;}
 .detailPage > section{max-width: 720px; width: calc(100% - 40px); margin: 60px auto 0;}
 
 /* 서브 페이지 타이틀 공통 */
-:is(.signPage , .categoryPage , .rankingPage , .receiptPage) > section h2,
-.marketingPage .mainPage h2{font-size: var(--title01); font-weight: 700;}
-:is(.signPage , .receiptPage) > section h2 + form{margin-top: 50px;}
+:is(.signPage , .categoryPage , .rankingPage , .receiptPage , .marketingPage) > section h2{font-size: var(--title01); font-weight: 700;}
+:is(.signPage , .receiptPage , .marketingPage) > section h2 + form{margin-top: 50px;}
 :is(.categoryPage , .rankingPage) > section h2,
 .marketingPage .mainPage h2{margin-bottom: 30px;}
 
@@ -98,7 +98,7 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 .inputBox fieldset > ul > li label{display: block; font-weight: 500; line-height: 22px; color: #666; margin-bottom: 15px; white-space: pre-line;}
 .inputBox fieldset > ul > li :is(input , textarea){width: 100%; background-color: rgba(241, 244, 246, 0.5); padding: 20px; border: none; border-radius: 10px; box-sizing: border-box;}
 .inputBox fieldset > ul > li input{height: 54px;}
-.inputBox fieldset > ul > li textarea{height: 200px;}
+.inputBox fieldset > ul > li textarea{line-height: 20px; height: 200px;}
 .inputBox fieldset > ul > li :is(input , textarea)::placeholder,
 .searchBox input::placeholder{color: rgba(33, 33, 33, 0.3);}
 .inputBox fieldset > ul > li > *:not(:last-child){margin-bottom: 14px;}

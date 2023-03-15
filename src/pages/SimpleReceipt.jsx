@@ -3,7 +3,7 @@ import Email from '../components/input/Email';
 import Identification from '../components/input/Identification.';
 import InputLayout from '../components/input/InputLayout';
 import InputName from '../components/input/Name';
-import Text from '../components/input/Text';
+import InputText from '../components/input/Text';
 import Tab from '../components/Tab';
 
 export default function SimpleReceipt() {
@@ -26,18 +26,18 @@ export default function SimpleReceipt() {
             <InputLayout>
                 <ul>
                     <li>
-                        <InputName />
+                        <InputName labelText='성함'/>
                     </li>
                     <li>
                         <Identification />
                     </li>
                     <li>
-                        <Text labelText="창업상담 선호" placeholderText="지역명을 입력해주세요"/>
+                        <InputText labelText="창업상담 선호" placeholderText="지역명을 입력해주세요"/>
                     </li>
                     <li>
-                        <Text labelText="전화상담 선호" placeholderText="선호 시간대를 알려주세요">
+                        <InputText labelText="전화상담 선호" placeholderText="선호 시간대를 알려주세요">
                             <Tab tabList={tabList} content={[content ,setContent]}/>
-                        </Text>
+                        </InputText>
                     </li>
                     <li>
                         <Email />

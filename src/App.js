@@ -11,7 +11,7 @@ import CategoryMain from './pages/category/Main';
 import Show from './pages/category/Show';
 import MarketingMain from './pages/marketing/Main';
 import Detail from './pages/detail/Detail';
-import MarketingCounsel from './pages/detail/Counsel';
+import MarketingCounsel from './pages/marketing/Counsel';
 import SimpleReceipt from './pages/SimpleReceipt';
 
 const router = createBrowserRouter([

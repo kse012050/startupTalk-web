@@ -107,6 +107,10 @@
 .marketingPage .mainPage ul li a mark.blue{color: #51aad7;}
 .marketingPage .mainPage ul li a p{font-size: 30px; font-weight: 500; line-height: 36px; margin-top: 15px;}
 
+/* 마케팅 - 창업톡 상담 */
+.marketingPage .counselPage h2{text-align: center;}
+
+
 /* 상세 페이지 */
 .detailPage section figure{display: flex; justify-content: space-between; margin-bottom: 40px;}
 .detailPage section figure > .imgBox{width: 370px; height: 370px; border-radius: 20px; margin-right: 40px;}
