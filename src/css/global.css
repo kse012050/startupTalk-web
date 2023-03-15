@@ -151,8 +151,9 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 /* 게시판 */
 .boardBox{font-size: var(--font06); border-top: 1px solid var(--colorDarker);}
 .boardBox li{border-bottom: 1px solid #dedede;}
-.boardBox li:not([class]){height: 70px;}
-.boardBox li.titleArea{height: 55px;}
+.boardBox li > *:first-child{width: 100%; display: flex; align-items: center;}
+.boardBox li:not(.titleArea) > *:first-child{height: 70px;}
+.boardBox li.titleArea div{height: 55px;}
 
 /* 해더 */
 header{position: sticky; top: 0; font-size: var(--font04); background-color: white; box-shadow: inset 0 -1px 0 0 #dedede; z-index: 10;}

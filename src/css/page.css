@@ -160,6 +160,9 @@
 .receiptPage .mainPage fieldset > div label{font-size: var(--font06); font-weight: 600;}
 
 
+/* my 페이지 */
+.myPage h3{font-size: var(--title02); font-weight: 700; margin-bottom: 28px;}
+
 /* my 페이지 - 최상단 */
 .myPage .topArea{padding: 50px 0 40px; background-color: var(--colorPoint); color: white; font-weight: 700; margin-bottom: 60px;}
 .myPage .topArea div{position: relative;}
@@ -177,8 +180,17 @@
 .myPage .mainPage .tabBox{margin-bottom: 40px;}
 .myPage .mainPage > button{display: block; width: 205px; height: 60px; font-size: var(--font04); font-weight: 500; border: 1px solid #e6e6e6; border-radius: 30px; margin: 60px auto 0;}
 /* my 페이지 - 메인 - 상담 접수 내역 */
-.myPage .mainPage .boardBox li{display: flex; justify-content: space-between; align-items: center; text-align: center;}
-.myPage .mainPage .boardBox li *:nth-child(2n + 1){width: 150px;}
-.myPage .mainPage .boardBox li *:nth-child(2){flex: 1;}
-.myPage .mainPage .boardBox li strong{font-weight: 700;}
-.myPage .mainPage .boardBox li time{color: var(--colorGray);}
+.myPage .mainPage .boardBox li div{justify-content: space-between; text-align: center;}
+.myPage .mainPage .boardBox li div *:nth-child(2n + 1){width: 150px;}
+.myPage .mainPage .boardBox li div *:nth-child(2){flex: 1;}
+.myPage .mainPage .boardBox li div strong{font-weight: 700;}
+.myPage .mainPage .boardBox li div time{color: var(--colorGray);}
+
+/* my 페이지 - 공지사항 */
+.myPage .noticePage .boardBox li button{padding: 0 20px;}
+.myPage .noticePage .boardBox li button span{padding: 0 20px;}
+.myPage .noticePage .boardBox li button time{color: var(--colorGray); margin-left: auto;}
+.myPage .noticePage .boardBox li button::after{content: ''; width: 24px; height: 24px; background: url('../images/icon-more.png') no-repeat center / cover; margin-left: 40px;}
+.myPage .noticePage .boardBox li div{min-height: 320px; padding: 40px; border-top: 1px solid #dedede; box-sizing: border-box;}
+.myPage .noticePage .boardBox li.active button span{font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px;}
+.myPage .noticePage .boardBox li.active button::after{transform: rotate(180deg);}
