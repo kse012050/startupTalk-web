@@ -11,7 +11,7 @@ export default function Item({img , type , info , support , bookmark , rankType}
         alert('북마크')
     }
     return (
-        <Link to={'/ranking'} className={`itemBox ${!type ? 'basic' : type}`}>
+        <Link to={'/detail/test'} className={`itemBox ${!type ? 'basic' : type}`}>
             <div className='imgBox' style={{backgroundImage : `url(${img})`}}>
                 {support &&
                     <span>

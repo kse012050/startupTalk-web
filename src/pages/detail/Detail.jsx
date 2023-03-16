@@ -52,6 +52,8 @@ export default function Detail() {
                 </figcaption>
             </figure>
 
+            <mark className='support'><strong>창업비 지원</strong>현재 프로모션을 진행 중인 업체입니다.</mark>
+
             <Tab tabList={tabList} content={[content ,setContent]}/>
 
             {content === 'info' && <Info/>}

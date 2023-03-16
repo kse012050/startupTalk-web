@@ -1,12 +1,11 @@
 import React from 'react';
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Item from '../../components/item/Item';
 
 export default function Info() {
     return (
         <div className='infoArea'>
-            <mark className='support'><strong>창업비 지원</strong>현재 프로모션을 진행 중인 업체입니다.</mark>
-
             <div className='videoArea'>
                 <iframe title='동영상' src="https://www.youtube.com/embed/eIUIknTz3-8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
             </div>
@@ -46,14 +45,19 @@ export default function Info() {
                 <div className='sliderArea'>
                     <Swiper 
                         navigation={{
-                            prevEl : '.popularArea .sliderArea .navigation-circle .prev',
-                            nextEl : '.popularArea .sliderArea .navigation-circle .next',
+                            prevEl : '.interiorArea .sliderArea .navigation-circle .prev',
+                            nextEl : '.interiorArea .sliderArea .navigation-circle .next',
                         }}
+                        modules={[Navigation]}
                         className="interiorSwiper"
                     >
                         <SwiperSlide><div className="imgBox" style={{backgroundImage : `url(${require('../../images/item02.png')})`}}></div></SwiperSlide>
                         <SwiperSlide><div className="imgBox" style={{backgroundImage : `url(${require('../../images/item02.png')})`}}></div></SwiperSlide>
                         <SwiperSlide><div className="imgBox" style={{backgroundImage : `url(${require('../../images/item02.png')})`}}></div></SwiperSlide>
+                        <div className="navigation-circle">
+                            <div className='prev imgBox'></div>
+                            <div className='next imgBox'></div>
+                        </div>
                     </Swiper>
                 </div>
             </div>

@@ -22,7 +22,7 @@ export default function Email() {
                     </li>
                 </ul>
                 <div>
-                    <input type="checkbox" id='autoLogin'/><label htmlFor="autoLogin">로그인</label>
+                    <input type="checkbox" id='autoLogin'/><label htmlFor="autoLogin">자동 로그인</label>
                     <Link to={'/sign/find'}>ID / PW 찾기</Link>
                 </div>
                 <input type="submit" value={'로그인'} className={'btn-basic'} onClick={test}/>

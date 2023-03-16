@@ -33,7 +33,7 @@ mark:not([class]){color: var(--colorPoint);}
 [class|="btn"]{width: 100%; font-size: 18px; font-weight: 700; line-height: 58px; text-align: center; border-radius: 10px; box-sizing: border-box;}
 /* [class|="btn"]:nth-child(1 of [class|="btn"]){margin-top: 60px;} */
 .btn-basic{background-color: var(--colorPoint); color: white; border: none; /* margin-top: 60px; */}
-.btn-border{border: 1px solid var(--colorPoint); color: var(--colorPoint);}
+.btn-border{border: 1px solid rgba(12,191,93,0.3); color: var(--colorPoint);}
 .btn-color{background-color: #e6f8ed; color: var(--colorPoint);}
 [class|="btn"] + [class|="btn"]{margin-top: 16px;}
 

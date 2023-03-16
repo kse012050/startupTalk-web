@@ -16,11 +16,11 @@ export default function Counsel() {
                         </tr>
                         <tr>
                             <th>교육비</th>
-                            <td>1000만원</td>
+                            <td className='exemption'><s>1000만원</s></td>
                         </tr>
                         <tr>
                             <th>가맹비</th>
-                            <td>1000만원</td>
+                            <td className='exemption'><s>1000만원</s></td>
                         </tr>
                         <tr>
                             <th>인테리어</th>
@@ -53,7 +53,7 @@ export default function Counsel() {
                         </tr>
                         <tr>
                             <th>광고/판촉비</th>
-                            <td>1000만원</td>
+                            <td className='exemption'><s>1000만원</s></td>
                         </tr>
                     </tbody>
                 </table>
