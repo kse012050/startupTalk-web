@@ -41,11 +41,10 @@ mark:not([class]){color: var(--colorPoint);}
 .itemBox{display: block;}
 .itemBox:not(.rank) .imgBox{width: 100%; border-radius: 20px;}
 .itemBox.basic .imgBox{height: var(--itemImgHieght02);}
-.itemBox.basic .imgBox:has(ul , button){position: relative;}
-.itemBox.basic .imgBox ul{position: absolute; left: 0; bottom: -8px; text-indent: 0; display: flex;}
-.itemBox.basic .imgBox ul li{font-size: 13px; font-weight: 500; color: white; padding: 5px 10px;}
-.itemBox.basic .imgBox ul li:nth-child(1){background-color: var(--colorPoint);}
-.itemBox.basic .imgBox ul li:nth-child(2){background-color: #909090;}
+.itemBox.basic .imgBox:has(span , button){position: relative;}
+.itemBox.basic .imgBox span{position: absolute; left: 0; bottom: -8px; text-indent: 0; display: flex;}
+.itemBox.basic .imgBox span{font-size: 13px; font-weight: 500; color: white; padding: 5px 10px;}
+.itemBox.basic .imgBox span{background-color: var(--colorPoint);}
 .itemBox.basic .itemText{font-weight: 500; margin-top: 20px;}
 .itemBox.basic .itemText strong{display: block; font-size: var(--font01);  margin-bottom: 10px;}
 .itemBox.basic .itemText div{display: flex; align-items: center;}
@@ -57,6 +56,7 @@ mark:not([class]){color: var(--colorPoint);}
 .itemBox.basic .itemText div span:nth-child(2)::after{content: '억원';}
 .itemBox.basic .itemText div span:nth-child(3)::before{background-image: url('../images/icon-taik-gray.png');}
 .itemBox.basic .itemText div span:nth-child(3)::after{content: '천';}
+.itemBox.best .imgBox{height: var(--itemImgHieght01);}
 .itemBox.rank{display: flex; position: relative; background-color: white; border-radius: 18px;  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1); overflow: hidden;}
 .itemBox.rank .imgBox{width: 138px; height: 138px;}
 .itemBox.rank .itemText{flex: 1; padding: 30px; display: flex; flex-direction: column; justify-content: center;}
@@ -180,3 +180,36 @@ footer div img{width: 80px;}
 footer div ul{display: flex; align-items: center; gap: 30px;}
 footer div ul li{font-size: var(--font06);}
 footer div ul li:last-child{font-weight: 700;}
+
+
+/* .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+  }
+  
+  .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  } */
+
+  

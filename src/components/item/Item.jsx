@@ -14,10 +14,9 @@ export default function Item({img , type , info , support , bookmark , rankType}
         <Link to={'/ranking'} className={`itemBox ${!type ? 'basic' : type}`}>
             <div className='imgBox' style={{backgroundImage : `url(${img})`}}>
                 {support &&
-                    <ul>
-                        <li>창업비 지원</li>
-                        <li>프로모션</li>
-                    </ul>
+                    <span>
+                        창업비 지원
+                    </span>
                 }
                 {!!bookmark &&
                     <button onClick={bookMark}>북마크</button>
