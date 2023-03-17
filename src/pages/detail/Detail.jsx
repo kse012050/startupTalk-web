@@ -1,11 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import ScrollFixed from '../../components/ScrollFixed';
 import Tab from '../../components/Tab';
 import Counsel from './Counsel';
 import Info from './Info';
+// import * as Scroll from 'react-scroll';
+// import { Linka, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 
 export default function Detail() {
+    const [isScroll , setIsScroll] = useState(false)
     const [content , setContent] = useState('')
+    const scrollRef = useRef();
     const tabList = [{
             name : '브랜드 정보',
             path : 'info'
@@ -19,6 +25,16 @@ export default function Detail() {
         setContent(tabList[0].path)
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if(window.scrollY > (scrollRef.current.offsetTop - 86)){
+                setIsScroll(true)
+            }else{
+                setIsScroll(false)
+            }
+        });
+    }, []);
 
     return (
         <>
@@ -45,19 +61,25 @@ export default function Detail() {
                             면적 기준
                         </li>
                     </ul>
-                    <div>
-                        <Link to={'/receipt'} className='btn-basic'>간편 상담 접수</Link>
-                        <button>북마크</button>
-                    </div>
+                    <ScrollFixed isScroll={isScroll} type="bottom">
+                        <div className='receiptArea'>
+                            <Link to={'/receipt'} className='btn-basic'>간편 상담 접수</Link>
+                            <button>관심저장</button>
+                        </div>
+                    </ScrollFixed>
                 </figcaption>
             </figure>
 
             <mark className='support'><strong>창업비 지원</strong>현재 프로모션을 진행 중인 업체입니다.</mark>
 
-            <Tab tabList={tabList} content={[content ,setContent]}/>
+            <ScrollFixed isScroll={isScroll} type="top">
+                <Tab tabList={tabList} content={[content ,setContent]}/>
+            </ScrollFixed>
 
-            {content === 'info' && <Info/>}
-            {content === 'counsel' && <Counsel />}
+            <div ref={scrollRef} className="contentArea">
+                {content === 'info' && <Info/>}
+                {content === 'counsel' && <Counsel />}
+            </div>
         </>
     );
 }

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function DropBox({type , first , list}) {
     const [isDrop , setIsDrop] = useState(false)
-    const [current , setCurrent] = useState('전체 카테고리')
+    // const [current , setCurrent] = useState('전체 카테고리')
 
     const dropEvent = () =>{
         setIsDrop((test)=>{

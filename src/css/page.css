@@ -113,13 +113,23 @@
 .detailPage section figure figcaption ul li{flex: 1; font-size: 13px; font-weight: 400; color: var(--colorGray); padding: 2px 0;}
 .detailPage section figure figcaption ul li:not(:last-child){border-right: 1px solid #ececec;}
 .detailPage section figure figcaption ul li strong{display: block; font-size: var(--font02); font-weight: 600; line-height: 23px; color: var(--colorBasic); margin-bottom: 6px;}
-.detailPage section figure figcaption div{margin-top: auto; display: flex;}
-.detailPage section figure figcaption div button{flex-shrink: 0; width: 56px; height: 56px; background:#e6f8ee url('../images/icon-bookmark-green.png') no-repeat center / 24px; border: 1.2px solid #c5f0d8; border-radius: 10px; text-indent: -9999px; margin-left: 8px;}
+.detailPage section figure figcaption > div{margin-top: auto;}
+.detailPage section figure figcaption .receiptArea{display: flex;}
+.detailPage section figure figcaption .receiptArea button{flex-shrink: 0; background:#e6f8ee; border: 1.2px solid #c5f0d8; border-radius: 10px; text-indent: -9999px; margin-left: 8px; display: flex; align-items: center; justify-content: center;}
+.detailPage section figure figcaption .receiptArea button::before{content: ''; width: 56px; height: 56px; background:#e6f8ee url('../images/icon-bookmark-green.png') no-repeat center / 24px;}
 .detailPage section mark.support{display: flex; align-items: center; font-size: var(--font06); font-weight: 700; color: var(--colorPoint); background-color: rgba(12, 191, 93, 0.1); border-radius: 14px 0; margin-bottom: 30px;}
 .detailPage section mark.support strong{padding: 10px 30px; color: white; background-color: var(--colorPoint); border-radius: 14px 0; margin-right: 30px;}
 .detailPage section .tabBox{margin-bottom: 50px;}
-.detailPage section > div > div:not(:last-child){margin-bottom: 70px;}
+.detailPage section > div > div > div:not(:last-child){margin-bottom: 70px;}
 .detailPage section > div > div h3{font-size: var(--font01); font-weight: 700; margin-bottom: 14px;}
+
+.detailPage section [class|="scrollFixed"].active{position: fixed; left: 0; width: 100%; padding: 20px 0; background-color: white; z-index: 10;}
+.detailPage section [class|="scrollFixed"].active > div{max-width: var(--contentSize01); margin: 0 auto;}
+.detailPage section .scrollFixed-top.active{top: 0;  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);}
+.detailPage section .scrollFixed-top.active .tabBox{margin: 0;}
+.detailPage section .scrollFixed-bottom.active{bottom: 0; box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.1);}
+.detailPage section .scrollFixed-bottom.active button{width: 226px; text-indent: 0; font-size: var(--font03); font-weight: 700; color: var(--colorPoint); display: flex; justify-content: center; align-items: center; background-image: none;}
+.detailPage section .scrollFixed-bottom.active button::before{content: ''; width: 24px; height: 24px; margin-right: 4px;}
 
 /* 상세 페이지 - 브랜드 정보 */
 .detailPage section .infoArea .videoArea iframe{width: 100%; height: 340px; border-radius: 12px;}
