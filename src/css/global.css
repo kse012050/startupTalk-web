@@ -216,6 +216,28 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 .appLink a{width: 248px; border-radius: 28px;}
 
 
+/* 팝업 */
+[class|='popupBox']{position: fixed; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: rgba(0, 0, 0, 0.5); z-index: 100;}
+[class|='popupBox'] > div{background-color: white; width: var(--mobileWidth); border-radius: 8px;}
+.popupBox-termsOfUse > div{max-width: 588px; height: 72%; padding: 40px 50px; box-sizing: border-box; display: flex; flex-direction: column; position: relative;}
+.popupBox-termsOfUse > div strong{font-size: var(--title02); font-weight: 700; margin-bottom: 40px;}
+.popupBox-termsOfUse > div div{flex: 1; overflow: auto;}
+.popupBox-termsOfUse > div div::-webkit-scrollbar{background-color: transparent; width: 6px; border-radius: 4px;}
+.popupBox-termsOfUse > div div::-webkit-scrollbar-thumb{background-color: #e5e5e5;}
+.popupBox-termsOfUse > div div ol li{font-size: var(--font06); line-height: 24px;}
+.popupBox-termsOfUse > div div ol li b{display: block; font-weight: 700; margin-bottom: 30px;}
+.popupBox-termsOfUse > div button{position: absolute; right: 30px; top: 30px; width: 18px; height: 18px; background: url('../images/icon-close.png') no-repeat center / cover; text-indent: -9999px;}
+:is(.popupBox-confime , .popupBox-find) > div{width: 380px; text-align: center; overflow: hidden;}
+:is(.popupBox-confime , .popupBox-find) > div .textArea{padding: 50px 30px; font-size: var(--font03);}
+:is(.popupBox-confime , .popupBox-find) > div .textArea b{display: block; font-weight: 700; margin-bottom: 30px;}
+:is(.popupBox-confime , .popupBox-find) > div .textArea b + p{font-size: var(--font04);}
+:is(.popupBox-confime , .popupBox-find) > div .textArea p{line-height: 24px;}
+:is(.popupBox-confime , .popupBox-find) > div .btnArea{display: flex; font-size: var(--font06); font-weight: 700;}
+:is(.popupBox-confime , .popupBox-find) > div .btnArea *{flex: 1; height: 54px;}
+:is(.popupBox-confime , .popupBox-find) > div .btnArea button{color: white; background-color: var(--colorPoint);}
+:is(.popupBox-confime , .popupBox-find) > div .btnArea a{display: flex; justify-content: center; align-items: center; color: var(--colorPoint); background-color: #e6f8ee;}
+
+
 /* 해더 */
 header{position: sticky; top: 0; font-size: var(--font04); background-color: white; box-shadow: inset 0 -1px 0 0 #dedede; z-index: 10;}
 header > div , 

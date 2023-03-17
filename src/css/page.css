@@ -51,8 +51,8 @@
 .signPage > .mainPage ul li:nth-child(3) a::before{background-image: url('../images/icon-apple.png');}
 .signPage > .mainPage ul li:nth-child(4) a::before{background-image: url('../images/icon-email.png');}
 .signPage > .emailPage fieldset > div{display: flex; justify-content: space-between; font-weight: 600; margin-top: 16px;}
-.signPage > .signUpPage fieldset > div{color: var(--colorGray); font-weight: 600; line-height: 26px; text-align: center; margin-top: 30px;}
-.signPage > .signUpPage fieldset > div label mark{text-decoration: underline; text-decoration-thickness: 2px;}
+.signPage > .signUpPage fieldset .agreeArea{color: var(--colorGray); font-weight: 600; line-height: 26px; text-align: center; margin-top: 30px;}
+.signPage > .signUpPage fieldset .agreeArea label mark{text-decoration: underline; text-decoration-thickness: 2px;}
 .signPage > .findPage .tabBox{margin: 50px 0;}
 
 
