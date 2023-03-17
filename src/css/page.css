@@ -208,7 +208,7 @@
 .myPage :is(.noticePage , .servicePage) .boardBox li.active button::after{transform: rotate(180deg);}
 
 /* my 페이지 - 계정정보 */
-.myPage .accountPage .inputBox{max-width: var(--contentSize02);}
+.myPage .accountPage .inputBox{max-width: var(--contentSize02); margin: 0 auto;}
 .myPage .accountPage .inputBox fieldset > .kakao{font-size: var(--font06); font-weight: 700; display: flex; align-items: center; margin-top: 30px;}
 .myPage .accountPage .inputBox fieldset > .kakao::before{content: ''; width: 20px; height: 20px; background: url('../images/icon-kakao2.png') no-repeat center / cover; margin-right: 6px;}
 

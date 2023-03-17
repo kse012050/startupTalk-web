@@ -3,7 +3,8 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
     let location = useLocation();
-    location = location.pathname.substring(1).split('/')[0];
+    location = location.pathname;
+    let pageName = location.substring(1).split('/');
     return (
         <header>
             <div className='contentSize'>
@@ -14,10 +15,13 @@ export default function Navbar() {
                         <li><NavLink to='/ranking'>랭킹</NavLink></li>
                         <li><NavLink to='/marketing'>마케팅</NavLink></li>
                     </ul>
-                    {location === 'sign' ||
+                    {pageName[0] === 'sign' ||
                         <div>
                             <NavLink to='/category' className='icon-search'>검색</NavLink>
-                            <Link to='/sign'>로그인</Link>
+                            {pageName[0] === 'my' ? 
+                                <Link to='/my'>MY</Link> :
+                                <Link to='/sign'>로그인</Link>
+                            }
                         </div>
                     }
                 </nav>
