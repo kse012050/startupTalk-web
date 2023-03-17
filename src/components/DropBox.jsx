@@ -13,18 +13,18 @@ export default function DropBox({type , first , list}) {
 
     const listClick = (e , text) =>{
         e.preventDefault();
-        console.log(text.includes('전체'));
         text.includes('전체') && (text = '전체보기')
         first[1](text);
         dropEvent();
     }
-
+    console.log(first[0]);
+    console.log(list)
     return (
         <div className={`dropBox-${type}`}>
             <button onClick={dropEvent}>{first[0]}</button>
             {isDrop &&
                 <ul>
-                    {list.map((l , i)=> <li key={i}><Link onClick={(e)=>listClick(e ,l)}>{l}</Link></li>)}
+                    {list.map((l , i)=> <li key={i}><Link onClick={(e)=>listClick(e ,l)} className={first[0] === l ? 'active' : null}>{l}</Link></li>)}
                 </ul>
             }
         </div>

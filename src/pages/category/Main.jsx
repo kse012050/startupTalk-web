@@ -7,6 +7,7 @@ export default function Main() {
     const test = [
         {
             title : '음식/주식',
+            type : 'food',
             typeList : [
                 {
                     title : '음악/주점전체',
@@ -52,6 +53,7 @@ export default function Main() {
         },
         {
             title : '카페/디저트',
+            type : 'cafe',
             typeList : [
                 {
                     title : '카페/디저트 전체',
@@ -71,6 +73,7 @@ export default function Main() {
         },
         {
             title : '서비스',
+            type : 'service',
             typeList : [
                 {
                     title : '서비스 전체',
@@ -93,7 +96,7 @@ export default function Main() {
         <>
             <h2>
                 카테고리
-                <Link to={'/category/show'}>전체 카테고리 보기</Link>
+                <Link to={'/category/show'}>ALL</Link>
             </h2>
             <Search />
             {test.map((c)=><CategoryType info={c} key={c.title} title={true}/>)}

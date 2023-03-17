@@ -8,7 +8,7 @@ export default function CategoryType({info , title}) {
             <ul>
                 {info.typeList.map((c)=>
                     <li key={c.title}>
-                        <Link to={'/category/show'}>{c.title}
+                        <Link to={`/category/show/${info.type}`}>{c.title}
                             {!!c.count && <mark>{c.count}</mark>}
                         </Link>
                     </li>

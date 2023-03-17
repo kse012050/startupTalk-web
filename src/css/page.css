@@ -1,32 +1,18 @@
 
 /* 메인 페이지 */
-.homePage section > .contentSize{margin-top: 70px;}
 .homePage section > .contentSize > div:not(:last-child){margin-bottom: 60px;}
 .homePage section > .contentSize > div h3{font-size: var(--title02); font-weight: 700; margin-bottom: 20px;}
 .homePage section > .contentSize .sliderArea{position: relative;}
 
-/* 메인 페이지 - 슬라이더 공통 */
-[class|="navigation"]{position: absolute; left: 50%; max-width: var(--contentSize); width: 100%; height: 100%; display: flex; justify-content: space-between; z-index: 1; pointer-events: none;}
-[class|="navigation"] :is(.prev , .next){width: var(--iconSize02); height: 100%; display: flex; align-items: center;}
-[class|="navigation"] :is(.prev , .next)::after{content: ''; width: 100%; height: var(--iconSize02); background-repeat: no-repeat; background-position: center; background-size: cover; cursor: pointer; pointer-events: all;}
-.navigation-basic , .popularArea .navigation-circle{top: 50%; transform: translate(-50% , -50%);}
-.itemSwiper + .navigation-circle{top: 0; transform: translateX(-50%);}
-.itemArea .itemSwiper + .navigation-circle{height: var(--itemImgHieght02);}
-.bastArea .itemSwiper + .navigation-circle{height: var(--itemImgHieght01);}
-.navigation-basic .prev::after{background-image: url('../images/icon-prev-basic.png');}
-.navigation-basic .next::after{background-image: url('../images/icon-next-basic.png');}
-.navigation-circle :is(.prev , .next).swiper-button-disabled{opacity: 0; pointer-events: none;}
-.navigation-circle .prev::after{background-image: url('../images/icon-prev-circle.png'); transform: translateX(-50%);}
-.navigation-circle .next::after{background-image: url('../images/icon-next-circle.png'); transform: translateX(50%);}
-
 /* 메인 페이지 - 메인 슬라이더 */
 .homePage .mainSwiper{height: 410px; color: white;}
 .homePage .mainSwiper .swiper-slide{background-position: center; background-size: auto 100%;}
-.homePage .mainSwiper .swiper-slide div{max-width: 600px; width: calc(100% - 40px); margin: 0 auto; padding: 60px;}
+.homePage .mainSwiper .swiper-slide div{max-width: var(--mainSliderWidth); width: calc(100% - 40px); margin: 0 auto; padding: 60px;}
 .homePage .mainSwiper .swiper-slide div strong{display: block; font-size: var(--title01); font-weight: 700; line-height: 60px; margin-bottom: 10px;}
 .homePage .mainSwiper .swiper-slide div a{font-size: var(--font02); font-weight: 500;}
+
 /* 메인 페이지 - 메인 슬라이더 - 오토 플레이 */
-.homePage .mainSwiper .playArea{position: absolute; left: 50%; top: 0; transform: translateX(-50%); max-width: 600px; width: calc(100% - 40px); width: 100%; height: 100%; display: flex; align-items: flex-end; z-index: 1; pointer-events: none; padding-bottom: 72.5px; box-sizing: border-box;}
+.homePage .mainSwiper .playArea{position: absolute; left: 50%; top: 0; transform: translateX(-50%); max-width: var(--mainSliderWidth); width: calc(100% - 40px); width: 100%; height: 100%; display: flex; align-items: flex-end; z-index: 1; pointer-events: none; padding-bottom: 72.5px; box-sizing: border-box;}
 .homePage .mainSwiper .playArea > div{display: flex; align-items: center;}
 .homePage .mainSwiper .playArea > div .progress{display: block; width: 60px; height: 1px; /* background-color: red; */ position: relative;}
 .homePage .mainSwiper .playArea > div .progress span{position: absolute; left: 0; top: 0; width: 0; height: 100%; background-color: white;}
@@ -46,10 +32,6 @@
 .popularArea .sliderArea .navigation-circle div::before{content: ''; position: absolute; left: 0; top: 0; width: 50px; height: 100%;  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), #fff); }
 .popularArea .sliderArea .navigation-circle .prev::before{transform: rotate(180deg);}
 
-/* 메인 페이지 - 추천 슬라이더 */
-/* .itemArea .sliderArea .itemSwiper .swiper-wrapper{}
-.itemArea .sliderArea .itemSwiper .swiper-slide:not(:last-child){} */
-
 /* 메인 페이지 - 마케팅 */
 .homePage .marketingArea div{display: flex; gap: 20px;}
 .homePage .marketingArea div a img{width: 100%;}
@@ -58,6 +40,7 @@
 /* 로그인 페이지 */
 .signPage > section{text-align: center;}
 .signPage > section h2 + p{font-size: var(--font03); font-weight: 400; line-height: 26px; margin: 30px 0 50px;}
+
 /* 로그인 페이지 - 로그인 방식 선택 */
 .signPage > .mainPage ul li{border: 1px solid #e6e6e6; border-radius: 10px;}
 .signPage > .mainPage ul li:not(:last-child){margin-bottom: 16px;}
@@ -101,7 +84,6 @@
 .rankingPage .mainPage ol li:not(:nth-child(2n)){margin-right: 3.38%;}
 .rankingPage .mainPage ol li:nth-last-child(n + 3){margin-bottom: 30px;}
 .rankingPage .mainPage ol li a::before{content: counter(rankItem); position: absolute; left: 0; top: 0; width: 42px; height: 42px; font-size: var(--font06); color: white; font-weight: 500; display: flex; justify-content: center; align-items: center; background-color: var(--colorPoint); border-radius: 20px 0;}
-
 
 
 /* 마케팅 - 메인 */
@@ -153,6 +135,7 @@
 .detailPage section .infoArea .interiorArea .navigation-circle{top: 0; transform: translate(-50%);}
 .detailPage section .infoArea .interiorArea .navigation-circle .prev::after{transform: translateX(20px);}
 .detailPage section .infoArea .interiorArea .navigation-circle .next::after{transform: translateX(-20px);}
+
 /* 상세 페이지 - 창업개요 */
 .detailPage section .counselArea div small{font-size: var(--font06); font-weight: 400; color: var(--colorGray);}
 .detailPage section .counselArea div h3:has(small){display: flex; justify-content: space-between; align-items: flex-end;}
@@ -195,8 +178,10 @@
 
 /* my 페이지 - 메인 */
 .myPage .mainPage .tabBox{margin-bottom: 40px;}
+
 /* my 페이지 - 메인 - 관심 아이템 */
 .myPage .mainPage > button{display: block; width: 205px; height: 60px; font-size: var(--font04); font-weight: 500; border: 1px solid #e6e6e6; border-radius: 30px; margin: 60px auto 0;}
+
 /* my 페이지 - 메인 - 상담 접수 내역 */
 .myPage .mainPage .boardBox li div{justify-content: space-between; text-align: center;}
 .myPage .mainPage .boardBox li div *:nth-child(2n + 1){width: 150px;}
@@ -223,24 +208,17 @@
 .myPage :is(.noticePage , .servicePage) .boardBox li.active button::after{transform: rotate(180deg);}
 
 /* my 페이지 - 계정정보 */
+.myPage .accountPage .inputBox{max-width: var(--contentSize02);}
 .myPage .accountPage .inputBox fieldset > .kakao{font-size: var(--font06); font-weight: 700; display: flex; align-items: center; margin-top: 30px;}
 .myPage .accountPage .inputBox fieldset > .kakao::before{content: ''; width: 20px; height: 20px; background: url('../images/icon-kakao2.png') no-repeat center / cover; margin-right: 6px;}
 
 /* my 페이지 - 서비스 */
 .myPage .servicePage .tabBox{margin-bottom: 50px;}
+
 /* my 페이지 - 서비스 - 문의하기 */
 .myPage .servicePage .inputBox fieldset div{display: flex; margin-top: 30px;}
 .myPage .servicePage .inputBox fieldset div span{width: 100px; height: 100px; background: url('../images/icon-camera.png') no-repeat center / 30px; border: 1px solid #e6e6e6; border-radius: 10px; box-sizing: border-box;}
 .myPage .servicePage .inputBox fieldset div span:not(:last-child){margin-right: 15px;}
 .myPage .servicePage .inputBox fieldset p{font-size: var(--font06); color: var(--colorGray); display: flex; align-items: center; margin-top: 14px;}
 .myPage .servicePage .inputBox fieldset p::before{content: ''; width: 18px; height: 18px; background: url('../images/icon-notice.png') no-repeat center / cover; margin-right: 6px;}
-.myPage .servicePage .inputBox fieldset input[type="submit"]{display: block; max-width: 390px; margin-right: auto; margin-left: auto;}
-
-/* my 페이지 - 서비스 - 문의 내역 */
-/* .myPage .servicePage .boardBox li button{padding: 0 20px;}
-.myPage .servicePage .boardBox li button span{padding: 0 20px;}
-.myPage .servicePage .boardBox li button time{color: var(--colorGray); margin-left: auto;}
-.myPage .servicePage .boardBox li button::after{content: ''; width: 24px; height: 24px; background: url('../images/icon-more.png') no-repeat center / cover; margin-left: 40px;}
-.myPage .servicePage .boardBox li div{min-height: 320px; padding: 40px; border-top: 1px solid #dedede; box-sizing: border-box;}
-.myPage .servicePage .boardBox li.active button span{font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px;}
-.myPage .servicePage .boardBox li.active button::after{transform: rotate(180deg);} */
+.myPage .servicePage .inputBox fieldset input[type="submit"]{display: block; max-width: var(--contentSize02); margin-right: auto; margin-left: auto;}

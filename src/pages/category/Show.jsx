@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import CategoryType from '../../components/CategoryType';
 import DropBox from '../../components/DropBox';
 import Item from '../../components/item/Item';
 import Horizontal4 from '../../components/layout/Horizontal4';
 
 export default function Show() {
-    const [firstType , setFirstType] = useState('전체 카테고리')
+    const testPage = useParams()
+    const [firstType , setFirstType] = useState(()=>{
+        let pageName = ''
+        !testPage.test && (pageName = '전체');
+        testPage.test === 'food' && (pageName = '음식/주점');
+        testPage.test === 'cafe' && (pageName = '카페/디저트');
+        testPage.test === 'service' && (pageName = '서비스');
+        return pageName;
+    })
     const type = [
         '전체보기' , '음식/주점' , '카페/디저트' , '서비스'
     ]

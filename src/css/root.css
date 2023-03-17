@@ -1,5 +1,9 @@
 :root{
     --contentSize : 1140px;
+    --contentSize01 : 720px;
+    --contentSize02 : 390px;
+    --mobileWidth : calc(100% - 40px);
+    --mainSliderWidth : 600px;
     /* 타이틀 */
     --title01 : 42px;
     --title02 : 28px;

@@ -1,20 +1,26 @@
 import React from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import Footer from '../components/Footer';
+import HomeSlider from '../components/HomeSlider';
 import Navbar from '../components/Navbar';
-import Top from './my/Top';
+import MyAppLink from './my/AppLink';
+import MyTop from './my/Top';
 
 export default function Root() {
     let location = useLocation();
-    location = location.pathname.substring(1).split('/');
-    location[0] = location[0] ? location[0] : 'home'
+    location = location.pathname;
+    let pageName = location.substring(1).split('/');
+    pageName[0] = pageName[0] ? pageName[0] : 'home';
+    console.log(location);
     return (
-        <div className={location[0] + 'Page'}>
+        <div className={pageName[0] + 'Page'}>
             <Navbar />
-            {location[0] === 'my' && <Top />}
-            <section className={location[1] ? location[1] + 'Page' : 'mainPage'}>
+            {pageName[0] === 'home' && <HomeSlider />}
+            {pageName[0] === 'my' && <MyTop />}
+            <section className={pageName[1] ? pageName[1] + 'Page' : 'mainPage'}>
                 <Outlet/>
             </section>
+            {location === '/my' && <MyAppLink />}
             <Footer />
         </div>
     );

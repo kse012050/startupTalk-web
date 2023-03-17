@@ -32,6 +32,7 @@ const router = createBrowserRouter([
       { path : '/ranking' , element : <Ranking />},
       { path : '/category' , element : <CategoryMain />},
       { path : '/category/show' , element : <Show />},
+      { path : '/category/show/:test' , element : <Show />},
       { path : '/marketing' , element : <MarketingMain />},
       { path : '/detail/:test' , element : <Detail />},
       { path : '/receipt' , element : <SimpleReceipt />},
