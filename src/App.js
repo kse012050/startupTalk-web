@@ -10,9 +10,10 @@ import Find from './pages/sign/Find';
 import CategoryMain from './pages/category/Main';
 import Show from './pages/category/Show';
 import MarketingMain from './pages/marketing/Main';
-import Detail from './pages/detail/Detail';
+import MarketingDetail from './pages/marketing/Detail';
 import MarketingCounsel from './pages/marketing/Counsel';
 import SimpleReceipt from './pages/SimpleReceipt';
+import Detail from './pages/detail/Detail';
 import MyMain from './pages/my/Main';
 import MyNotice from './pages/my/Notice';
 import MyAccount from './pages/my/Account';
@@ -34,9 +35,10 @@ const router = createBrowserRouter([
       { path : '/category/show' , element : <Show />},
       { path : '/category/show/:test' , element : <Show />},
       { path : '/marketing' , element : <MarketingMain />},
+      { path : '/marketing/detail' , element : <MarketingDetail />},
+      { path : '/marketing/counsel' , element : <MarketingCounsel />},
       { path : '/detail/:test' , element : <Detail />},
       { path : '/receipt' , element : <SimpleReceipt />},
-      { path : '/marketing/counsel' , element : <MarketingCounsel />},
       { path : '/my' , element : <MyMain />},
       { path : '/my/notice' , element : <MyNotice />},
       { path : '/my/account' , element : <MyAccount />},

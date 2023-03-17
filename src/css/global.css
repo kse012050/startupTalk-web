@@ -12,7 +12,8 @@
 :is(.homePage , .categoryPage , .rankingPage , .myPage ) [class$="Page"],
 .marketingPage .mainPage{max-width: var(--contentSize);}
 /* width 720 - 상세 페이지*/
-.detailPage > section {max-width: var(--contentSize01);}
+.detailPage > section,
+.marketingPage .detailPage {max-width: var(--contentSize01);}
 /* width 390 - 로그인 페이지 , 마케팅 상담 페이지 */
 :is(.signPage , .receiptPage) [class$="Page"],
 .marketingPage .counselPage{max-width: var(--contentSize02);}
@@ -25,7 +26,7 @@
 .homePage [class$="Page"]{margin-top: 70px;}
 /* 카테고리 , 랭킹  , 마이 , 상세 , 마케팅 - 메인 페이지*/
 :is(.categoryPage , .rankingPage , .myPage , .detailPage ) > section, 
-.marketingPage .mainPage{margin-top: 60px;}
+.marketingPage :is(.mainPage , .detailPage){margin-top: 60px;}
 
 /* 서브 페이지 타이틀 공통 */
 :is(.signPage , .categoryPage , .rankingPage , .receiptPage , .marketingPage) > section h2{font-size: var(--title01); font-weight: 700;}
@@ -57,6 +58,7 @@ mark:not([class]){color: var(--colorPoint);}
 .btn-basic{background-color: var(--colorPoint); color: white; border: none; /* margin-top: 60px; */}
 .btn-border{border: 1px solid rgba(12,191,93,0.3); color: var(--colorPoint);}
 .btn-color{background-color: #e6f8ed; color: var(--colorPoint);}
+.btn-white{background-color: white; color: var(--colorPoint);}
 [class|="btn"] + [class|="btn"]{margin-top: 16px;}
 
 

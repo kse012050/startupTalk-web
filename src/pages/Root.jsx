@@ -16,7 +16,7 @@ export default function Root() {
             <Navbar />
             {pageName[0] === 'home' && <HomeSlider />}
             {pageName[0] === 'my' && <MyTop />}
-            <section className={pageName[1] ? pageName[1] + 'Page' : 'mainPage'}>
+            <section className={(pageName[0] !== 'detail' && pageName[1]) ? pageName[1] + 'Page' : 'mainPage'}>
                 <Outlet/>
             </section>
             {location === '/my' && <AppLink />}

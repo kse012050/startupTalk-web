@@ -96,6 +96,14 @@
 .marketingPage .mainPage ul li a mark.blue{color: #51aad7;}
 .marketingPage .mainPage ul li a p{font-size: 30px; font-weight: 500; line-height: 36px; margin-top: 15px;}
 
+/* 마케팅 - 상세 페이지 */
+.marketingPage .detailPage .videoArea{margin-bottom: 60px;}
+.marketingPage .detailPage .fixedArea{position: fixed; left: 0; bottom: 0; width: 100%; background-color: var(--colorPoint);}
+.marketingPage .detailPage .fixedArea div{height: 96px; display: flex; justify-content: space-between; align-items: center;}
+.marketingPage .detailPage .fixedArea div p{font-size: 22px; font-weight: 700; color: white; display: flex; align-items: center;}
+.marketingPage .detailPage .fixedArea div p::before{content: ''; width: 28px; height: 28px; background: url('../images/icon-bell.png') no-repeat center / cover; margin-right: 12px;}
+.marketingPage .detailPage .fixedArea div a{max-width: 262px;}
+
 /* 마케팅 - 창업톡 상담 */
 .marketingPage .counselPage h2{text-align: center;}
 
@@ -132,10 +140,10 @@
 .detailPage section .scrollFixed-bottom.active button::before{content: ''; width: 24px; height: 24px; margin-right: 4px;}
 
 /* 상세 페이지 - 브랜드 정보 */
-.detailPage section .infoArea .videoArea iframe{width: 100%; height: 340px; border-radius: 12px;}
-.detailPage section .infoArea .detailArea div{height: 1000px; background-color: #f4f4f4; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 18%, #fff); display: flex; justify-content: center; align-items: center; font-size: var(--title01);}
-.detailPage section .infoArea .detailArea button{width: 100%; height: 60px; display: flex; justify-content: center; align-items: center; font-size: var(--font03); font-weight: 700; border: 1px solid #ccc; border-radius: 10px;}
-.detailPage section .infoArea .detailArea button::after{content: ''; width: 34px; height: 34px; background: url('../images/icon-category-more.png') no-repeat center / cover; margin-left: 2px;}
+.detailPage .videoArea iframe{width: 100%; height: 340px; border-radius: 12px;}
+.detailPage .detailArea div{height: 1000px; background-color: #f4f4f4; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 18%, #fff); display: flex; justify-content: center; align-items: center; font-size: var(--title01);}
+.detailPage .detailArea button{width: 100%; height: 60px; display: flex; justify-content: center; align-items: center; font-size: var(--font03); font-weight: 700; border: 1px solid #ccc; border-radius: 10px;}
+.detailPage .detailArea button::after{content: ''; width: 34px; height: 34px; background: url('../images/icon-category-more.png') no-repeat center / cover; margin-left: 2px;}
 .detailPage section .infoArea .menuArea .swiper-slide{width: 210px;}
 .detailPage section .infoArea .menuArea .swiper-slide:not(:last-child){margin-right: 20px;}
 .detailPage section .infoArea .interiorArea .swiper-slide .imgBox{height: 340px; border-radius: 18px;}
