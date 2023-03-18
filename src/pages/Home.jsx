@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Navigation , FreeMode, } from "swiper";
 import { Link } from 'react-router-dom';
 import Item from '../components/item/Item';
@@ -54,8 +54,24 @@ export default function Home() {
                                 prevEl : '.itemArea .navigation-circle .prev',
                                 nextEl : '.itemArea .navigation-circle .next',
                             }}
-                            slidesPerView={4}
-                            spaceBetween={20}
+                            breakpoints={{
+                                1180 : {
+                                    slidesPerView: 4,
+                                    spaceBetween: 20,
+                                },
+                                950 : {
+                                    slidesPerView: 3,
+                                    spaceBetween: 20,
+                                },
+                                780 : {
+                                    slidesPerView: 2,
+                                    spaceBetween: 20
+                                },
+                                320 : {
+                                    slidesPerView: 1,
+                                    spaceBetween: 20
+                                }
+                            }}
                             modules={[Navigation]}
                             className="itemSwiper"
                         >
@@ -95,6 +111,20 @@ export default function Home() {
                             }}
                             slidesPerView={3}
                             spaceBetween={20}
+                            breakpoints={{
+                                950 : {
+                                    slidesPerView: 3,
+                                    spaceBetween: 20,
+                                },
+                                780 : {
+                                    slidesPerView: 2,
+                                    spaceBetween: 20
+                                },
+                                320 : {
+                                    slidesPerView: 1,
+                                    spaceBetween: 20
+                                }
+                            }}
                             modules={[Navigation]}
                             className="itemSwiper bestList"
                         >
