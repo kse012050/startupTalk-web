@@ -34,4 +34,5 @@
 
     /* 로그인 페이지 - 회원가입 */
     .signPage > .signUpPage fieldset .agreeArea{font-size: var(--font06); line-height: 20px;}
+    .signPage > .findPage .tabBox{margin-bottom: 30px;}
 }

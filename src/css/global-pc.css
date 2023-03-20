@@ -53,6 +53,10 @@
     .inputBox input[type="submit"]{margin-top: 60px;}
 
 
+    /* 탭 */
+    .tabBox li{font-size: var(--font03); height: 60px; border-width: 1.5px; border-radius: 14px;}
+
+
     /* 팝업 */
     .popupBox-termsOfUse > div{max-width: 588px; height: 72%; padding: 40px 50px; }
     .popupBox-termsOfUse > div strong{font-size: var(--title02); margin-bottom: 40px;}

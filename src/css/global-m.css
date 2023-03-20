@@ -47,11 +47,15 @@
 
     /* input */
     .inputBox{font-size: var(--font04);}
-    .inputBox fieldset > ul > li label{font-size: var(--font06); line-height: 15px;}
-    .inputBox fieldset > ul > li > *:not(:last-child){margin-bottom: 12px;}
+    .inputBox fieldset > ul > li label{font-size: var(--font06); line-height: 20px;}
+    .inputBox fieldset > ul > li > *:not(:last-child){margin-bottom: 10px;}
     .inputBox fieldset > ul > li input{height: 48px;}
-    .inputBox fieldset > ul > li :is(input , textarea){padding: 0 16px;}
+    .inputBox fieldset > ul > li :is(input , textarea){padding: 16px;}
     .inputBox input[type="submit"]{margin-top: 50px;}
+
+
+    /* 탭 */
+    .tabBox li{font-size: var(--font04); height: 50px; border-width: 1px; border-radius: 10px;}
 
 
     /* 팝업 */
