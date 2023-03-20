@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import { ResponsiveContext } from '../context/Responsive';
 
 export default function Navbar() {
     let location = useLocation();
+    const responsive = useContext(ResponsiveContext);
     location = location.pathname;
     let pageName = location.substring(1).split('/');
     return (
@@ -10,14 +12,18 @@ export default function Navbar() {
             <div className='contentSize'>
                 <h1><Link to='/'><img src={require('../images/logo.png')} alt="창업톡 로고" /></Link></h1>
                 <nav>
-                    <ul>
-                        <li><NavLink to='/category'>카테고리</NavLink></li>
-                        <li><NavLink to='/ranking'>랭킹</NavLink></li>
-                        <li><NavLink to='/marketing'>마케팅</NavLink></li>
-                    </ul>
+                    {responsive && 
+                        <ul>
+                            <li><NavLink to='/category'>카테고리</NavLink></li>
+                            <li><NavLink to='/ranking'>랭킹</NavLink></li>
+                            <li><NavLink to='/marketing'>마케팅</NavLink></li>
+                        </ul>
+                    }
                     {pageName[0] === 'sign' ||
                         <div>
-                            <NavLink to='/category' className='icon-search'>검색</NavLink>
+                            {responsive && 
+                                <NavLink to='/category' className='icon-search'>검색</NavLink>
+                            }
                             {pageName[0] === 'my' ? 
                                 <Link to='/my'>MY</Link> :
                                 <Link to='/sign'>로그인</Link>

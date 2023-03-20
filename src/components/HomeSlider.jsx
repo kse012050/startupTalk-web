@@ -1,18 +1,22 @@
-import React, { useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { Navigation ,  Autoplay , Pagination } from "swiper";
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import { ResponsiveContext } from '../context/Responsive';
 
 export default function HomeSlider() {
     const progressCircle = useRef(null);
     const progressContent = useRef(null);
     const mainSliderRef = useRef(null);
     const [mainSliderAuto , setMainSliderAuto] = useState(true);
+    const responsive = useContext(ResponsiveContext);
     const onAutoplayTimeLeft = (s, time, progress) => {
+        if(!responsive){return}
         progressContent.current.style.width = (1 - Math.abs(progress)) * 100 + '%';
     }
     const autoPlayEvent = () =>{
+        if(!responsive){return}
         if(mainSliderAuto ){
             mainSliderRef.current.swiper.autoplay.pause();
             setMainSliderAuto(!mainSliderAuto)
@@ -29,17 +33,31 @@ export default function HomeSlider() {
                     prevEl : '.navigation-basic .prev',
                     nextEl : '.navigation-basic .next',
                 }}
-                autoplay={{
+                /* autoplay={{
                     el: '.autoPlay',
                     delay: 2500,
                     disableOnInteraction: false,
-                }}
+                }} */
                 pagination={{
                     el : '.pager',
                     clickable: true,
                     type: "fraction",
                 }}
-                watchSlidesProgress
+                /* breakpoints={{
+                    780 : {
+                        navigation :{
+                            prevEl : '.navigation-basic .prev',
+                            nextEl : '.navigation-basic .next',
+                        },
+                        pagination :{
+                            el : '.pager',
+                            clickable: true,
+                            type: "fraction",
+                        }
+                    }
+                }} */
+                // watchSlidesProgress
+                // onAutoplayTimeLeft={()=> responsive && onAutoplayTimeLeft()}
                 modules={[Navigation , Autoplay ,Pagination]}
                 onAutoplayTimeLeft={onAutoplayTimeLeft}
                 loop={true}

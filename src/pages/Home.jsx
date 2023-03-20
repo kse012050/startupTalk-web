@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Navigation , FreeMode, } from "swiper";
 import { Link } from 'react-router-dom';
 import Item from '../components/item/Item';
@@ -12,7 +12,7 @@ export default function Home() {
         <>
             <h2 className='textHidden'>메인 페이지</h2>
 
-            <div className='contentSize'>
+            <div>
                 <div className='popularArea'>
                     <h3>인기 창업 키워드</h3>
                     <div className='sliderArea'>

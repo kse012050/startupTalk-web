@@ -19,6 +19,9 @@ import MyNotice from './pages/my/Notice';
 import MyAccount from './pages/my/Account';
 import MyService from './pages/my/Service';
 
+import { ResponsiveContext } from './context/Responsive';
+import { useEffect, useState } from 'react';
+
 const router = createBrowserRouter([
   {
     path : '/',
@@ -48,8 +51,22 @@ const router = createBrowserRouter([
 ])
 
 function App() {
+  const [responsive , setResponsive] = useState(true);
+  useEffect(()=>{
+    resizeEvent();
+    window.addEventListener('resize',()=>{
+      resizeEvent();
+    })
+  },[])
+
+  const resizeEvent = () =>{
+    window.innerWidth > 780 ? setResponsive(true) : setResponsive(false);
+  }
+
   return (
-    <RouterProvider router={router} />
+    <ResponsiveContext.Provider value={responsive}>
+      <RouterProvider router={router} />
+    </ResponsiveContext.Provider>
   );
 }
 

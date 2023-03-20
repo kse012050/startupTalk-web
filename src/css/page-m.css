@@ -1,0 +1,10 @@
+@media screen and (max-width : 780px) {
+    /* 메인 페이지 - 메인 슬라이더 - 오토 플레이 */
+    .homePage .mainSwiper .playArea{display: none;}
+
+    /* 메인 페이지 */
+    .homePage .mainPage > div > div h3{margin-bottom: 24px;}
+
+    /* 메인 페이지 - 인기 슬라이더 */
+    .popularArea .sliderArea .popularSwiper .swiper-slide{width: 98px; height: 86px;}
+}
