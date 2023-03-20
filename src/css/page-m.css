@@ -21,4 +21,14 @@
 
     /* 메인 페이지 - 마케팅 */
     .homePage .marketingArea div{flex-direction: column;}
+
+    
+
+    /* 로그인 페이지 */
+    .signPage > section h2 + p{font-size: var(--font04);  line-height: 22px; margin: 12px 0 30px;}
+
+    /* 로그인 페이지 - 로그인 방식 선택 */
+    .signPage > .mainPage ul li:not(:last-child){margin-bottom: 12px;}
+    .signPage > .mainPage ul li a{font-size: var(--font04); line-height: 50px; }
+    .signPage > .mainPage ul li a::before{left: 20px; width: 20px; height: 20px;}
 }

@@ -18,4 +18,12 @@
     .popularArea .sliderArea .popularSwiper .swiper-slide{width: 125px; height: 110px;}
     .popularArea .sliderArea .popularSwiper .swiper-slide a{font-size: var(--font01);}
 
+
+    /* 로그인 페이지 */
+    .signPage > section h2 + p{font-size: var(--font03); font-weight: 400; line-height: 26px; margin: 30px 0 50px;}
+
+    /* 로그인 페이지 - 로그인 방식 선택 */
+    .signPage > .mainPage ul li:not(:last-child){margin-bottom: 16px;}
+    .signPage > .mainPage ul li a{font-size: var(--font03); line-height: 60px; }
+    .signPage > .mainPage ul li a::before{left: 26px; width: 24px; height: 24px;}
 }

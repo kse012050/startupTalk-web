@@ -15,12 +15,18 @@
     /* 페이지 컨텐츠 상단 공간 */
     /* 로그인  , 간편 상담 페이지 */
     :is(.signPage , .receiptPage) [class$="Page"],
-    .marketingPage .counselPage{margin-top: 100px;}
+    .marketingPage .counselPage{margin-top: 50px;}
     /* 메인 페이지 */
     .homePage [class$="Page"]{margin-top: 50px;}
     /* 카테고리 , 랭킹  , 마이 , 상세 , 마케팅 - 메인 페이지*/
     :is(.categoryPage , .rankingPage , .myPage , .detailPage ) > section, 
     .marketingPage :is(.mainPage , .detailPage){margin-top: 60px;}
+
+
+    /* 서브 페이지 타이틀 공통 */
+    .signPage .mainPage{font-size: var(--title01); font-weight: 700;}
+
+    .signPage > section:not(.mainPage) h2{position: fixed; top: 0; left: 50%; transform: translateX(-50%); z-index: 11; line-height: 50px; font-size: var(--font04); font-weight: 700;}
 
 
     /* 아이템 - 기본 */
@@ -37,6 +43,7 @@
     /* 해더 */
     header > div{justify-content: space-between; padding: 13px 0;}
     header > div h1{width: 68px;}
+    header > div h1 a{width: 68px; height: 24px;}
     header > div div a:not([class]){font-size: 13px; text-align: center; width: 66px; line-height: 32px; border-radius: 16px; border: 1px solid #e6e6e6;}
     header > div nav{position: fixed; left: 0; bottom: 0; width: 100%; box-shadow: 0 -0.5px 0 0 rgba(0, 0, 0, 0.1);}
     header > div nav ul{display: flex; background-color: white;}
@@ -52,6 +59,11 @@
     header > div nav ul li:nth-child(3) a.active{background-image: url('../images/m-icon-lanking.png');}
     header > div nav ul li:nth-child(4) a.active{background-image: url('../images/m-icon-marketing.png');}
 
+    header:has(.prevPageLink){box-shadow: none;}
+    header > div .prevPageLink{text-indent: -9999px; width: 50px; height: 50px; background-image: url('../images/icon-back.png');}
+    header > div:has(.prevPageLink){padding: 0; width: 100%;}
+    header > div:has(.prevPageLink) h1{width: auto;}
+    header > div:has(.prevPageLink) h1 a{width: 50px; height: 50px; background-image: url('../images/icon-home.png');}
 
     /* 푸터 */
     footer{padding: 40px 0; margin-bottom: 54px;}

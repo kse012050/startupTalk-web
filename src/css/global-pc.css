@@ -43,7 +43,7 @@
     header > div nav ul,
     header > div :is(nav , div){display: flex; align-items: center;}
     header > div , header > div nav ul{gap: 70px;}
-    header > div h1{width: 96px;}
+    header > div h1 a{width: 96px; height: 34px;}
     header > div nav{flex: 1;}
     header > div nav ul{color: black; font-weight: 700;}
     header > div nav ul li a{line-height: 86px; font-weight: 400;}

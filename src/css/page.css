@@ -28,13 +28,12 @@
 
 /* 로그인 페이지 */
 .signPage > section{text-align: center;}
-.signPage > section h2 + p{font-size: var(--font03); font-weight: 400; line-height: 26px; margin: 30px 0 50px;}
+.signPage > section h2 + p{font-weight: 400;}
 
 /* 로그인 페이지 - 로그인 방식 선택 */
 .signPage > .mainPage ul li{border: 1px solid #e6e6e6; border-radius: 10px;}
-.signPage > .mainPage ul li:not(:last-child){margin-bottom: 16px;}
-.signPage > .mainPage ul li a{width: 100%; font-size: var(--font03); font-weight: 700; line-height: 60px; position: relative;}
-.signPage > .mainPage ul li a::before{content: ''; position: absolute; left: 26px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background-repeat: no-repeat; background-position: center; background-size: cover;}
+.signPage > .mainPage ul li a{width: 100%; font-weight: 700; position: relative;}
+.signPage > .mainPage ul li a::before{content: ''; position: absolute; top: 50%; transform: translateY(-50%); background-repeat: no-repeat; background-position: center; background-size: cover;}
 .signPage > .mainPage ul li:nth-child(1) a::before{background-image: url('../images/icon-naver.png');}
 .signPage > .mainPage ul li:nth-child(2) a::before{background-image: url('../images/icon-kakao.png');}
 .signPage > .mainPage ul li:nth-child(3) a::before{background-image: url('../images/icon-apple.png');}

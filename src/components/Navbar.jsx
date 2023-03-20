@@ -10,7 +10,10 @@ export default function Navbar() {
     return (
         <header>
             <div className='contentSize'>
-                <h1><Link to='/'><img src={require('../images/logo.png')} alt="창업톡 로고" /></Link></h1>
+                {(!responsive && pageName[0] === 'sign') &&
+                    <Link className="prevPageLink imgBox">이전</Link>
+                }
+                <h1><Link to='/' className='imgBox'>창업톡</Link></h1>
                 <nav>
                     <ul>
                         {responsive ||
@@ -32,8 +35,8 @@ export default function Navbar() {
                         }
                     </div>
                 }
+                
             </div>
-            {/* <div className="mobileMenu"></div> */}
         </header>
     );
 }
