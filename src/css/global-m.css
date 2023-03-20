@@ -38,10 +38,23 @@
     header > div{justify-content: space-between; padding: 13px 0;}
     header > div h1{width: 68px;}
     header > div div a:not([class]){font-size: 13px; text-align: center; width: 66px; line-height: 32px; border-radius: 16px; border: 1px solid #e6e6e6;}
+    header > div nav{position: fixed; left: 0; bottom: 0; width: 100%; box-shadow: 0 -0.5px 0 0 rgba(0, 0, 0, 0.1);}
+    header > div nav ul{display: flex; background-color: white;}
+    header > div nav ul li{flex: 1; font-size: 10px; font-weight: 500; color: var(--colorGray);}
+    header > div nav ul li a{display: flex; justify-content: center; align-items: flex-end; height: 54px; padding: 6px 10px; box-sizing: border-box; background-repeat: no-repeat; background-position: top 5px center; background-size: 30px;}
+    header > div nav ul li a.active{color: var(--colorBasic);}
+    header > div nav ul li:nth-child(1) a{background-image: url('../images/m-icon-home-gray.png');}
+    header > div nav ul li:nth-child(2) a{background-image: url('../images/m-icon-cartegory-gray.png');}
+    header > div nav ul li:nth-child(3) a{background-image: url('../images/m-icon-lanking-gray.png');}
+    header > div nav ul li:nth-child(4) a{background-image: url('../images/m-icon-marketing-gray.png');}
+    header > div nav ul li:nth-child(1) a.active{background-image: url('../images/m-icon-home.png');}
+    header > div nav ul li:nth-child(2) a.active{background-image: url('../images/m-icon-cartegory.png');}
+    header > div nav ul li:nth-child(3) a.active{background-image: url('../images/m-icon-lanking.png');}
+    header > div nav ul li:nth-child(4) a.active{background-image: url('../images/m-icon-marketing.png');}
 
 
     /* 푸터 */
-    footer{padding: 40px 0;}
+    footer{padding: 40px 0; margin-bottom: 54px;}
     footer div img{width: 54px; margin-bottom: 20px;}
     footer div ul{gap: 18px;}
 }

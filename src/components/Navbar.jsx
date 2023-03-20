@@ -12,26 +12,28 @@ export default function Navbar() {
             <div className='contentSize'>
                 <h1><Link to='/'><img src={require('../images/logo.png')} alt="창업톡 로고" /></Link></h1>
                 <nav>
-                    {responsive && 
-                        <ul>
-                            <li><NavLink to='/category'>카테고리</NavLink></li>
-                            <li><NavLink to='/ranking'>랭킹</NavLink></li>
-                            <li><NavLink to='/marketing'>마케팅</NavLink></li>
-                        </ul>
-                    }
-                    {pageName[0] === 'sign' ||
-                        <div>
-                            {responsive && 
-                                <NavLink to='/category' className='icon-search'>검색</NavLink>
-                            }
-                            {pageName[0] === 'my' ? 
-                                <Link to='/my'>MY</Link> :
-                                <Link to='/sign'>로그인</Link>
-                            }
-                        </div>
-                    }
+                    <ul>
+                        {responsive ||
+                            <li><NavLink to='/'>홈</NavLink></li>
+                        }
+                        <li><NavLink to='/category'>카테고리</NavLink></li>
+                        <li><NavLink to='/ranking'>랭킹</NavLink></li>
+                        <li><NavLink to='/marketing'>마케팅</NavLink></li>
+                    </ul>
                 </nav>
+                {pageName[0] === 'sign' ||
+                    <div>
+                        {responsive && 
+                            <NavLink to='/category' className='icon-search'>검색</NavLink>
+                        }
+                        {pageName[0] === 'my' ? 
+                            <Link to='/my'>MY</Link> :
+                            <Link to='/sign'>로그인</Link>
+                        }
+                    </div>
+                }
             </div>
+            {/* <div className="mobileMenu"></div> */}
         </header>
     );
 }
