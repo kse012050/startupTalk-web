@@ -29,6 +29,11 @@
     .marketingPage .mainPage h2{margin-bottom: 30px;}
 
 
+    /* 버튼 */
+    [class|="btn"]{line-height: 58px; font-size: 18px;}
+    [class|="btn"] + [class|="btn"]{margin-top: 16px;}
+
+
     /* 아이템 - 기본 */
     .itemBox.basic .itemText strong{font-size: var(--font01);}
     .itemBox.basic .itemText div span{font-size: var(--font06);}
@@ -37,6 +42,15 @@
     .bestList :is(.swiper-slide) .itemText mark{font-size: var(--font06); margin-bottom: 10px;}
     .bestList :is(.swiper-slide) .itemText strong{font-size: var(--font01);}
     .bestList :is(.swiper-slide) .itemText span{font-size: var(--font06);}
+
+
+    /* input */
+    .inputBox{font-size: var(--font06);}
+    .inputBox fieldset > ul > li label{line-height: 22px;}
+    .inputBox fieldset > ul > li > *:not(:last-child){margin-bottom: 14px;}
+    .inputBox fieldset > ul > li input{height: 54px;}
+    .inputBox fieldset > ul > li :is(input , textarea){padding: 20px;}
+    .inputBox input[type="submit"]{margin-top: 60px;}
 
 
     /* 해더 */

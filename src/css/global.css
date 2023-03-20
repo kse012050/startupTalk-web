@@ -19,13 +19,11 @@ mark:not([class]){color: var(--colorPoint);}
 
 
 /* 버튼 */
-[class|="btn"]{width: 100%; font-size: 18px; font-weight: 700; line-height: 58px; text-align: center; border-radius: 10px; box-sizing: border-box;}
-/* [class|="btn"]:nth-child(1 of [class|="btn"]){margin-top: 60px;} */
+[class|="btn"]{width: 100%; font-weight: 700; text-align: center; border-radius: 10px; box-sizing: border-box;}
 .btn-basic{background-color: var(--colorPoint); color: white; border: none;}
 .btn-border{border: 1px solid rgba(12,191,93,0.3); color: var(--colorPoint);}
 .btn-color{background-color: #e6f8ed; color: var(--colorPoint);}
 .btn-white{background-color: white; color: var(--colorPoint);}
-[class|="btn"] + [class|="btn"]{margin-top: 16px;}
 
 
 /* 아이콘 */
@@ -115,17 +113,15 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 
 
 /* input */
-.inputBox{font-size: var(--font06); text-align: left;}
+.inputBox{text-align: left;}
 .inputBox fieldset > ul > li:not(:last-child){margin-bottom: 20px;}
-.inputBox fieldset > ul > li label{display: block; font-weight: 500; line-height: 22px; color: #666; margin-bottom: 15px; white-space: pre-line;}
-.inputBox fieldset > ul > li :is(input , textarea){width: 100%; background-color: rgba(241, 244, 246, 0.5); padding: 20px; border: none; border-radius: 10px; box-sizing: border-box;}
-.inputBox fieldset > ul > li input{height: 54px;}
+.inputBox fieldset > ul > li label{display: block; font-weight: 500; color: #666; margin-bottom: 15px; white-space: pre-line;}
+.inputBox fieldset > ul > li :is(input , textarea){width: 100%; background-color: rgba(241, 244, 246, 0.5); border: none; border-radius: 10px; box-sizing: border-box;}
 .inputBox fieldset > ul > li textarea{line-height: 20px; height: 200px;}
 .inputBox fieldset > ul > li :is(input , textarea)::placeholder,
 .searchBox input::placeholder{color: rgba(33, 33, 33, 0.3);}
-.inputBox fieldset > ul > li > *:not(:last-child){margin-bottom: 14px;}
 .inputBox fieldset > ul > li.requi label::after{content: '*'; color: var(--colorPoint);}
-.inputBox input[type="submit"]{margin-top: 60px;}
+
 
 /* 서치 박스 */
 .searchBox{position: relative;}

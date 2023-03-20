@@ -29,6 +29,11 @@
     .signPage > section:not(.mainPage) h2{position: fixed; top: 0; left: 50%; transform: translateX(-50%); z-index: 11; line-height: 50px; font-size: var(--font04); font-weight: 700;}
 
 
+    /* 버튼 */
+    [class|="btn"]{line-height: 50px; font-size: var(--font04);}
+    [class|="btn"] + [class|="btn"]{margin-top: 12px;}
+
+
     /* 아이템 - 기본 */
     .itemBox.basic .itemText strong{font-size: var(--font02);}
     .itemBox.basic .itemText div span{font-size: var(--font05);}
@@ -38,6 +43,15 @@
     .bestList :is(.swiper-slide) .itemText mark{font-size: var(--font05); margin-bottom: 12px;}
     .bestList :is(.swiper-slide) .itemText strong{font-size: var(--font02);}
     .bestList :is(.swiper-slide) .itemText span{font-size: var(--font05);}
+
+
+    /* input */
+    .inputBox{font-size: var(--font04);}
+    .inputBox fieldset > ul > li label{font-size: var(--font06); line-height: 15px;}
+    .inputBox fieldset > ul > li > *:not(:last-child){margin-bottom: 12px;}
+    .inputBox fieldset > ul > li input{height: 48px;}
+    .inputBox fieldset > ul > li :is(input , textarea){padding: 0 16px;}
+    .inputBox input[type="submit"]{margin-top: 50px;}
 
 
     /* 해더 */
