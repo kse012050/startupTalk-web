@@ -1,7 +1,7 @@
 
 /* 메인 페이지 */
 .homePage .mainPage > div > div:not(:last-child){margin-bottom: 60px;}
-.homePage .mainPage > div > div h3{font-size: var(--title02); font-weight: 700;}
+.homePage .mainPage > div > div h3{font-weight: 700;}
 .homePage .mainPage > div .sliderArea{position: relative;}
 
 /* 메인 페이지 - 메인 슬라이더 */
@@ -14,7 +14,7 @@
 
 /* 메인 페이지 - 인기 슬라이더 */
 .popularArea .sliderArea .popularSwiper .swiper-slide{background-color: #f5f7f7; border-radius: 18px;}
-.popularArea .sliderArea .popularSwiper .swiper-slide a{display: block; height: 100%; display: flex; justify-content: center; align-items: center; font-size: var(--font01); font-weight: 600; color: #222222;}
+.popularArea .sliderArea .popularSwiper .swiper-slide a{height: 100%; display: flex; justify-content: center; align-items: center;  font-weight: 600; color: #222222;}
 .popularArea .sliderArea .popularSwiper .swiper-slide:not(:last-child){margin-right: 10px;}
 .popularArea .sliderArea .navigation-circle{height: 100%; align-items: center;}
 .popularArea .sliderArea .navigation-circle div{position: relative;}

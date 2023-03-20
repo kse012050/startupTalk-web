@@ -38,16 +38,16 @@
         --mobileWidth : calc(100% - 40px);
         --mainSliderWidth : 600px;
         /* 타이틀 */
-        --title01 : 42px;
-        --title02 : 20px;
+        --title01 : 28px;
+        --title02 : 24px;
         --title03 : 20px;
         /* 본문 */
-        --font01 : 16px;
-        --font02 : 19px;
-        --font03 : 18px;
-        --font04 : 17px;
-        --font05 : 16px;
-        --font06 : 15px;
+        --font01 : 19px;
+        --font02 : 18px;
+        --font03 : 17px;
+        --font04 : 15px;
+        --font05 : 14px;
+        --font06 : 13px;
         /* 색상 */
         --colorBasic: #333;
         --colorDarker: #222;
@@ -57,7 +57,7 @@
         --iconSize01 : 40px;
         --iconSize02 : 38px;
         /* 아이템 이미지 크기 */
-        --itemImgHieght01 : 275px;
-        --itemImgHieght02 : 270px;
+        --itemImgHieght01 : 204px;
+        --itemImgHieght02 : 242px;
     }
 }

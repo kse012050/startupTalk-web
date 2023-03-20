@@ -1,7 +1,7 @@
 @media screen and (max-width : 780px) {
     /* 페이지 컨텐츠 공통 */
     /* 개별 페이지 컨텐츠 사이즈 */
-    [class$="Page"] [class$="Page"]{width: var(--mobileWidth); margin-left: auto; margin-right: auto; margin-bottom: 150px;}
+    [class$="Page"] [class$="Page"]{width: var(--mobileWidth); margin-left: auto; margin-right: auto; margin-bottom: 100px;}
     /* width 1140 - 메인 페이지 , 카테고리 페이지 , 랭킹 페이지 , 마이페이지 , 마케팅 메인*/
     :is(.homePage , .categoryPage , .rankingPage , .myPage ) [class$="Page"],
     .marketingPage .mainPage{max-width: var(--contentSize);}
@@ -23,8 +23,25 @@
     .marketingPage :is(.mainPage , .detailPage){margin-top: 60px;}
 
 
-     /* 해더 */
-     header > div{justify-content: space-between; padding: 13px 0;}
-     header > div h1{width: 68px;}
-     header > div div a:not([class]){font-size: 13px; text-align: center; width: 66px; line-height: 32px; border-radius: 16px; border: 1px solid #e6e6e6;}
+    /* 아이템 - 기본 */
+    .itemBox.basic .itemText strong{font-size: var(--font02);}
+    .itemBox.basic .itemText div span{font-size: var(--font05);}
+
+
+    /* 아이템 - 베스트  순위표? */
+    .bestList :is(.swiper-slide) .itemText mark{font-size: var(--font05); margin-bottom: 12px;}
+    .bestList :is(.swiper-slide) .itemText strong{font-size: var(--font02);}
+    .bestList :is(.swiper-slide) .itemText span{font-size: var(--font05);}
+
+
+    /* 해더 */
+    header > div{justify-content: space-between; padding: 13px 0;}
+    header > div h1{width: 68px;}
+    header > div div a:not([class]){font-size: 13px; text-align: center; width: 66px; line-height: 32px; border-radius: 16px; border: 1px solid #e6e6e6;}
+
+
+    /* 푸터 */
+    footer{padding: 40px 0;}
+    footer div img{width: 54px; margin-bottom: 20px;}
+    footer div ul{gap: 18px;}
 }

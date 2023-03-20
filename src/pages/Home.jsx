@@ -118,7 +118,7 @@ export default function Home() {
                                 },
                                 780 : {
                                     slidesPerView: 2,
-                                    spaceBetween: 20
+                                    spaceBetween: 20,
                                 },
                                 320 : {
                                     slidesPerView: 1,
