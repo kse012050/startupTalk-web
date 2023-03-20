@@ -17,7 +17,7 @@ export default function Info() {
 
             <div className='menuArea'>
                 <h3>대표 메뉴</h3>
-                <div className='sliderArea'>
+                <div className='sliderArea mobileFull'>
                     <Swiper 
                         slidesPerView={"auto"}
                         freeMode={true}

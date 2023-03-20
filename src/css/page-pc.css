@@ -30,4 +30,41 @@
     /* 로그인 페이지 - 회원가입 */
     .signPage > .signUpPage fieldset .agreeArea{line-height: 26px}
     .signPage > .findPage .tabBox{margin: 50px 0;}
+
+
+    /* 상세 페이지 */
+    .detailPage section figure{display: flex; justify-content: space-between; margin-bottom: 40px;}
+    .detailPage section figure > .imgBox{width: 370px; height: 370px; border-radius: 20px; margin-right: 40px;}
+    .detailPage section figure figcaption{width: 310px; display: flex; flex-direction: column; padding-top: 10px;}
+    .detailPage section figure figcaption h2{font-size: var(--title02); font-weight: 700; margin-bottom: 16px;}
+    .detailPage section figure figcaption h2 mark{display: block; font-size: var(--font06); margin-bottom: 10px;}
+    .detailPage section figure figcaption p{font-size: var(--font06);}
+    .detailPage section figure figcaption .scrollFixed-bottom div .receiptArea button::before{content: ''; width: 56px; height: 56px; background:#e6f8ee url('../images/icon-bookmark-green.png') no-repeat center / 24px;}
+
+    .detailPage section [class|="scrollFixed"].active{position: fixed; left: 0; width: 100%; padding: 20px 0; background-color: white; z-index: 10;}
+    .detailPage section [class|="scrollFixed"].active > div{max-width: var(--contentSize01); margin: 0 auto;}
+    .detailPage section .scrollFixed-top.active{top: 0;  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);}
+    .detailPage section .scrollFixed-top.active .tabBox{margin: 0;}
+    .detailPage section figure figcaption .scrollFixed-bottom.active{bottom: 0; box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.1);}
+    .detailPage section figure figcaption .scrollFixed-bottom.active div button{width: 226px; text-indent: 0; font-size: var(--font03); font-weight: 700; color: var(--colorPoint); display: flex; justify-content: center; align-items: center; background-image: none;}
+    .detailPage section figure figcaption .scrollFixed-bottom.active div button::before{content: ''; width: 24px; height: 24px; margin-right: 4px;}
+    .detailPage section mark.support strong{padding: 10px 30px; margin-right: 30px;}
+    .detailPage section .tabBox{margin-bottom: 50px;}
+    .detailPage section > div > div > div:not(:last-child){margin-bottom: 70px;}
+    .detailPage section > div > div h3{font-size: var(--font01); font-weight: 700; margin-bottom: 14px;}
+
+    /* 상세 페이지 - 브랜드 정보 */
+    .detailPage .videoArea iframe{height: 340px;}
+    .detailPage .detailArea div{height: 1000px;}
+    .detailPage .detailArea button{width: 100%; height: 60px; display: flex; justify-content: center; align-items: center; font-size: var(--font03); font-weight: 700; border: 1px solid #ccc; border-radius: 10px;}
+    .detailPage .detailArea button::after{content: ''; width: 34px; height: 34px; background: url('../images/icon-category-more.png') no-repeat center / cover; margin-left: 2px;}
+    .detailPage section .infoArea .menuArea .swiper-slide{width: 210px;}
+    .detailPage section .infoArea .menuArea .swiper-slide:not(:last-child){margin-right: 20px;}
+    .detailPage section .infoArea .interiorArea .swiper-slide .imgBox,
+    .detailPage section .infoArea .locationArea iframe{height: 340px;}
+    .detailPage section .infoArea .locationArea iframe{margin-bottom: 16px;}
+    .detailPage section .infoArea .locationArea p{font-size: var(--font06);}
+    .detailPage section .infoArea .interiorArea .navigation-circle{top: 0; transform: translate(-50%);}
+    .detailPage section .infoArea .interiorArea .navigation-circle .prev::after{transform: translateX(20px);}
+    .detailPage section .infoArea .interiorArea .navigation-circle .next::after{transform: translateX(-20px);}
 }

@@ -35,4 +35,34 @@
     /* 로그인 페이지 - 회원가입 */
     .signPage > .signUpPage fieldset .agreeArea{font-size: var(--font06); line-height: 20px;}
     .signPage > .findPage .tabBox{margin-bottom: 30px;}
+
+
+    /* 상세 페이지 */
+    .detailPage section figure{margin-bottom: 30px;}
+    .detailPage section figure > .imgBox{height: 360px; transform: translateX(-20px); width: calc(100% + 40px); margin-bottom: 30px;}
+    .detailPage section figure figcaption h2{font-size: var(--title02); font-weight: 600; margin-bottom: 10px; position: relative;}
+    .detailPage section figure figcaption h2 mark{position: absolute; right: 0; top: 0; font-size: var(--font04);}
+    .detailPage section figure figcaption p{font-size: var(--font05);}
+    .detailPage section figure figcaption ul li strong{font-size: var(--font01);}
+    .detailPage section figure figcaption .scrollFixed-bottom {position: fixed; left: 0; bottom: 84px; width: 100%; z-index: 10;}
+    .detailPage section figure figcaption .scrollFixed-bottom > div{width: var(--mobileWidth); margin: 0 auto;}
+    .detailPage section figure figcaption .scrollFixed-bottom > div .receiptArea a{box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);}
+    .detailPage section figure figcaption .scrollFixed-bottom > div .receiptArea button{overflow: hidden; box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);}
+    .detailPage section figure figcaption .scrollFixed-bottom > div .receiptArea button::before{width: 48px; height: 48px;}
+    .detailPage section mark.support strong{padding: 7px 10px; margin-right: 20px;}
+    .detailPage section .tabBox{margin-bottom: 30px;}
+    .detailPage section > div > div > div:not(:last-child){margin-bottom: 40px;}
+    .detailPage section > div > div h3{font-size: var(--font02); font-weight: 600; margin-bottom: 20px;}
+
+    /* 상세 페이지 - 브랜드 정보 */
+    .detailPage .videoArea iframe{height: 180px;}
+    .detailPage .detailArea div{height: 500px;}
+    .detailPage .detailArea button{width: 82px; height: 34px; font-size: var(--font06); font-weight: 400; border: 1px solid #e6e6e6; border-radius: 8px; display: block; margin: 0 auto;}
+    .detailPage section .infoArea .menuArea .swiper-slide{width: 98px;}
+    .detailPage section .infoArea .menuArea .swiper-slide:not(:last-child){margin-right: 13px;}
+    .detailPage section .infoArea .interiorArea .swiper-slide .imgBox,
+    .detailPage section .infoArea .locationArea iframe{height: 180px;}
+    .detailPage section .infoArea .locationArea iframe{margin-bottom: 12px;}
+    .detailPage section .infoArea .locationArea p{font-size: var(--font04);}
+    .detailPage section .infoArea .interiorArea .navigation-circle{display: none;}
 }

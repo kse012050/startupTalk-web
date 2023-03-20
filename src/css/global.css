@@ -69,10 +69,7 @@ mark:not([class]){color: var(--colorPoint);}
 .itemBox.rank .itemText span.interest::before{background-image: url('../images/icon-interest.png');}
 
 /* 아이템 - 가격 */
-.itemBox.price .imgBox{height: 210px; margin-bottom: 12px;}
-.itemBox.price .itemText{text-align: center; font-size: 16px; line-height: 20px;}
-.itemBox.price .itemText p{margin-bottom: 4px;}
-.itemBox.price .itemText strong{font-weight: 700;}
+.itemBox.price .itemText{text-align: center;}
 
 /* 북마크 */
 .itemBox .imgBox button{position: absolute; right: 20px; top: 18px; text-indent: inherit; width: 30px; height: 30px; background: url('../images/icon-bookmark-white.png') no-repeat center / cover;}
