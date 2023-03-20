@@ -53,6 +53,14 @@
     .inputBox input[type="submit"]{margin-top: 60px;}
 
 
+    /* 팝업 */
+    .popupBox-termsOfUse > div{max-width: 588px; height: 72%; padding: 40px 50px; }
+    .popupBox-termsOfUse > div strong{font-size: var(--title02); margin-bottom: 40px;}
+    .popupBox-termsOfUse > div div ol li{font-size: var(--font06);}
+    .popupBox-termsOfUse > div div ol li b{margin-bottom: 30px;}
+    .popupBox-termsOfUse > div .btnArea button{background-image: url('../images/icon-close.png'); position: absolute; right: 30px; top: 30px; width: 18px; height: 18px;}
+
+
     /* 해더 */
     header > div nav ul,
     header > div :is(nav , div){display: flex; align-items: center;}

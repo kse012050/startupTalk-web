@@ -24,6 +24,9 @@
 
     /* 로그인 페이지 - 로그인 방식 선택 */
     .signPage > .mainPage ul li:not(:last-child){margin-bottom: 16px;}
-    .signPage > .mainPage ul li a{font-size: var(--font03); line-height: 60px; }
+    .signPage > .mainPage ul li a{font-size: var(--font03); line-height: 60px;}
     .signPage > .mainPage ul li a::before{left: 26px; width: 24px; height: 24px;}
+
+    /* 로그인 페이지 - 회원가입 */
+    .signPage > .signUpPage fieldset .agreeArea{line-height: 26px}
 }

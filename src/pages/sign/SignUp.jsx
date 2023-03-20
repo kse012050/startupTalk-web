@@ -34,8 +34,8 @@ export default function SignUp() {
                     </label>
                 </div>
                 {popup &&
-                    // <Popup type='termsOfUse' isPopup={[popup , setPopup]}/>
-                    <Popup type='find' isPopup={[popup , setPopup]} info={{title : '' , content : '이메일 형식에 맞게 입력해주세요.'}}/>
+                    <Popup type='termsOfUse' isPopup={[popup , setPopup]}/>
+                    // <Popup type='find' isPopup={[popup , setPopup]} info={{title : '' , content : '이메일 형식에 맞게 입력해주세요.'}}/>
                 }
                 <input type="submit" value={'회원가입'} className={'btn-basic'}/>
             </InputLayout>

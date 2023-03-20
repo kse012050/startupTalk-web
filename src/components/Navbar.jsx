@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { ResponsiveContext } from '../context/Responsive';
+import BackLink from './BackLink';
 
 export default function Navbar() {
     let location = useLocation();
@@ -11,7 +12,7 @@ export default function Navbar() {
         <header>
             <div className='contentSize'>
                 {(!responsive && pageName[0] === 'sign') &&
-                    <Link className="prevPageLink imgBox">이전</Link>
+                    <BackLink />
                 }
                 <h1><Link to='/' className='imgBox'>창업톡</Link></h1>
                 <nav>

@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ResponsiveContext } from '../../context/Responsive';
+import BackLink from '../BackLink';
 
 export default function TermsOfUse({isPopup}) {
+    const responsive = useContext(ResponsiveContext);
     return (
         <>
             <strong>이용약관</strong>
-            <div>
+            <div className='textArea'>
                 <ol>
                     <li>
                         <b>제1조(목적)</b>
@@ -28,7 +31,12 @@ export default function TermsOfUse({isPopup}) {
                     </li>
                 </ol>
             </div>
-            <button onClick={()=>isPopup[1](!isPopup[0])}>팝업 닫기</button>   
+            <div className="btnArea">
+                {!responsive &&
+                    <BackLink />
+                }
+                <button onClick={()=>isPopup[1](!isPopup[0])}>팝업 닫기</button>   
+            </div>
         </>
     );
 }

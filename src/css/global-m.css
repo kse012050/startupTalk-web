@@ -54,6 +54,15 @@
     .inputBox input[type="submit"]{margin-top: 50px;}
 
 
+    /* 팝업 */
+    .popupBox-termsOfUse > div{width: 100%; height: 100%; padding: 80px 20px 30px; box-sizing: border-box; border-radius: 0;}
+    .popupBox-termsOfUse > div strong{font-size: var(--title01); margin-bottom: 18px;}
+    .popupBox-termsOfUse > div .textArea ol li{font-size: var(--font04);}
+    .popupBox-termsOfUse > div .textArea ol li b{margin-bottom: 20px;}
+    .popupBox-termsOfUse > div .btnArea{position: absolute; left: 0; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center;}
+    .popupBox-termsOfUse > div .btnArea button{background-image: url('../images/m-icon-close.png'); width: 50px; height: 50px;}
+
+
     /* 해더 */
     header > div{justify-content: space-between; padding: 13px 0;}
     header > div h1{width: 68px;}
@@ -73,11 +82,11 @@
     header > div nav ul li:nth-child(3) a.active{background-image: url('../images/m-icon-lanking.png');}
     header > div nav ul li:nth-child(4) a.active{background-image: url('../images/m-icon-marketing.png');}
 
-    header:has(.prevPageLink){box-shadow: none;}
-    header > div .prevPageLink{text-indent: -9999px; width: 50px; height: 50px; background-image: url('../images/icon-back.png');}
-    header > div:has(.prevPageLink){padding: 0; width: 100%;}
-    header > div:has(.prevPageLink) h1{width: auto;}
-    header > div:has(.prevPageLink) h1 a{width: 50px; height: 50px; background-image: url('../images/icon-home.png');}
+    header:has(.backLink){box-shadow: none;}
+    .backLink{text-indent: -9999px; width: 50px; height: 50px; background-image: url('../images/icon-back.png');}
+    header > div:has(.backLink){padding: 0; width: 100%;}
+    header > div:has(.backLink) h1{width: auto;}
+    header > div:has(.backLink) h1 a{width: 50px; height: 50px; background-image: url('../images/icon-home.png');}
 
     /* 푸터 */
     footer{padding: 40px 0; margin-bottom: 54px;}

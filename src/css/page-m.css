@@ -31,4 +31,7 @@
     .signPage > .mainPage ul li:not(:last-child){margin-bottom: 12px;}
     .signPage > .mainPage ul li a{font-size: var(--font04); line-height: 50px; }
     .signPage > .mainPage ul li a::before{left: 20px; width: 20px; height: 20px;}
+
+    /* 로그인 페이지 - 회원가입 */
+    .signPage > .signUpPage fieldset .agreeArea{font-size: var(--font06); line-height: 20px;}
 }
