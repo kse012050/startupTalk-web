@@ -106,4 +106,6 @@
     footer{padding: 40px 0; margin-bottom: 54px;}
     footer div img{width: 54px; margin-bottom: 20px;}
     footer div ul{gap: 18px;}
+
+    .detailPage footer{margin-bottom: 134px;}
 }

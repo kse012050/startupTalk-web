@@ -43,8 +43,8 @@
 
     .detailPage section [class|="scrollFixed"].active{position: fixed; left: 0; width: 100%; padding: 20px 0; background-color: white; z-index: 10;}
     .detailPage section [class|="scrollFixed"].active > div{max-width: var(--contentSize01); margin: 0 auto;}
-    .detailPage section .scrollFixed-top.active{top: 0;  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);}
-    .detailPage section .scrollFixed-top.active .tabBox{margin: 0;}
+    /* .detailPage section .scrollFixed-top.active{top: 0;  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);} */
+    /* .detailPage section .scrollFixed-top.active .tabBox{margin: 0;} */
     .detailPage section figure figcaption .scrollFixed-bottom.active{bottom: 0; box-shadow: 0 -2px 4px 0 rgba(0, 0, 0, 0.1);}
     .detailPage section figure figcaption .scrollFixed-bottom.active div button{width: 226px; text-indent: 0; font-size: var(--font03); font-weight: 700; color: var(--colorPoint); display: flex; justify-content: center; align-items: center; background-image: none;}
     .detailPage section figure figcaption .scrollFixed-bottom.active div button::before{content: ''; width: 24px; height: 24px; margin-right: 4px;}
@@ -67,4 +67,11 @@
     .detailPage section .infoArea .interiorArea .navigation-circle{top: 0; transform: translate(-50%);}
     .detailPage section .infoArea .interiorArea .navigation-circle .prev::after{transform: translateX(20px);}
     .detailPage section .infoArea .interiorArea .navigation-circle .next::after{transform: translateX(-20px);}
+
+    /* 상세 페이지 - 창업개요 */
+    .detailPage section .counselArea div table tbody tr{font-size: 16px; line-height: 70px;}
+    .detailPage section .counselArea div table tbody tr th{width: 236px;}
+    .detailPage section .counselArea div table tbody tr td{width: 264px;}
+    .detailPage section .counselArea div table tfoot tr th{padding: 33px 50px;}
+    .detailPage section .counselArea div table tfoot tr th strong{font-size: var(--font01); margin-bottom: 8px;}
 }

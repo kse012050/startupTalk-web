@@ -54,6 +54,10 @@
     .detailPage section > div > div > div:not(:last-child){margin-bottom: 40px;}
     .detailPage section > div > div h3{font-size: var(--font02); font-weight: 600; margin-bottom: 20px;}
 
+    .detailPage section .scrollFixed-top.active{position: fixed; left: 0; width: 100%; z-index: 11; padding-bottom: 20px; background-color: white;}
+    .detailPage section .scrollFixed-top.active > div{width: var(--mobileWidth); margin: 0 auto;}
+    .detailPage section .scrollFixed-top.active .backLink{transform: translateX(-20px); margin-bottom: 10px;}
+
     /* 상세 페이지 - 브랜드 정보 */
     .detailPage .videoArea iframe{height: 180px;}
     .detailPage .detailArea div{height: 500px;}
@@ -65,4 +69,10 @@
     .detailPage section .infoArea .locationArea iframe{margin-bottom: 12px;}
     .detailPage section .infoArea .locationArea p{font-size: var(--font04);}
     .detailPage section .infoArea .interiorArea .navigation-circle{display: none;}
+
+    /* 상세 페이지 - 창업개요 */
+    .detailPage section .counselArea div table tbody tr{font-size: var(--font04); line-height: 52px;}
+    .detailPage section .counselArea div table tbody tr > *{flex: 1;}
+    .detailPage section .counselArea div table tfoot tr th{padding: 20px;}
+    .detailPage section .counselArea div table tfoot tr th strong{font-size: var(--font02); margin-bottom: 5px;}
 }

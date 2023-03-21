@@ -1,7 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import BackLink from '../../components/BackLink';
 import ScrollFixed from '../../components/ScrollFixed';
 import Tab from '../../components/Tab';
+import { ResponsiveContext } from '../../context/Responsive';
 import Counsel from './Counsel';
 import Info from './Info';
 // import * as Scroll from 'react-scroll';
@@ -9,6 +11,7 @@ import Info from './Info';
 
 
 export default function Detail() {
+    const responsive = useContext(ResponsiveContext);
     const [isScroll , setIsScroll] = useState(false)
     const [content , setContent] = useState('')
     const scrollRef = useRef();
@@ -73,6 +76,9 @@ export default function Detail() {
             <mark className='support'><strong>창업비 지원</strong>현재 프로모션을 진행 중인 업체입니다.</mark>
 
             <ScrollFixed isScroll={isScroll} type="top">
+                {(!responsive && isScroll) &&
+                    <BackLink />
+                }
                 <Tab tabList={tabList} content={[content ,setContent]}/>
             </ScrollFixed>
 
