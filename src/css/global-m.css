@@ -36,7 +36,8 @@
     :is(.rankingPage) > section h2{margin-bottom: 30px;}
 
     .signPage > section:not(.mainPage) h2,
-    .receiptPage > .mainPage h2{position: fixed; top: 0; left: 50%; transform: translateX(-50%); z-index: 11; line-height: 50px; font-size: var(--font04); font-weight: 700;}
+    .receiptPage > .mainPage h2,
+    .marketingPage .counselPage h2{position: fixed; top: 0; left: 50%; transform: translateX(-50%); z-index: 11; line-height: 50px; font-size: var(--font04); font-weight: 700;}
 
 
     /* 버튼 */
@@ -153,5 +154,5 @@
     footer div img{width: 54px; margin-bottom: 20px;}
     footer div ul{gap: 18px;}
 
-    .detailPage footer{margin-bottom: 134px;}
+    .detailPage footer , .marketingPage .detailPage + footer{margin-bottom: 134px;}
 }

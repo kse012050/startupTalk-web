@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ResponsiveContext } from '../../context/Responsive';
 import { Link } from 'react-router-dom';
 
 export default function Detail() {
+    const responsive = useContext(ResponsiveContext);
     return (
         <>
             <div className='videoArea'>
@@ -15,8 +17,8 @@ export default function Detail() {
 
             <div className="fixedArea">
                 <div className='contentSize01'>
-                    <p>지금 바로 설계 상담받고 싶다면?</p>
-                    <Link to={'/marketing/counsel'} className='btn-white'>신청하기</Link>
+                    {responsive && <p>지금 바로 설계 상담받고 싶다면?</p>}
+                    <Link to={'/marketing/counsel'} className={ responsive ? 'btn-white' : 'btn-basic'}>신청하기</Link>
                 </div>
             </div>
         </>
