@@ -153,6 +153,8 @@
 
 /* my 페이지 - 공지사항 , my 페이지 - 서비스 - 문의 내역*/
 .myPage :is(.noticePage , .servicePage) .boardBox li button::after{content: ''; width: 24px; height: 24px; background: url('../images/icon-more.png') no-repeat center / cover;}
+.myPage :is(.noticePage , .servicePage) .boardBox li button strong{color: var(--colorPoint);}
+.myPage :is(.noticePage , .servicePage) .boardBox li button strong.fin{color: var(--colorGray);}
 .myPage :is(.noticePage , .servicePage) .boardBox li > div{box-sizing: border-box;}
 .myPage :is(.noticePage , .servicePage) .boardBox li div.detailArea{display: flex; flex-direction: column;}
 .myPage :is(.noticePage , .servicePage) .boardBox li div.detailArea .imgArea{display: flex; margin-top: auto;}
@@ -171,12 +173,10 @@
 .myPage .accountPage .inputBox fieldset > .withdrawalArea button.withdrawal{font-size: 14px; font-weight: 500; color: var(--colorGray); display: inline-flex; justify-content: flex-end; align-items: center;}
 
 /* my 페이지 - 서비스 */
-.myPage .servicePage .tabBox{margin-bottom: 50px;}
 
 /* my 페이지 - 서비스 - 문의하기 */
-.myPage .servicePage .inputBox fieldset div{display: flex; margin-top: 30px;}
+.myPage .servicePage .inputBox fieldset div{display: flex;}
 .myPage .servicePage .inputBox fieldset div span{width: 100px; height: 100px; background: url('../images/icon-camera.png') no-repeat center / 30px; border: 1px solid #e6e6e6; border-radius: 10px; box-sizing: border-box;}
 .myPage .servicePage .inputBox fieldset div span:not(:last-child){margin-right: 15px;}
-.myPage .servicePage .inputBox fieldset p{font-size: var(--font06); color: var(--colorGray); display: flex; align-items: center; margin-top: 14px;}
-.myPage .servicePage .inputBox fieldset p::before{content: ''; width: 18px; height: 18px; background: url('../images/icon-notice.png') no-repeat center / cover; margin-right: 6px;}
+.myPage .servicePage .inputBox fieldset p{font-size: var(--font06); color: var(--colorGray); display: flex; align-items: center;}
 .myPage .servicePage .inputBox fieldset input[type="submit"]{display: block; max-width: var(--contentSize02); margin-right: auto; margin-left: auto;}

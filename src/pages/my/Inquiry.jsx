@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import InputLayout from '../../components/input/InputLayout';
+import { ResponsiveContext } from '../../context/Responsive';
 
 export default function Inquiry() {
+    const responsive = useContext(ResponsiveContext);
     return (
         <InputLayout>
             <ul>
@@ -12,6 +14,9 @@ export default function Inquiry() {
                     <textarea placeholder='문의 사항을 입력해주세요'></textarea>
                 </li>
             </ul>
+            {responsive ||
+                <label htmlFor="">첨부파일</label>
+            }
             <div>
                 <span></span>
                 <span></span>

@@ -143,13 +143,32 @@
     /* my 페이지 - 메인 - 관심 아이템 */
 
     /* my 페이지 - 메인 - 상담 접수 내역 */
-    .myPage :is(.noticePage , .servicePage) .boardBox li > div{padding: 3px 20px 29.5px;}
-    .myPage :is(.noticePage , .servicePage) .boardBox li div.detailArea{min-height: 180px;}
+    .myPage :is(.noticePage , .servicePage) .boardBox li div.detailArea{min-height: 180px; padding: 3px 20px 29.5px;}
+    .myPage :is(.noticePage , .servicePage) .boardBox li div.answerArea{padding: 30px 20px;}
 
     /* my 페이지 - 공지사항 , my 페이지 - 서비스 - 문의 내역*/
+    .myPage :is(.noticePage , .servicePage) .boardBox li button strong{font-size: var(--font05);}
 
     /* my 페이지 - 계정정보 */
     .myPage .accountPage .inputBox fieldset > .kakao{font-size: var(--font04);}
     .myPage .accountPage .inputBox fieldset > .withdrawalArea{text-align: center;}
     .myPage .accountPage .inputBox fieldset > .withdrawalArea button{text-decoration: underline;}
+
+    /* my 페이지 - 서비스 */
+    .myPage .servicePage .tabBox{margin-bottom: 20px;}
+
+    /* my 페이지 - 서비스 - 문의하기 */
+    .myPage .servicePage .inputBox fieldset > ul > li textarea{height: 278px;}
+    .myPage .servicePage .inputBox fieldset > label{display: inline-block; font-size: var(--font06); font-weight: 400; margin-top: 20px;}
+    .myPage .servicePage .inputBox fieldset div{margin-top: 13px;}
+    .myPage .servicePage .inputBox fieldset p{max-width: 190px; line-height: 15px; margin-top: 12px;}
+
+    /* my 페이지 - 서비스 - 나의 문의 내역 */
+    .myPage .servicePage .boardBox li button{display: flex; flex-wrap: wrap;}
+    .myPage .servicePage .boardBox.mobileFull li > *:first-child > *:first-child{margin-bottom: 0;}
+    .myPage .servicePage .boardBox li button strong{order: 1;}
+    .myPage .servicePage .boardBox li button span{width: 100%; margin-bottom: 10px;}
+    .myPage .servicePage .boardBox li button time{order: 1; /* border-left: 1px solid var(--colorGray); */ padding-left: 6px; margin-left: 6px; position: relative;}
+    .myPage .servicePage .boardBox li button time::before{content: ''; position: absolute; left: 0; top: 0; width: 1px; height: 100%; background-color: var(--colorGray);}
+    
 }

@@ -4,8 +4,8 @@ import { ResponsiveContext } from '../context/Responsive';
 import BackLink from './BackLink';
 
 export default function Navbar() {
-    let location = useLocation();
     const responsive = useContext(ResponsiveContext);
+    let location = useLocation();
     location = location.pathname;
     let pageName = location.substring(1).split('/');
     const isMobileNavbar = !responsive && (

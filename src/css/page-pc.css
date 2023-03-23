@@ -154,8 +154,7 @@
 
     /* my 페이지 - 공지사항 , my 페이지 - 서비스 - 문의 내역*/
     .myPage :is(.noticePage , .servicePage) .boardBox li button{padding: 0 20px;}
-    .myPage :is(.noticePage , .servicePage) .boardBox li button strong{width: 92px; color: var(--colorPoint); font-weight: 700; text-align: left; padding: 0 20px; margin-right: 40px;}
-    .myPage :is(.noticePage , .servicePage) .boardBox li button strong.fin{color: var(--colorGray);}
+    .myPage :is(.noticePage , .servicePage) .boardBox li button strong{width: 92px; font-weight: 700; text-align: left; padding: 0 20px; margin-right: 40px;}
     .myPage :is(.noticePage , .servicePage) .boardBox li button span{padding: 0 20px;}
     .myPage :is(.noticePage , .servicePage) .boardBox li button time{margin-left: auto;}
     .myPage :is(.noticePage , .servicePage) .boardBox li button::after{margin-left: 40px;}
@@ -167,4 +166,12 @@
     .myPage .accountPage .inputBox fieldset > .kakao{font-size: var(--font06);}
     .myPage .accountPage .inputBox fieldset > .withdrawalArea{text-align: right;}
     .myPage .accountPage .inputBox fieldset > .withdrawalArea button.withdrawal::after{content: ''; width: 16px; height: 16px; background: url('../images/icon-withdrawal.png') no-repeat center / cover;}
+
+    /* my 페이지 - 서비스 */
+    .myPage .servicePage .tabBox{margin-bottom: 50px;}
+
+    /* my 페이지 - 서비스 - 문의하기 */
+    .myPage .servicePage .inputBox fieldset div{margin-top: 30px;}
+    .myPage .servicePage .inputBox fieldset p{margin-top: 14px;}
+    .myPage .servicePage .inputBox fieldset p::before{content: ''; width: 18px; height: 18px; background: url('../images/icon-notice.png') no-repeat center / cover; margin-right: 6px;}
 }
