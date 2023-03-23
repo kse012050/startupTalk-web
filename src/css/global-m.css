@@ -37,7 +37,8 @@
 
     .signPage > section:not(.mainPage) h2,
     .receiptPage > .mainPage h2,
-    .marketingPage .counselPage h2{position: fixed; top: 0; left: 50%; transform: translateX(-50%); z-index: 11; line-height: 50px; font-size: var(--font04); font-weight: 700;}
+    .marketingPage .counselPage h2,
+    .myPage h3{position: fixed; top: 0; left: 50%; transform: translateX(-50%); z-index: 11; line-height: 50px; font-size: var(--font04); font-weight: 700;}
 
 
     /* 버튼 */

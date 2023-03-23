@@ -145,4 +145,11 @@
     /* my 페이지 - 메인 - 상담 접수 내역 */
     .myPage :is(.noticePage , .servicePage) .boardBox li > div{padding: 3px 20px 29.5px;}
     .myPage :is(.noticePage , .servicePage) .boardBox li div.detailArea{min-height: 180px;}
+
+    /* my 페이지 - 공지사항 , my 페이지 - 서비스 - 문의 내역*/
+
+    /* my 페이지 - 계정정보 */
+    .myPage .accountPage .inputBox fieldset > .kakao{font-size: var(--font04);}
+    .myPage .accountPage .inputBox fieldset > .withdrawalArea{text-align: center;}
+    .myPage .accountPage .inputBox fieldset > .withdrawalArea button{text-decoration: underline;}
 }

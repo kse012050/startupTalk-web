@@ -46,6 +46,9 @@ export default function Account() {
                 </ul>
                 <Link className='kakao'>카카오톡 로그인</Link>
                 <input type="submit" value="수정하기" className='btn-basic' />
+                <div className='withdrawalArea'>
+                    <button className='withdrawal'>회원탈퇴</button>
+                </div>
             </InputLayout>
         </>
     );

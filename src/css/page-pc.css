@@ -123,6 +123,7 @@
     .receiptPage .mainPage fieldset > div label{font-size: var(--font06);}
 
     /* my 페이지 */
+    .myPage h3{font-size: var(--title02); font-weight: 700; margin-bottom: 28px;}
     .appLink{background-image: url('../images/appLinkBG.png'); height: 104px; display: flex; align-items: center; justify-content: center;}
     .appLink mark{font-size: 22px; margin-right: 4.375%;}
     .appLink a{width: 248px;}
@@ -161,4 +162,9 @@
     .myPage :is(.noticePage , .servicePage) .boardBox li > div{padding: 30px 40px 40px;}
     .myPage :is(.noticePage , .servicePage) .boardBox li > div:first-of-type{border-top: 1px solid #dedede;}
     .myPage :is(.noticePage , .servicePage) .boardBox li div.detailArea{min-height: 320px;}
+
+    /* my 페이지 - 계정정보 */
+    .myPage .accountPage .inputBox fieldset > .kakao{font-size: var(--font06);}
+    .myPage .accountPage .inputBox fieldset > .withdrawalArea{text-align: right;}
+    .myPage .accountPage .inputBox fieldset > .withdrawalArea button.withdrawal::after{content: ''; width: 16px; height: 16px; background: url('../images/icon-withdrawal.png') no-repeat center / cover;}
 }

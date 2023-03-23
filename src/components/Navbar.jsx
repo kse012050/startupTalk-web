@@ -11,16 +11,20 @@ export default function Navbar() {
     const isMobileNavbar = !responsive && (
         pageName[0] === 'sign' || 
         pageName[0] === 'receipt' ||
-        (pageName[0] === 'marketing' && !!pageName[1])
+        (pageName[0] === 'marketing' && !!pageName[1]) ||
+        (pageName[0] === 'my' && !!pageName[1])
         );
-    const isMarketingHome = !responsive && (pageName[0] === 'marketing' && !!pageName[1])
+    const isMobileHome = !responsive && (
+        (pageName[0] === 'marketing' && !!pageName[1]) ||
+        (pageName[0] === 'my' && !!pageName[1])
+    )
     return (
         <header>
             <div className='contentSize'>
                 {isMobileNavbar &&
                     <BackLink />
                 }
-                {isMarketingHome ||
+                {isMobileHome ||
                     <h1><Link to='/' className='imgBox'>창업톡</Link></h1>
                 }
                 <nav>

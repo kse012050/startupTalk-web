@@ -135,7 +135,6 @@
 
 
 /* my 페이지 */
-.myPage h3{font-size: var(--title02); font-weight: 700; margin-bottom: 28px;}
 .appLink{background-repeat: no-repeat; background-position: center; background-size: cover;}
 .appLink mark{font-weight: 600;}
 .appLink a{border-radius: 28px;}
@@ -166,8 +165,10 @@
 
 /* my 페이지 - 계정정보 */
 .myPage .accountPage .inputBox{max-width: var(--contentSize02); margin: 0 auto;}
-.myPage .accountPage .inputBox fieldset > .kakao{font-size: var(--font06); font-weight: 700; display: flex; align-items: center; margin-top: 30px;}
+.myPage .accountPage .inputBox fieldset > .kakao{font-weight: 700; display: flex; align-items: center; margin-top: 30px;}
 .myPage .accountPage .inputBox fieldset > .kakao::before{content: ''; width: 20px; height: 20px; background: url('../images/icon-kakao2.png') no-repeat center / cover; margin-right: 6px;}
+.myPage .accountPage .inputBox fieldset > .withdrawalArea{margin-top: 30px;}
+.myPage .accountPage .inputBox fieldset > .withdrawalArea button.withdrawal{font-size: 14px; font-weight: 500; color: var(--colorGray); display: inline-flex; justify-content: flex-end; align-items: center;}
 
 /* my 페이지 - 서비스 */
 .myPage .servicePage .tabBox{margin-bottom: 50px;}
