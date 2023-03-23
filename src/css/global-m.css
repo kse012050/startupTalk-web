@@ -30,10 +30,12 @@
 
     /* 서브 페이지 타이틀 공통 */
     :is(.signPage , .categoryPage , .marketingPage) .mainPage h2, 
-    :is(.rankingPage) > section h2{font-size: var(--title01); font-weight: 700;}
+    :is(.rankingPage) > section h2,
+    .myPage .mobileSettingPage h2{font-size: var(--title01); font-weight: 700;}
 
     :is(.categoryPage , .marketingPage) .mainPage h2,
-    :is(.rankingPage) > section h2{margin-bottom: 30px;}
+    :is(.rankingPage) > section h2,
+    .myPage .mobileSettingPage h2{margin-bottom: 30px;}
 
     .signPage > section:not(.mainPage) h2,
     .receiptPage > .mainPage h2,

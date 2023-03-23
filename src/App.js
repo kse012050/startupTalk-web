@@ -18,6 +18,7 @@ import MyMain from './pages/my/Main';
 import MyNotice from './pages/my/Notice';
 import MyAccount from './pages/my/Account';
 import MyService from './pages/my/Service';
+import MobileSetting from './pages/my/MobileSetting';
 
 import { ResponsiveContext } from './context/Responsive';
 import { useEffect, useState } from 'react';
@@ -46,6 +47,7 @@ const router = createBrowserRouter([
       { path : '/my/notice' , element : <MyNotice />},
       { path : '/my/account' , element : <MyAccount />},
       { path : '/my/service' , element : <MyService />},
+      { path : '/my/mobileSetting' , element : <MobileSetting />},
     ]
   },
 ])
