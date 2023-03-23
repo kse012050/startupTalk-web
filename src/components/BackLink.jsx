@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link , useNavigate } from 'react-router-dom';
 
 export default function BackLink() {
+    const navigate = useNavigate();
     return (
-        <Link className="backLink imgBox">이전</Link>
+        <Link className="backLink imgBox" onClick={() => navigate(-1)}>이전</Link>
     );
 }
 

@@ -77,7 +77,7 @@ mark:not([class]){color: var(--colorPoint);}
 /* 아이템 - 베스트  순위표? */
 .bestList :is(.swiper-slide){counter-increment: bestItem;}
 .bestList :is(.swiper-slide) .itemText{margin-top: 16px; padding: 5px 0 12px 64px; position: relative;}
-.bestList :is(.swiper-slide) .itemText::before{content: '베스트' counter(bestItem); position: absolute; left: 0; top: 0; width: 52px; height: 62px; padding: 6px 5px; font-size: 14px; font-weight: 500; color: white; line-height: 20px; text-align: center; background: url('../images/icon-best.png') no-repeat center / cover; box-sizing: border-box;}
+.bestList :is(.swiper-slide) .itemText::before{content: '베스트' counter(bestItem); position: absolute; left: 0; top: 0; width: 52px; height: 62px; padding: 6px 5px; font-size: 14px; font-weight: 500; color: white; line-height: 20px; text-align: center; background: url('../images/icon-best.png') no-repeat center / cover; box-sizing: border-box; word-break: normal;}
 .bestList :is(.swiper-slide) .itemText mark{display: block; font-weight: 700;}
 .bestList :is(.swiper-slide) .itemText strong{font-weight: 500;}
 .bestList :is(.swiper-slide) .itemText span{position: absolute; right: 0; top: 0; font-weight: 700; display: flex; align-items: center;}

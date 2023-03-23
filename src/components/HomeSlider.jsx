@@ -33,11 +33,11 @@ export default function HomeSlider() {
                     prevEl : '.navigation-basic .prev',
                     nextEl : '.navigation-basic .next',
                 }}
-                /* autoplay={{
+                autoplay={{
                     el: '.autoPlay',
                     delay: 2500,
                     disableOnInteraction: false,
-                }} */
+                }}
                 pagination={{
                     el : '.pager',
                     clickable: true,
