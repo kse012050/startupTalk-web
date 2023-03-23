@@ -61,6 +61,16 @@
     .rankingPage .mainPage ol li a::before{width: 32px; height: 32px; font-size: var(--font05);}
 
 
+    /* 마케팅 - 메인 */
+    .marketingPage .mainPage ul li{background-size: 320px;}
+    .marketingPage .mainPage ul li:not(:last-child){margin-bottom: 20px;}
+    .marketingPage .mainPage ul li:nth-child(1){background-color: #f5faf3; background-image: url('../images/m-marketing-main01.png');}
+    .marketingPage .mainPage ul li:nth-child(2){background-color: #ebf5fa; background-image: url('../images/m-marketing-main02.png');}
+    .marketingPage .mainPage ul li a{height: 320px; padding: 24px;}
+    .marketingPage .mainPage ul li a mark{font-size: var(--font05);}
+    .marketingPage .mainPage ul li a p{font-size: 20px; line-height: 24px; margin-top: 10px;}
+
+
     /* 상세 페이지 */
     .detailPage section figure{margin-bottom: 30px;}
     .detailPage section figure > .imgBox{height: 360px; transform: translateX(-20px); width: calc(100% + 40px); margin-bottom: 30px;}

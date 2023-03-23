@@ -72,14 +72,11 @@
 
 
 /* 마케팅 - 메인 */
-.marketingPage .mainPage ul{display: flex; gap: 20px;}
-.marketingPage .mainPage ul li{flex: 1; background-repeat: no-repeat; background-position: right bottom; background-size: cover; border-radius: 18px;}
-.marketingPage .mainPage ul li:nth-child(1){background-image: url('../images/marketing-main01.png');}
-.marketingPage .mainPage ul li:nth-child(2){background-image: url('../images/marketing-main02.png');}
-.marketingPage .mainPage ul li a{display: block; height: 560px; padding: 45px 40px; box-sizing: border-box;}
-.marketingPage .mainPage ul li a mark{font-size: var(--font03); font-weight: 700;}
+.marketingPage .mainPage ul li{background-repeat: no-repeat; background-position: right bottom; border-radius: 18px;}
+.marketingPage .mainPage ul li a{display: block; box-sizing: border-box;}
+.marketingPage .mainPage ul li a mark{font-weight: 700;}
 .marketingPage .mainPage ul li a mark.blue{color: #51aad7;}
-.marketingPage .mainPage ul li a p{font-size: 30px; font-weight: 500; line-height: 36px; margin-top: 15px;}
+.marketingPage .mainPage ul li a p{font-weight: 500;}
 
 /* 마케팅 - 상세 페이지 */
 .marketingPage .detailPage .videoArea{margin-bottom: 60px;}

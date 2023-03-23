@@ -29,11 +29,10 @@
 
 
     /* 서브 페이지 타이틀 공통 */
-    .signPage .mainPage h2, 
-    .categoryPage .mainPage h2,
+    :is(.signPage , .categoryPage , .marketingPage) .mainPage h2, 
     :is(.rankingPage) > section h2{font-size: var(--title01); font-weight: 700;}
 
-    .categoryPage .mainPage h2,
+    :is(.categoryPage , .marketingPage) .mainPage h2,
     :is(.rankingPage) > section h2{margin-bottom: 30px;}
 
     .signPage > section:not(.mainPage) h2,
