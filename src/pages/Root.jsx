@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar';
 import MyTop from './my/Top';
 import AppLink from '../components/AppLink';
 import { ResponsiveContext } from '../context/Responsive';
+import ScrollToTop from "../ScrollToTop";
 
 export default function Root() {
     const responsive = useContext(ResponsiveContext);
@@ -15,6 +16,7 @@ export default function Root() {
     pageName[0] = pageName[0] ? pageName[0] : 'home';
     return (
         <div className={pageName[0] + 'Page'}>
+            <ScrollToTop/>
             <Navbar />
             {pageName[0] === 'home' && <HomeSlider />}
             {(responsive && pageName[0] === 'my') && <MyTop />}
