@@ -143,6 +143,6 @@
     /* my 페이지 - 메인 - 관심 아이템 */
 
     /* my 페이지 - 메인 - 상담 접수 내역 */
-    .myPage .mainPage .boardBox li div p{margin-bottom: 10px;}
-    .myPage .mainPage .boardBox li div time{font-size: var(--font05);}
+    .myPage :is(.noticePage , .servicePage) .boardBox li > div{padding: 3px 20px 29.5px;}
+    .myPage :is(.noticePage , .servicePage) .boardBox li div.detailArea{min-height: 180px;}
 }

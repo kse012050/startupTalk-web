@@ -150,4 +150,15 @@
     .myPage .mainPage .boardBox li div *:nth-child(2n + 1){width: 150px;}
     .myPage .mainPage .boardBox li div *:nth-child(2){flex: 1;}
     .myPage .mainPage .boardBox li div strong{font-weight: 700;}
+
+    /* my 페이지 - 공지사항 , my 페이지 - 서비스 - 문의 내역*/
+    .myPage :is(.noticePage , .servicePage) .boardBox li button{padding: 0 20px;}
+    .myPage :is(.noticePage , .servicePage) .boardBox li button strong{width: 92px; color: var(--colorPoint); font-weight: 700; text-align: left; padding: 0 20px; margin-right: 40px;}
+    .myPage :is(.noticePage , .servicePage) .boardBox li button strong.fin{color: var(--colorGray);}
+    .myPage :is(.noticePage , .servicePage) .boardBox li button span{padding: 0 20px;}
+    .myPage :is(.noticePage , .servicePage) .boardBox li button time{margin-left: auto;}
+    .myPage :is(.noticePage , .servicePage) .boardBox li button::after{margin-left: 40px;}
+    .myPage :is(.noticePage , .servicePage) .boardBox li > div{padding: 30px 40px 40px;}
+    .myPage :is(.noticePage , .servicePage) .boardBox li > div:first-of-type{border-top: 1px solid #dedede;}
+    .myPage :is(.noticePage , .servicePage) .boardBox li div.detailArea{min-height: 320px;}
 }

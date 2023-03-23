@@ -164,6 +164,7 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 
 
 /* 게시판 */
+.boardBox.mobileFull li > *:first-child time{font-size: var(--font05); color: var(--colorGray);}
 
 
 /* 팝업 */
