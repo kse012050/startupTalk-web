@@ -14,7 +14,7 @@ export default function Ranking() {
     return (
         <>
             <h2>실시간 랭킹</h2>
-            <ul className='tabArea' onClick={tabMenu}>
+            <ul className='tabArea mobileFull' onClick={tabMenu}>
                 <li className='active'>관심도</li>
                 <li>Talk 수</li>
                 <li>점포 수</li>

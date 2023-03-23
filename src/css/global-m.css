@@ -24,14 +24,17 @@
     /* 메인 페이지 */
     .homePage [class$="Page"]{margin-top: 50px;}
     /* 카테고리 , 랭킹  , 마이 , 상세 , 마케팅 - 메인 페이지*/
-    :is(.categoryPage , .rankingPage , .myPage ) > section, 
-    .marketingPage :is(.mainPage , .detailPage){margin-top: 60px;}
+    :is(.categoryPage , .rankingPage , .myPage ) > section,
+    .marketingPage :is(.mainPage , .detailPage){margin-top: 30px;}
 
 
     /* 서브 페이지 타이틀 공통 */
-    .signPage .mainPage h2, .categoryPage .mainPage h2{font-size: var(--title01); font-weight: 700;}
+    .signPage .mainPage h2, 
+    .categoryPage .mainPage h2,
+    :is(.rankingPage) > section h2{font-size: var(--title01); font-weight: 700;}
 
-    .categoryPage .mainPage h2{margin-bottom: 30px;}
+    .categoryPage .mainPage h2,
+    :is(.rankingPage) > section h2{margin-bottom: 30px;}
 
     .signPage > section:not(.mainPage) h2,
     .receiptPage > .mainPage h2{position: fixed; top: 0; left: 50%; transform: translateX(-50%); z-index: 11; line-height: 50px; font-size: var(--font04); font-weight: 700;}
@@ -46,6 +49,12 @@
     .itemBox.basic .itemText strong{font-size: var(--font02);}
     .itemBox.basic .itemText div span{font-size: var(--font05);}
 
+    /* 아이템 - 랭킹 */
+    .itemBox.rank .imgBox{width: 98px; height: 98px; border-radius: 18px; margin-right: 16px;}
+    .itemBox.rank .itemText mark{font-weight: 600; margin-bottom: 7px;}
+    .itemBox.rank .itemText strong{font-size: var(--font02); font-weight: 600; margin-bottom: 20px;}
+    .itemBox.rank .itemText span{font-size: 12px; font-weight: 700;}
+
     /* 아이템 - 가격 */
     .itemBox.price .imgBox{height: 98px; margin-bottom: 9px;}
     .itemBox.price .itemText{font-size: var(--font04); line-height: 18px;}
@@ -53,7 +62,7 @@
 
     /* 북마크 */
     .itemBox .imgBox button{width: 22px; height: 22px;}
-
+    .itemBox.rank .imgBox button{top: 10px; right: 0; width: 24px; height: 24px;}
 
     /* 아이템 - 베스트  순위표? */
     .bestList :is(.swiper-slide) .itemText mark{font-size: var(--font05); margin-bottom: 12px;}
