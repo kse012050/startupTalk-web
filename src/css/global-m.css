@@ -29,10 +29,12 @@
 
 
     /* 서브 페이지 타이틀 공통 */
-    .signPage .mainPage{font-size: var(--title01); font-weight: 700;}
+    .signPage .mainPage , .categoryPage .mainPage h2{font-size: var(--title01); font-weight: 700;}
 
-    /* .signPage > section:not(.mainPage) h2{position: fixed; top: 0; left: 50%; transform: translateX(-50%); z-index: 11; line-height: 50px; font-size: var(--font04); font-weight: 700;} */
-    .mobileNavbar + section h2{position: fixed; top: 0; left: 50%; transform: translateX(-50%); z-index: 11; line-height: 50px; font-size: var(--font04); font-weight: 700;}
+    .categoryPage .mainPage h2{margin-bottom: 30px;}
+
+    .signPage > section:not(.mainPage) h2,
+    .receiptPage > .mainPage h2{position: fixed; top: 0; left: 50%; transform: translateX(-50%); z-index: 11; line-height: 50px; font-size: var(--font04); font-weight: 700;}
 
 
     /* 버튼 */

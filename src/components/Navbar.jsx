@@ -10,7 +10,7 @@ export default function Navbar() {
     let pageName = location.substring(1).split('/');
     const isMobileNavbar = !responsive && (pageName[0] === 'sign' || pageName[0] === 'receipt');
     return (
-        <header className={isMobileNavbar && 'mobileNavbar'}>
+        <header>
             <div className='contentSize'>
                 {isMobileNavbar &&
                     <BackLink />

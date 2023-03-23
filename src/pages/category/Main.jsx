@@ -10,7 +10,7 @@ export default function Main() {
             type : 'food',
             typeList : [
                 {
-                    title : '음악/주점전체',
+                    title : '전체',
                     count : 10
                 },
                 {
