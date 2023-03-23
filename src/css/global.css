@@ -122,8 +122,8 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 
 /* 서치 박스 */
 .searchBox{position: relative;}
-.searchBox input{height: 54px; width: 100%; background-color: rgba(241, 244, 246, 0.5); padding: 20px 60px 20px 30px; border: none; border-radius: 10px; box-sizing: border-box;}
-.searchBox button{position: absolute; right: 30px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../images/icon-search-color.png') no-repeat center / cover; text-indent: -9999px;}
+.searchBox input{width: 100%; background-color: rgba(241, 244, 246, 0.8); border: none; border-radius: 10px; box-sizing: border-box;}
+.searchBox button{position: absolute; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; background: url('../images/icon-search-color.png') no-repeat center / cover; text-indent: -9999px;}
 
 
 /* 탭 */
@@ -137,10 +137,8 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 
 
 /* 카테고리 */
-.categoryType h3{font-size: var(--title03); font-weight: 700; margin-bottom: 20px;}
-.categoryType ul{display: flex; gap: 16px 12px; flex-wrap: wrap;}
-.categoryType ul li a{display: block; font-size: var(--font06); font-weight: 400; padding: 14px 20px; border: 1px solid #e6e6e6; border-radius: 23px;}
-.categoryType ul li a mark{font-weight: 700;}
+.categoryType ul{display: flex; flex-wrap: wrap;}
+.categoryType ul li a{display: block; font-weight: 400; border: 1px solid #e6e6e6; border-radius: 23px;}
 .categoryType ul li a mark::before{content: ' (';}
 .categoryType ul li a mark::after{content: ')';}
 

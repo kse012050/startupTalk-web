@@ -29,7 +29,7 @@
 
 
     /* 서브 페이지 타이틀 공통 */
-    .signPage .mainPage , .categoryPage .mainPage h2{font-size: var(--title01); font-weight: 700;}
+    .signPage .mainPage h2, .categoryPage .mainPage h2{font-size: var(--title01); font-weight: 700;}
 
     .categoryPage .mainPage h2{margin-bottom: 30px;}
 
@@ -67,8 +67,23 @@
     .inputBox input[type="submit"]{margin-top: 50px;}
 
 
+    /* 서치 박스 */
+    .searchBox input{height: 48px;  padding: 15px 50px 15px 15px;}
+    .searchBox button{right: 16px;}
+
+
     /* 탭 */
     .tabBox li{font-size: var(--font04); height: 50px; border-width: 1px; border-radius: 10px;}
+
+
+    /* 카테고리 */
+    .categoryType:not(:last-of-type){box-shadow: inset 0 -1px 0 0 #eee;}
+    .categoryType h3{font-size: var(--font01); font-weight: 600; height: 70px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;}
+    .categoryType h3::after{content: ''; width: 24px; height: 24px; background: url('../images/m-icon-category-more.png') no-repeat center / cover; transition: transform 0.5s;}
+    .categoryType h3.active::after{transform: rotate(180deg);}
+    .categoryType ul{gap: 12px 10px; padding-bottom: 25px;}
+    .categoryType ul li a{font-size: var(--font04); padding: 14px 16px;}
+    .categoryType ul li a mark{font-weight: 600;}
 
 
     /* 팝업 */

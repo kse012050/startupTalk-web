@@ -58,8 +58,20 @@
     .inputBox input[type="submit"]{margin-top: 60px;}
 
 
+    /* 서치 박스 */
+    .searchBox input{height: 54px; padding: 20px 60px 20px 30px;}
+    .searchBox button{right: 30px;}
+
+
     /* 탭 */
     .tabBox li{font-size: var(--font03); height: 60px; border-width: 1.5px; border-radius: 14px;}
+
+
+    /* 카테고리 */
+    .categoryType h3{font-size: var(--title03); font-weight: 700; margin-bottom: 20px;}
+    .categoryType ul{gap: 16px 12px;}
+    .categoryType ul li a{font-size: var(--font06); padding: 14px 20px;}
+    .categoryType ul li a mark{font-weight: 700;}
 
 
     /* 팝업 */

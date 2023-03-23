@@ -37,6 +37,10 @@
     .signPage > .findPage .tabBox{margin-bottom: 30px;}
 
 
+    /* 카테고리 - 메인 */
+    .categoryPage .mainPage .searchBox{margin-bottom: 20px;}
+
+
     /* 상세 페이지 */
     .detailPage section figure{margin-bottom: 30px;}
     .detailPage section figure > .imgBox{height: 360px; transform: translateX(-20px); width: calc(100% + 40px); margin-bottom: 30px;}

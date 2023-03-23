@@ -32,6 +32,11 @@
     .signPage > .findPage .tabBox{margin: 50px 0;}
 
 
+    /* 카테고리 - 메인 */
+    .categoryPage .mainPage .searchBox{margin-bottom: 50px;}
+    .categoryPage .mainPage .categoryType:not(:last-of-type){margin-bottom: 60px;}
+
+
     /* 상세 페이지 */
     .detailPage section figure{display: flex; justify-content: space-between; margin-bottom: 40px;}
     .detailPage section figure > .imgBox{width: 370px; height: 370px; border-radius: 20px; margin-right: 40px;}
