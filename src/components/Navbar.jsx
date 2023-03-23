@@ -8,10 +8,11 @@ export default function Navbar() {
     const responsive = useContext(ResponsiveContext);
     location = location.pathname;
     let pageName = location.substring(1).split('/');
+    const isMobileNavbar = !responsive && (pageName[0] === 'sign' || pageName[0] === 'receipt');
     return (
-        <header>
+        <header className={isMobileNavbar && 'mobileNavbar'}>
             <div className='contentSize'>
-                {(!responsive && pageName[0] === 'sign') &&
+                {isMobileNavbar &&
                     <BackLink />
                 }
                 <h1><Link to='/' className='imgBox'>창업톡</Link></h1>
@@ -25,7 +26,7 @@ export default function Navbar() {
                         <li><NavLink to='/marketing'>마케팅</NavLink></li>
                     </ul>
                 </nav>
-                {pageName[0] === 'sign' ||
+                {(pageName[0] === 'sign' || isMobileNavbar) ||
                     <div>
                         {responsive && 
                             <NavLink to='/category' className='icon-search'>검색</NavLink>
