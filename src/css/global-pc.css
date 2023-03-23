@@ -110,6 +110,14 @@
     }
 
 
+    /* 게시판 */
+    .boardBox{font-size: var(--font06); border-top: 1px solid var(--colorDarker);}
+    .boardBox li{border-bottom: 1px solid #dedede;}
+    .boardBox li.titleArea div{height: 55px;}
+    .boardBox li > *:first-child{width: 100%; display: flex; align-items: center;}
+    .boardBox li:not(.titleArea) > *:first-child{height: 70px;}
+
+
     /* 팝업 */
     .popupBox-termsOfUse > div{max-width: 588px; height: 72%; padding: 40px 50px; }
     .popupBox-termsOfUse > div strong{font-size: var(--title02); margin-bottom: 40px;}

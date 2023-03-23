@@ -103,16 +103,22 @@
 
     /* 레이아웃 */
     /* 레이아웃 - 4개*/
-    @media (min-width: 501px) {
+    @media (min-width: 601px) {
         .horizontal4 > li{width: calc((100% - 20px) / 2);}
         .horizontal4 > li:not(:nth-child(2n)){margin-right: 20px;}
         .horizontal4 > li:nth-child(n + 3){margin-top: 30px;}
     }
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         .horizontal4 > li{width: 100%;}
         .horizontal4 > li:nth-child(n + 2){margin-top: 30px;}
     }
 
+
+    /* 게시판 */
+    .boardBox{font-size: var(--font04);}
+    .boardBox li{border-bottom: 1px solid #eeeeee;}
+    .boardBox li > *:first-child{padding-top: 21.5px; padding-bottom: 23.5px;}
+    .boardBox.mobileFull li > *:first-child{padding-left: 20px; padding-right: 20px; box-sizing: border-box;}
 
 
     /* 팝업 */

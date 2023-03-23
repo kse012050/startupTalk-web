@@ -131,36 +131,26 @@
 /* 간편 상담 신청 */
 .receiptPage .mainPage h2{text-align: center;}
 .receiptPage .mainPage fieldset > div{margin-top: 30px;}
-.receiptPage .mainPage fieldset > div label{font-size: var(--font06); font-weight: 600;}
+.receiptPage .mainPage fieldset > div label{font-weight: 600;}
 
 
 /* my 페이지 */
 .myPage h3{font-size: var(--title02); font-weight: 700; margin-bottom: 28px;}
+.appLink{background-repeat: no-repeat; background-position: center; background-size: cover;}
+.appLink mark{font-weight: 600;}
+.appLink a{border-radius: 28px;}
 
 /* my 페이지 - 최상단 */
-.myPage .topArea{padding: 50px 0 40px; background-color: var(--colorPoint); color: white; font-weight: 700; margin-bottom: 60px;}
+.myPage .topArea{background-color: var(--colorPoint); color: white; font-weight: 700;}
 .myPage .topArea div{position: relative;}
-.myPage .topArea div h2{font-size: 32px; margin-bottom: 110px;}
-.myPage .topArea div h2 em{text-decoration: underline;}
-.myPage .topArea div .logout{position: absolute; left: 0; bottom: 0; font-size: var(--font04); color: rgba(255, 255, 255, 0.8); display: flex; align-items: center;}
-.myPage .topArea div .logout::after{content: ''; width: 20px; height: 20px; background: url('../images/icon-logout.png') no-repeat center / cover; margin-left: 6px;}
-.myPage .topArea div ul{display: flex; justify-content: flex-end; align-items: center;}
-.myPage .topArea div ul li:not(:last-child){margin-right: 50px;}
-.myPage .topArea div ul li a{font-size: var(--font01);}
-.myPage .topArea div ul li:first-child a{position: relative;}
-.myPage .topArea div ul li:first-child a::after{content: ''; position: absolute; right: -9px; top: -2px; width: 6px; height: 6px; background-color: rgba(255, 255, 255, 0.7); border-radius: 100%;}
+
 
 /* my 페이지 - 메인 */
-.myPage .mainPage .tabBox{margin-bottom: 40px;}
+
 
 /* my 페이지 - 메인 - 관심 아이템 */
-.myPage .mainPage > button{display: block; width: 205px; height: 60px; font-size: var(--font04); font-weight: 500; border: 1px solid #e6e6e6; border-radius: 30px; margin: 60px auto 0;}
 
 /* my 페이지 - 메인 - 상담 접수 내역 */
-.myPage .mainPage .boardBox li div{justify-content: space-between; text-align: center;}
-.myPage .mainPage .boardBox li div *:nth-child(2n + 1){width: 150px;}
-.myPage .mainPage .boardBox li div *:nth-child(2){flex: 1;}
-.myPage .mainPage .boardBox li div strong{font-weight: 700;}
 .myPage .mainPage .boardBox li div time{color: var(--colorGray);}
 
 /* my 페이지 - 공지사항 , my 페이지 - 서비스 - 문의 내역*/
