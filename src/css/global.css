@@ -38,7 +38,7 @@ mark:not([class]){color: var(--colorPoint);}
 /* 아이템 - 기본 */
 .itemBox.basic .imgBox{height: var(--itemImgHieght02);}
 .itemBox.basic .imgBox:has(span , button){position: relative;}
-.itemBox.basic .imgBox span{position: absolute; left: 0; bottom: -8px; text-indent: 0; display: flex;}
+.itemBox.basic .imgBox span{position: absolute; left: 0; bottom: -8px; text-indent: 0; display: flex; border-radius: 4px;}
 .itemBox.basic .imgBox span{font-size: 13px; font-weight: 500; color: white; padding: 5px 10px;}
 .itemBox.basic .imgBox span{background-color: var(--colorPoint);}
 .itemBox.basic .itemText{font-weight: 500; margin-top: 20px;}
@@ -72,7 +72,7 @@ mark:not([class]){color: var(--colorPoint);}
 .itemBox.price .itemText{text-align: center;}
 
 /* 북마크 */
-.itemBox .imgBox button{position: absolute; right: 20px; top: 18px; text-indent: inherit; width: 30px; height: 30px; background: url('../images/icon-bookmark-white.png') no-repeat center / cover;}
+.itemBox .imgBox button{position: absolute; right: 20px; top: 18px; text-indent: inherit; background: url('../images/icon-bookmark-white.png') no-repeat center / cover;}
 .itemBox.rank .imgBox button{top: 20px; width: 44px; height: 44px; background: url('../images/icon-bookmark-border.png') no-repeat center / cover;}
 
 /* 아이템 - 베스트  순위표? */
@@ -139,6 +139,7 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 /* 카테고리 */
 .categoryType ul{display: flex; flex-wrap: wrap;}
 .categoryType ul li a{display: block; font-weight: 400; border: 1px solid #e6e6e6; border-radius: 23px;}
+.categoryType ul li a mark{font-weight: 700;}
 .categoryType ul li a mark::before{content: ' (';}
 .categoryType ul li a mark::after{content: ')';}
 
@@ -154,16 +155,13 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 .dropBox-big ul li a{display: block; padding: 0 22px; font-size: var(--font01); line-height: 52px;}
 .dropBox-big button::after{width: 34px; height: 34px; margin-left: 8px;}
 .dropBox-small ul{top: calc(100% + 14px); right: 0; padding: 13px 0;}
-.dropBox-small ul li a{display: block; padding: 0 26px 0 20px; font-size: var(--font04); line-height: 46px;}
+.dropBox-small ul li a{display: block; padding: 0 26px 0 20px; line-height: 46px;}
 .dropBox-small button::after{width: 20px; height: 20px; margin-left: 4px;}
 
 
 /* 레이아웃 */
 /* 레이아웃 - 4개*/
 .horizontal4{display: flex; flex-wrap: wrap;}
-.horizontal4 > li{width: calc((100% - 60px) / 4);}
-.horizontal4 > li:not(:nth-child(4n)){margin-right: 20px;}
-.horizontal4 > li:nth-child(n + 5){margin-top: 40px;}
 
 
 /* 게시판 */

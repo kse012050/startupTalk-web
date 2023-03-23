@@ -37,6 +37,12 @@
     .categoryPage .mainPage .categoryType:not(:last-of-type){margin-bottom: 60px;}
 
 
+    /* 카테고리 - 보기 */
+    .categoryPage .showPage .totalArea{margin-bottom: 20px;}
+    .categoryPage .showPage .dropBox-big + .totalArea{margin-top: 50px;}
+    .categoryPage .showPage .dropBox-big + .categoryType{margin: 30px 0;}
+
+
     /* 상세 페이지 */
     .detailPage section figure{display: flex; justify-content: space-between; margin-bottom: 40px;}
     .detailPage section figure > .imgBox{width: 370px; height: 370px; border-radius: 20px; margin-right: 40px;}

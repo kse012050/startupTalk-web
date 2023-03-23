@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function CategoryType({info , title}) {
-    const [isDrop , idSetDrop] = useState(false);
-    
+    const [isDrop , idSetDrop] = useState(()=> title ? false : true);
+    let isClass = 'categoryType'
+    title || (isClass = isClass + ' mobileFull')
     return (
-        <div className='categoryType'>
+        <div className={isClass}>
             {title && <h3 onClick={()=>idSetDrop(!isDrop)} className={isDrop ? 'active' : null}>{info.title}</h3>}
-            {isDrop &&
+            {(isDrop) &&
                 <ul>
                     {info.typeList.map((c)=>
                         <li key={c.title}>

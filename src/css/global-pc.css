@@ -23,7 +23,8 @@
     .marketingPage :is(.mainPage , .detailPage){margin-top: 60px;}
 
     /* 서브 페이지 타이틀 공통 */
-    :is(.signPage , .categoryPage , .rankingPage , .receiptPage , .marketingPage) > section h2{font-size: var(--title01); font-weight: 700;}
+    :is(.signPage , .categoryPage , .rankingPage , .receiptPage , .marketingPage) > section h2,
+    .categoryPage .showPage .dropBox-big button{font-size: var(--title01); font-weight: 700;}
     :is(.signPage , .receiptPage , .marketingPage) > section h2 + form{margin-top: 50px;}
     :is(.categoryPage , .rankingPage) > section h2,
     .marketingPage .mainPage h2{margin-bottom: 30px;}
@@ -49,6 +50,9 @@
     .itemBox.price .itemText p{margin-bottom: 4px;}
     .itemBox.price .itemText strong{font-weight: 700;}
 
+    /* 북마크 */
+    .itemBox .imgBox button{width: 30px; height: 30px;}
+
     /* input */
     .inputBox{font-size: var(--font06);}
     .inputBox fieldset > ul > li label{line-height: 22px;}
@@ -71,7 +75,29 @@
     .categoryType h3{font-size: var(--title03); font-weight: 700; margin-bottom: 20px;}
     .categoryType ul{gap: 16px 12px;}
     .categoryType ul li a{font-size: var(--font06); padding: 14px 20px;}
-    .categoryType ul li a mark{font-weight: 700;}
+
+
+    /* 드랍박스 */
+    .dropBox-small ul li a{font-size: var(--font04);}
+
+
+    /* 레이아웃 */
+    /* 레이아웃 - 4개*/
+    @media (min-width: 1181px) {
+        .horizontal4 > li{width: calc((100% - 60px) / 4);}
+        .horizontal4 > li:not(:nth-child(4n)){margin-right: 20px;}
+        .horizontal4 > li:nth-child(n + 5){margin-top: 40px;}
+    }
+    @media (min-width: 901px) and (max-width: 1180px) {
+        .horizontal4 > li{width: calc((100% - 40px) / 3);}
+        .horizontal4 > li:not(:nth-child(3n)){margin-right: 20px;}
+        .horizontal4 > li:nth-child(n + 4){margin-top: 40px;}
+    }
+    @media (max-width: 900px) {
+        .horizontal4 > li{width: calc((100% - 20px) / 2);}
+        .horizontal4 > li:not(:nth-child(2n)){margin-right: 20px;}
+        .horizontal4 > li:nth-child(n + 3){margin-top: 40px;}
+    }
 
 
     /* 팝업 */
