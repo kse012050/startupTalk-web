@@ -145,5 +145,7 @@
     footer div{display: flex; justify-content: space-between; align-items: center;}
     footer div img{width: 80px;}
     footer div ul{gap: 30px;}
+
+    .detailPage footer , .marketingPage .detailPage + footer{margin-bottom: 100px;}
 }
 

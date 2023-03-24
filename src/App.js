@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       { path : '/category/show' , element : <Show />},
       { path : '/category/show/:test' , element : <Show />},
       { path : '/marketing' , element : <MarketingMain />},
-      { path : '/marketing/detail' , element : <MarketingDetail />},
+      { path : '/marketing/detail/:test' , element : <MarketingDetail />},
       { path : '/marketing/counsel' , element : <MarketingCounsel />},
       { path : '/detail/:test' , element : <Detail />},
       { path : '/receipt' , element : <SimpleReceipt />},

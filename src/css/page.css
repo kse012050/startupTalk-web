@@ -79,7 +79,7 @@
 .marketingPage .mainPage ul li a p{font-weight: 500;}
 
 /* 마케팅 - 상세 페이지 */
-.marketingPage .detailPage .fixedArea{position: fixed; left: 0; width: 100%;}
+.marketingPage .detailPage .fixedArea{position: fixed; left: 0; width: 100%; z-index: 1;}
 
 
 /* 마케팅 - 창업톡 상담 (PC에 있음)*/

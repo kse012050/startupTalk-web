@@ -76,7 +76,7 @@ export default function Detail() {
             <mark className='support'><strong>창업비 지원</strong>현재 프로모션을 진행 중인 업체입니다.</mark>
 
             <ScrollFixed isScroll={isScroll} type="top">
-                {(!responsive && isScroll) &&
+                {(isScroll) &&
                     <BackLink />
                 }
                 <Tab tabList={tabList} content={[content ,setContent]}/>

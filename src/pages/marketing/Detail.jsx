@@ -1,9 +1,26 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { ResponsiveContext } from '../../context/Responsive';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 export default function Detail() {
     const responsive = useContext(ResponsiveContext);
+    // 페이지 서브 데이터 이름
+    const { test } = useParams()
+    const [isImg , setIsImg] = useState(false);
+    const [classTest , setClassTest] = useState(()=>
+        (test !== 'consulting' && test !== 'marketing') ?
+        'textArea' :
+        ''
+    );
+
+    useEffect(()=>{
+        if(isImg && classTest !=='textArea'){
+            setClassTest((prev)=>{
+                return prev + ' active';
+            })
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[isImg])
     return (
         <>
             <div className='videoArea'>
@@ -11,8 +28,12 @@ export default function Detail() {
             </div>
 
             <div className='detailArea'>
-                <div>상세 영역</div>
-                <button>더보기</button>
+                <div className={classTest}>
+                    {test === 'consulting' && <img src={require('../../images/detail-consulting.png')} alt=""/>}
+                    {test === 'marketing' && <img src={require('../../images/detail-marketing.png')} alt=""/>}
+                    {(test !== 'consulting' && test !== 'marketing') && '상세 영역'}
+                </div>
+                <button onClick={()=>setIsImg(!isImg)}>더보기</button>
             </div>
 
             <div className="fixedArea">
