@@ -157,10 +157,10 @@ export default function Home() {
                 <div className='marketingArea'>
                     <h3>연계 마케팅 정보</h3>
                     <div>
-                        <Link to={'/marketing'}>
+                        <Link to={'/detail/marketing'}>
                             <img src={require('../images/main-marketing01.png')} alt="우리 매장에 딱! 필요한 최적화 마케팅" />
                         </Link>
-                        <Link to={'/marketing'}>
+                        <Link to={'/detail/consulting'}>
                             <img src={require('../images/main-marketing02.png')} alt="창업톡만의 특별한 파워 전문 컨설팅"/>
                         </Link>
                     </div>

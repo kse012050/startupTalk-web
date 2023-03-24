@@ -63,7 +63,7 @@ export default function HomeSlider() {
                 loop={true}
                 className="mainSwiper"
             >
-                <SwiperSlide style={{backgroundImage: `url(${require('../images/mainSliderImg.png')})`}}>
+                <SwiperSlide>
                     <div>
                         <strong>
                             창업톡 첫걸음<br />
@@ -73,7 +73,7 @@ export default function HomeSlider() {
                         <Link>바로가기</Link>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide style={{backgroundImage: `url(${require('../images/mainSliderImg.png')})`}}>
+                <SwiperSlide>
                     <div>
                         <strong>
                             창업톡 첫걸음<br />

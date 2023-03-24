@@ -5,7 +5,7 @@
 .homePage .mainPage > div .sliderArea{position: relative;}
 
 /* 메인 페이지 - 메인 슬라이더 */
-.homePage .mainSwiper{height: 410px; color: white;}
+.homePage .mainSwiper{color: white;}
 .homePage .mainSwiper .swiper-slide{background-position: center; background-size: auto 100%;}
 .homePage .mainSwiper .swiper-slide div{max-width: var(--mainSliderWidth); width: calc(100% - 40px); margin: 0 auto; padding: 60px 0;}
 .homePage .mainSwiper .swiper-slide div strong{display: block; font-size: var(--title01); font-weight: 700; line-height: 60px; margin-bottom: 10px;}
@@ -65,7 +65,7 @@
 /* 랭킹 */
 .rankingPage .mainPage .tabArea{display: flex;}
 .rankingPage .mainPage .tabArea li{flex: 1; font-weight: 600; color: var(--colorGray); text-align: center; cursor: pointer; box-shadow: inset 0 -2px 0 0 #eee;}
-.rankingPage .mainPage .tabArea li:is(.active , :hover){color: var(--colorBasic); font-weight: 700; box-shadow: inset 0 -2px 0 0 var(--colorPoint);}
+.rankingPage .mainPage .tabArea li:is(.active , :hover){color: var(--colorPoint); font-weight: 700; box-shadow: inset 0 -2px 0 0 var(--colorPoint);}
 .rankingPage .mainPage ol{padding-top: 40px; display: flex; flex-wrap: wrap; position: relative;}
 .rankingPage .mainPage ol li{counter-increment: rankItem;}
 .rankingPage .mainPage ol li a::before{content: counter(rankItem); position: absolute; left: 0; top: 0; color: white; font-weight: 500; display: flex; justify-content: center; align-items: center; background-color: var(--colorPoint); border-radius: 20px 0;}
@@ -92,7 +92,7 @@
 .detailPage section figure figcaption ul{display: flex; text-align: center;}
 .detailPage section figure figcaption ul li{flex: 1; font-size: 13px; font-weight: 400; color: var(--colorGray); padding: 2px 0;}
 .detailPage section figure figcaption ul li:not(:last-child){border-right: 1px solid #ececec;}
-.detailPage section figure figcaption ul li strong{display: block; font-weight: 600; line-height: 23px; color: var(--colorBasic); margin-bottom: 6px;}
+.detailPage section figure figcaption ul li strong{display: block; font-size: 19px; font-weight: 600; line-height: 23px; color: var(--colorBasic); margin-bottom: 6px;}
 .detailPage section figure figcaption > div{margin-top: auto;}
 .detailPage section figure figcaption .scrollFixed-bottom div .receiptArea{display: flex;}
 .detailPage section figure figcaption .scrollFixed-bottom div .receiptArea button{flex-shrink: 0; background:#e6f8ee; border: 1.2px solid #c5f0d8; border-radius: 10px; text-indent: -9999px; margin-left: 8px; display: flex; align-items: center; justify-content: center;}
@@ -105,7 +105,14 @@
 
 /* 상세 페이지 - 브랜드 정보 */
 .detailPage .videoArea iframe{width: 100%; border-radius: 12px;}
-.detailPage .detailArea div{background-color: #f4f4f4; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 18%, #fff); display: flex; justify-content: center; align-items: center; font-size: var(--title01);}
+.detailPage .detailArea div{background-color: #f4f4f4; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 18%, #fff); display: flex; justify-content: center; font-size: var(--title01); overflow: hidden; position: relative;}
+.detailPage .detailArea div:not(.textArea){align-items: flex-start;}
+.detailPage .detailArea div.textArea{align-items: center;}
+.detailPage .detailArea div::after{content: ''; position: absolute; width: 100%; height: 100%; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 18%, #fff); z-index: 1;}
+.detailPage .detailArea div.active{height: auto;}
+.detailPage .detailArea div.active + button{display: none;}
+.detailPage .detailArea div.active::after{display: none;}
+.detailPage .detailArea div img{width: 100%;}
 .detailPage section .infoArea .interiorArea .swiper-slide .imgBox{border-radius: 18px;}
 .detailPage section .infoArea .locationArea iframe{width: 100%;}
 .detailPage section .infoArea .locationArea p{display: flex; align-items: center; font-size: var(--font06);}

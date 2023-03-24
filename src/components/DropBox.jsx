@@ -17,8 +17,6 @@ export default function DropBox({type , first , list}) {
         first[1](text);
         dropEvent();
     }
-    console.log(first[0]);
-    console.log(list)
     return (
         <div className={`dropBox-${type}`}>
             <button onClick={dropEvent}>{first[0]}</button>

@@ -1,9 +1,18 @@
 @media screen and (max-width : 780px) {
-    /* 메인 페이지 - 메인 슬라이더 - 오토 플레이 */
-    .homePage .mainSwiper .playArea{display: none;}
-
     /* 메인 페이지 */
     .homePage .mainPage > div > div h3{font-size: var(--title03); margin-bottom: 24px;}
+
+    /* 메인 페이지 - 메인 슬라이더 */
+    .homePage .mainSwiper{height: 530px;}
+    .homePage .mainSwiper .swiper-slide{background-color: var(--colorPoint);}
+    .homePage .mainSwiper .swiper-slide div{height: 100%; display: flex; flex-direction: column; justify-content: flex-end; box-sizing: border-box;}
+    .homePage .mainSwiper .swiper-slide div strong{font-size: 26px; line-height: 32px; margin-bottom: 30px;}
+    .homePage .mainSwiper .swiper-slide div a{font-size: var(--font04);}
+
+    /* 메인 페이지 - 메인 슬라이더 - 오토 플레이 */
+    .homePage .mainSwiper .playArea{display: none;}
+    .homePage .mainSwiper .navigation-basic{display: none;}
+
 
     /* 메인 페이지 - 인기 슬라이더 */
     .popularArea .sliderArea .popularSwiper .swiper-slide{width: 98px; height: 86px;}
@@ -86,7 +95,6 @@
     .detailPage section figure figcaption h2{font-size: var(--title02); font-weight: 600; margin-bottom: 10px; position: relative;}
     .detailPage section figure figcaption h2 mark{position: absolute; right: 0; top: 0; font-size: var(--font04);}
     .detailPage section figure figcaption p{font-size: var(--font05);}
-    .detailPage section figure figcaption ul li strong{font-size: var(--font01);}
     .detailPage section figure figcaption .scrollFixed-bottom {position: fixed; left: 0; bottom: 84px; width: 100%; z-index: 10;}
     .detailPage section figure figcaption .scrollFixed-bottom > div{width: var(--mobileWidth); margin: 0 auto;}
     .detailPage section figure figcaption .scrollFixed-bottom > div .receiptArea a{box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);}
@@ -102,7 +110,8 @@
     .detailPage section .scrollFixed-top.active .backLink{transform: translateX(-20px); margin-bottom: 10px;}
 
     /* 상세 페이지 - 브랜드 정보 */
-    .detailPage .videoArea iframe{height: 180px;}
+    .detailPage .videoArea{position: relative; width: 100%; height: auto; padding-top: 50%;}
+    .detailPage .videoArea iframe{position: absolute; width: 100%; height: 100%; top: 0; left: 0;}
     .detailPage .detailArea div{height: 500px;}
     .detailPage .detailArea button{width: 82px; height: 34px; font-size: var(--font06); font-weight: 400; border: 1px solid #e6e6e6; border-radius: 8px; display: block; margin: 0 auto;}
     .detailPage section .infoArea .menuArea .swiper-slide{width: 98px;}

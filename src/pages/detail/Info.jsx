@@ -1,9 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Item from '../../components/item/Item';
 
 export default function Info() {
+    // 페이지 서브 데이터 이름
+    const { test } = useParams()
+    const [isImg , setIsImg] = useState(false);
+    const [classTest , setClassTest] = useState(()=>
+        (test !== 'consulting' && test !== 'marketing') ?
+        'textArea' :
+        ''
+    );
+
+    useEffect(()=>{
+        if(isImg && classTest !=='textArea'){
+            setClassTest((prev)=>{
+                return prev + ' active';
+            })
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[isImg])
     return (
         <div className='infoArea'>
             <div className='videoArea'>
@@ -11,8 +29,12 @@ export default function Info() {
             </div>
 
             <div className='detailArea'>
-                <div>상세 영역</div>
-                <button>더보기</button>
+                <div className={classTest}>
+                    {test === 'consulting' && <img src={require('../../images/detail-consulting.png')} alt=""/>}
+                    {test === 'marketing' && <img src={require('../../images/detail-marketing.png')} alt=""/>}
+                    {(test !== 'consulting' && test !== 'marketing') && '상세 영역'}
+                </div>
+                <button onClick={()=>setIsImg(!isImg)}>더보기</button>
             </div>
 
             <div className='menuArea'>
