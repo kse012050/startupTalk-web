@@ -56,7 +56,7 @@ export default function Main() {
             type : 'cafe',
             typeList : [
                 {
-                    title : '카페/디저트 전체',
+                    title : '전체',
                     count : 5
                 },
                 {
@@ -76,7 +76,7 @@ export default function Main() {
             type : 'service',
             typeList : [
                 {
-                    title : '서비스 전체',
+                    title : '전체',
                     count : 10
                 },
                 {

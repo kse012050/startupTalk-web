@@ -5,7 +5,7 @@ import Email from '../../components/input/Email';
 import Identification from '../../components/input/Identification.';
 import InputText from '../../components/input/Text';
 import Tab from '../../components/Tab';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default function Account() {
     const [content , setContent] = useState('')
@@ -44,7 +44,7 @@ export default function Account() {
                         <Email />
                     </li>
                 </ul>
-                <Link className='kakao'>카카오톡 로그인</Link>
+                <p className='kakao'>카카오톡 로그인</p>
                 <input type="submit" value="수정하기" className='btn-basic' />
                 <div className='withdrawalArea'>
                     <button className='withdrawal'>회원탈퇴</button>

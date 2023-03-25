@@ -137,7 +137,7 @@
     /* my 페이지 - 최상단 */
     .myPage .topArea{padding: 50px 0 40px; margin-bottom: 60px;}
     .myPage .topArea div h2{font-size: 32px; margin-bottom: 110px;}
-    .myPage .topArea div h2 em{text-decoration: underline;}
+    .myPage .topArea div h2 a{text-decoration: underline;}
     .myPage .topArea div .logout{position: absolute; left: 0; bottom: 0; font-size: var(--font04); color: rgba(255, 255, 255, 0.8); display: flex; align-items: center;}
     .myPage .topArea div .logout::after{content: ''; width: 20px; height: 20px; background: url('../images/icon-logout.png') no-repeat center / cover; margin-left: 6px;}
     .myPage .topArea div ul{display: flex; justify-content: flex-end; align-items: center;}

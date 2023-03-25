@@ -8,7 +8,7 @@ export default function Top() {
     return (
         <div className='topArea'>
             <div className='contentSize'>
-                <h2><em>홍길동</em>님의 페이지</h2>
+                <h2><Link to='/my'>홍길동</Link>님의 페이지</h2>
                 {responsive ?
                     <MyPageLink /> :
                     <Link to={'/my/mobileSetting'}>설정</Link>
