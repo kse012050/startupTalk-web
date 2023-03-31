@@ -91,6 +91,7 @@
 
     .detailPage section [class|="scrollFixed"].active{position: fixed; left: 0; width: 100%; padding: 20px 0; background-color: white; z-index: 10;}
     .detailPage section [class|="scrollFixed"].active > div{max-width: var(--contentSize01); margin: 0 auto;}
+    .detailPage section .scrollFixed-top.active{top: 86px;}
     /* .detailPage section .scrollFixed-top.active{top: 0;  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);} */
     /* .detailPage section .scrollFixed-top.active .tabBox{margin: 0;} */
     .detailPage section .scrollFixed-top.active .backLink{position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 60px; height: 60px; background-image: url('../images/icon-back.png');}

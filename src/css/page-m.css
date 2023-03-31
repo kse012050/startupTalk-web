@@ -105,7 +105,7 @@
     .detailPage section > div > div > div:not(:last-child){margin-bottom: 40px;}
     .detailPage section > div > div h3{font-size: var(--font02); font-weight: 600; margin-bottom: 20px;}
 
-    .detailPage section .scrollFixed-top.active{position: fixed; left: 0; width: 100%; z-index: 11; padding-bottom: 20px; background-color: white;}
+    .detailPage section .scrollFixed-top.active{position: fixed; top: 0; left: 0; width: 100%; z-index: 11; padding-bottom: 20px; background-color: white;}
     .detailPage section .scrollFixed-top.active > div{width: var(--mobileWidth); margin: 0 auto;}
     .detailPage section .scrollFixed-top.active .backLink{transform: translateX(-20px); margin-bottom: 10px;}
 

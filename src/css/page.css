@@ -100,7 +100,7 @@
 .detailPage section mark.support{display: flex; align-items: center; font-size: var(--font06); font-weight: 700; color: var(--colorPoint); background-color: rgba(12, 191, 93, 0.1); border-radius: 14px 0; margin-bottom: 30px;}
 .detailPage section mark.support strong{color: white; background-color: var(--colorPoint); border-radius: 14px 0;}
 
-.detailPage section .scrollFixed-top.active{top: 0;  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);}
+.detailPage section .scrollFixed-top.active{box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);}
 .detailPage section .scrollFixed-top.active .tabBox{margin: 0;}
 
 /* 상세 페이지 - 브랜드 정보 */
