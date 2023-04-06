@@ -121,7 +121,7 @@
     .detailPage section .infoArea .locationArea p{font-size: var(--font04);}
     .detailPage section .infoArea .interiorArea .navigation-circle{display: none;}
 
-    /* 상세 페이지 - 창업개요 */
+    /* 상세 페이지 - 창업개요 */ 
     .detailPage section .counselArea div table tbody tr{font-size: var(--font04); line-height: 52px;}
     .detailPage section .counselArea div table tbody tr > *{flex: 1;}
     .detailPage section .counselArea div table tfoot tr th{padding: 20px;}
