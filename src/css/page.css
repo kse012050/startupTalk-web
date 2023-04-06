@@ -5,11 +5,7 @@
 .homePage .mainPage > div .sliderArea{position: relative;}
 
 /* 메인 페이지 - 메인 슬라이더 */
-.homePage .mainSwiper{color: white;}
-.homePage .mainSwiper .swiper-slide{background-position: center; background-size: auto 100%;}
-.homePage .mainSwiper .swiper-slide div{max-width: var(--mainSliderWidth); width: calc(100% - 40px); margin: 0 auto; padding: 60px 0;}
-.homePage .mainSwiper .swiper-slide div strong{display: block; font-size: var(--title01); font-weight: 700; line-height: 60px; margin-bottom: 10px;}
-.homePage .mainSwiper .swiper-slide div a{font-size: var(--font02); font-weight: 500;}
+
 
 
 /* 메인 페이지 - 인기 슬라이더 */

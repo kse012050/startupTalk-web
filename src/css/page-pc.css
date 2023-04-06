@@ -3,8 +3,11 @@
     .homePage .mainPage > div > div h3{font-size: var(--title02); margin-bottom: 20px;}
 
     /* 메인 페이지 - 메인 슬라이더 */
-    .homePage .mainSwiper{height: 410px;}
-    .homePage .mainSwiper .swiper-slide{background-image: url('../images/mainSliderImg.png');}
+    .homePage .mainSwiper{height: 410px; color: white;}
+    .homePage .mainSwiper .swiper-slide{background-image: url('../images/mainSliderImg.png'); background-position: center; background-size: auto 100%;}
+    .homePage .mainSwiper .swiper-slide div{max-width: var(--mainSliderWidth); width: calc(100% - 40px); margin: 0 auto; padding: 60px 0;}
+    .homePage .mainSwiper .swiper-slide div strong{display: block; font-size: var(--title01); font-weight: 700; line-height: 60px; margin-bottom: 10px;}
+    .homePage .mainSwiper .swiper-slide div a{font-size: var(--font02); font-weight: 500;}
 
     /* 메인 페이지 - 메인 슬라이더 - 오토 플레이 */
     .homePage .mainSwiper .playArea{position: absolute; left: 50%; top: 0; transform: translateX(-50%); max-width: var(--mainSliderWidth); width: calc(100% - 40px); width: 100%; height: 100%; display: flex; align-items: flex-end; z-index: 1; pointer-events: none; padding-bottom: 72.5px; box-sizing: border-box;}

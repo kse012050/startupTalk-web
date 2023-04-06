@@ -4,10 +4,9 @@
 
     /* 메인 페이지 - 메인 슬라이더 */
     .homePage .mainSwiper{height: 530px;}
-    .homePage .mainSwiper .swiper-slide{background-color: var(--colorPoint);}
     .homePage .mainSwiper .swiper-slide div{height: 100%; display: flex; flex-direction: column; justify-content: flex-end; box-sizing: border-box;}
-    .homePage .mainSwiper .swiper-slide div strong{font-size: 26px; line-height: 32px; margin-bottom: 30px;}
-    .homePage .mainSwiper .swiper-slide div a{font-size: var(--font04);}
+    .homePage .mainSwiper .swiper-slide div strong{display: none;}
+    .homePage .mainSwiper .swiper-slide div a{height: 100%; background:var(--colorPoint) url('../images/m-mainSliderImg.png') no-repeat center / 720px; text-indent: -9999px;}
 
     /* 메인 페이지 - 메인 슬라이더 - 오토 플레이 */
     .homePage .mainSwiper .playArea{display: none;}
