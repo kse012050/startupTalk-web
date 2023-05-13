@@ -32,3 +32,16 @@ export function searchDataApi(body){
         return data;
     })
 }
+
+export function rankingDataApi(data){
+    let body = {
+        "fucn" : data
+    }
+    body = JSON.stringify(body);
+    return fetch(`${apiURL}search`,{
+        method : 'POST',
+        body: body
+    }).then((res)=>res.json()).then((data)=>{
+        return data;
+    })
+}

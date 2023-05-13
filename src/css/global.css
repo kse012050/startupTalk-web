@@ -63,8 +63,8 @@ mark:not([class]){color: var(--colorPoint);}
 .itemBox.rank .itemText strong{font-size: var(--font01); font-weight: 700; margin-bottom: 17px;}
 .itemBox.rank .itemText span{display: flex; align-items: center;}
 .itemBox.rank .itemText span::before{content: ''; width: 16px; height: 16px; background-repeat: no-repeat; background-position: center; background-size: cover; margin-right: 4px;}
-.itemBox.rank .itemText span.taik::before{background-image: url('../images/icon-taik.png');}
-.itemBox.rank .itemText span.shop::before{background-image: url('../images/icon-shop.png');}
+.itemBox.rank .itemText span.chat::before{background-image: url('../images/icon-taik.png');}
+.itemBox.rank .itemText span.store::before{background-image: url('../images/icon-shop.png');}
 .itemBox.rank .itemText span.interest::before{background-image: url('../images/icon-interest.png');}
 
 /* 아이템 - 가격 */
@@ -74,7 +74,8 @@ mark:not([class]){color: var(--colorPoint);}
 .itemBox .imgBox button{position: absolute; right: 20px; top: 18px; text-indent: inherit; background-repeat: no-repeat; background-position: center; background-size: cover;}
 .itemBox:not(.rank) .imgBox button{background-image: url('../images/icon-bookmark-white.png');}
 .itemBox:not(.rank) .imgBox button.active{background-image: url('../images/icon-bookmark-white-chk.png');}
-.itemBox.rank .imgBox button{background: url('../images/icon-bookmark-border.png') no-repeat center / cover;}
+.itemBox.rank .imgBox button{background-image: url('../images/icon-bookmark-border.png');}
+.itemBox.rank .imgBox button.active{background-image: url('../images/icon-bookmark-border-chk.png');}
 
 /* 아이템 - 베스트  순위표? */
 .bestList :is(.swiper-slide){counter-increment: bestItem;}
