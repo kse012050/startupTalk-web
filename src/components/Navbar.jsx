@@ -37,7 +37,8 @@ export default function Navbar() {
                         <li><NavLink to='/marketing'>마케팅</NavLink></li>
                     </ul>
                 </nav>
-                {(pageName[0] === 'sign' || isMobileNavbar) ||
+                {/* 로그인 */}
+                {/* {(pageName[0] === 'sign' || isMobileNavbar) ||
                     <div>
                         {responsive && 
                             <NavLink to='/category' className='icon-search'>검색</NavLink>
@@ -47,7 +48,7 @@ export default function Navbar() {
                             <Link to='/sign'>로그인</Link>
                         }
                     </div>
-                }
+                } */}
                 
             </div>
         </header>

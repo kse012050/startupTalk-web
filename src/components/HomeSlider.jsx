@@ -43,21 +43,6 @@ export default function HomeSlider() {
                     clickable: true,
                     type: "fraction",
                 }}
-                /* breakpoints={{
-                    780 : {
-                        navigation :{
-                            prevEl : '.navigation-basic .prev',
-                            nextEl : '.navigation-basic .next',
-                        },
-                        pagination :{
-                            el : '.pager',
-                            clickable: true,
-                            type: "fraction",
-                        }
-                    }
-                }} */
-                // watchSlidesProgress
-                // onAutoplayTimeLeft={()=> responsive && onAutoplayTimeLeft()}
                 modules={[Navigation , Autoplay ,Pagination]}
                 onAutoplayTimeLeft={onAutoplayTimeLeft}
                 loop={true}
@@ -70,10 +55,10 @@ export default function HomeSlider() {
                             관심 창업아이템<br />
                             저장하기
                         </strong>
-                        <Link>바로가기</Link>
+                        <Link to={'https://blog.naver.com/lenapower/222974469646'}>바로가기</Link>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                {/* <SwiperSlide>
                     <div>
                         <strong>
                             창업톡 첫걸음<br />
@@ -82,7 +67,7 @@ export default function HomeSlider() {
                         </strong>
                         <Link>바로가기</Link>
                     </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
                 <div className="navigation-basic">
                     <div className='prev'></div>
                     <div className='next'></div>
