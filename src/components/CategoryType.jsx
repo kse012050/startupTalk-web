@@ -9,8 +9,20 @@ export default function CategoryType({info , title}) {
     title || (isClass = isClass + ' mobileFull')
     return (
         <div className={isClass}>
-            {title && <h3 onClick={()=>!responsive && idSetDrop(!isDrop)} className={isDrop ? 'active' : null}>{info.title}</h3>}
+            {/* <h3 onClick={()=>!responsive && idSetDrop(!isDrop)} className={isDrop ? 'active' : null}>{title}</h3> */}
+            {title && <h3 onClick={()=>!responsive && idSetDrop(!isDrop)} className={isDrop ? 'active' : null}>{title}</h3>}
             {(isDrop) &&
+                <ul>
+                    {info.map((data)=>
+                        <li key={data.category_id}>
+                            <Link to={`/category/show/${info.type}`}>{data.category}
+                                {data.brand_count !== '0' && <mark>{data.brand_count}</mark>}
+                            </Link>
+                        </li>
+                    )}
+                </ul>
+            }
+            {/* {(isDrop) &&
                 <ul>
                     {info.typeList.map((c)=>
                         <li key={c.title}>
@@ -20,7 +32,7 @@ export default function CategoryType({info , title}) {
                         </li>
                     )}
                 </ul>
-            }
+            } */}
         </div>
     );
 }

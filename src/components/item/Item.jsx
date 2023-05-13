@@ -5,21 +5,21 @@ import ItemBest from './ItemBest';
 import ItemPrice from './ItemPrice';
 import ItemRank from './ItemRank';
 
-export default function Item({img , type , info , support , bookmark , rankType}) {
-    const bookMark = (e) =>{
+export default function Item({img , type , info , support , bookMark , rankType}) {
+    const bookMarkClick = (e) =>{
         e.preventDefault();
         alert('북마크')
     }
     return (
         <Link to={'/detail/test'} className={`itemBox ${!type ? 'basic' : type}`}>
             <div className='imgBox' style={{backgroundImage : `url(${img})`}}>
-                {support &&
+                {support === 'y' &&
                     <span>
                         창업비 지원
                     </span>
                 }
-                {!!bookmark &&
-                    <button onClick={bookMark}>북마크</button>
+                {!!bookMark &&
+                    <button onClick={bookMarkClick} className={bookMark === 'y' ? 'active' : null}>북마크</button>
                 }
             </div>
             {!type && <ItemBasic info={info}/>}

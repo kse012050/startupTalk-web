@@ -71,7 +71,9 @@ mark:not([class]){color: var(--colorPoint);}
 .itemBox.price .itemText{text-align: center;}
 
 /* 북마크 */
-.itemBox .imgBox button{position: absolute; right: 20px; top: 18px; text-indent: inherit; background: url('../images/icon-bookmark-white.png') no-repeat center / cover;}
+.itemBox .imgBox button{position: absolute; right: 20px; top: 18px; text-indent: inherit; background-repeat: no-repeat; background-position: center; background-size: cover;}
+.itemBox:not(.rank) .imgBox button{background-image: url('../images/icon-bookmark-white.png');}
+.itemBox:not(.rank) .imgBox button.active{background-image: url('../images/icon-bookmark-white-chk.png');}
 .itemBox.rank .imgBox button{background: url('../images/icon-bookmark-border.png') no-repeat center / cover;}
 
 /* 아이템 - 베스트  순위표? */
