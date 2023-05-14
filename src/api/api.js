@@ -62,10 +62,22 @@ export function marketingDetailDataApi(){
         "fucn":"list",
     }
     body = JSON.stringify(body);
+    console.log(body);
     return fetch(`${apiURL}marketing`,{
         method : 'POST',
         body: body
     }).then((res)=>res.json()).then((data)=>{
         return data.list;
+    })
+}
+
+export function counselApi(data){
+    let body = {...data};
+    body = JSON.stringify(body);
+    return fetch(`${apiURL}counsel`,{
+        method : 'POST',
+        body: body
+    }).then((res)=>res.json()).then((data)=>{
+        return data;
     })
 }
