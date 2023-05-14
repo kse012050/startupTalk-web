@@ -34,9 +34,9 @@ export default function Show() {
         })
     },[])
 
-    /* useEffect(()=>{
+    useEffect(()=>{
         console.log(searchData);
-    },[searchData]) */
+    },[searchData])
     const [firstOrder , setFirstOrder] = useState('톡순');
     const order = [
         '톡순' , '관심순' , '신규등록순' , '비용낮은순' , '비용높은순'
@@ -48,7 +48,7 @@ export default function Show() {
             <DropBox type='big'  first={[firstCategory , setFirstCategory]} list={categoryData} body={[body , setBody]}/>
             {/* {!firstCategory.includes('전체') && test.map((c)=><CategoryType info={c} key={c.title} title={false}/>)} */}
             <div className='totalArea'>
-                {/* {firstCategory.includes('전체') && <p>총<mark>200</mark></p>} */}
+                {firstCategory.includes('전체') && <p>총<mark>{searchData.data.total_count}</mark></p>}
                   <DropBox type='small'  first={[firstOrder , setFirstOrder]} list={order} body={[body , setBody]}/>
             </div>
             
