@@ -10,9 +10,9 @@ export default function Main() {
         categoryDataApi().then(setCategoryData)
     },[])
 
-    /* useEffect(()=>{
-        console.log(categoryData);
-    },[categoryData]) */
+    // useEffect(()=>{
+    //     console.log(categoryData);
+    // },[categoryData])
     return (
         <>
             <h2>
@@ -20,7 +20,7 @@ export default function Main() {
                 <Link to={'/category/show'}>ALL</Link>
             </h2>
             <Search />
-            {categoryData?.map((data)=><CategoryType info={data.categorys} key={data.parent_category} title={data.parent_category}/>)}
+            {categoryData?.map((data)=><CategoryType key={data.parent_category} info={data.categorys} title={data.parent_category}/>)}
         </>
     );
 }

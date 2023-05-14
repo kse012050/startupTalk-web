@@ -14,9 +14,9 @@ export default function Home() {
         mainDataApi().then(setMainData)
     },[])
 
-    useEffect(()=>{
+    /* useEffect(()=>{
         console.log(mainData);
-    },[mainData])
+    },[mainData]) */
 
     return (
         <>
@@ -135,10 +135,10 @@ export default function Home() {
                                 <img src={data.marketing_image_file} alt={data.title} />
                             </Link>
                         )} */}
-                        <Link to={'/marketing/detail/marketing/1'}>
+                        <Link to={`/marketing/detail/0`}>
                             <img src={require('../images/main-marketing01.png')} alt="우리 매장에 딱! 필요한 최적화 마케팅" />
                         </Link>
-                        <Link to={'/marketing/detail/consulting/2'}>
+                        <Link to={'/marketing/detail/1'}>
                             <img src={require('../images/main-marketing02.png')} alt="창업톡만의 특별한 파워 전문 컨설팅"/>
                         </Link>
                     </div>

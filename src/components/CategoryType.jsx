@@ -15,7 +15,7 @@ export default function CategoryType({info , title}) {
                 <ul>
                     {info.map((data)=>
                         <li key={data.category_id}>
-                            <Link to={`/category/show/${title.replace('/',',')}`}>{data.category}
+                            <Link to={`/category/show/id/${data.category_id}`}>{data.category}
                                 {data.brand_count !== '0' && <mark>{data.brand_count}</mark>}
                             </Link>
                         </li>

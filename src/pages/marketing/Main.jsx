@@ -7,7 +7,7 @@ export default function Main() {
             <h2>마케팅</h2>
             <ul>
                 <li>
-                    <Link to={'/marketing/detail/marketing'}>
+                    <Link to={'/marketing/detail/0'}>
                         <mark>Marketing</mark>
                         <p>
                             우리 매장에 딱!<br/>
@@ -16,7 +16,7 @@ export default function Main() {
                     </Link>
                 </li>
                 <li>
-                    <Link to={'/marketing/detail/consulting'}>
+                    <Link to={'/marketing/detail/1'}>
                         <mark className='blue'>Consulting</mark>
                         <p>
                             창업톡만의 특별한<br/>

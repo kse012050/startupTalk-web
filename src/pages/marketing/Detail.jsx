@@ -1,39 +1,38 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useCallback, useContext, useEffect, useState } from 'react';
 import { ResponsiveContext } from '../../context/Responsive';
 import { Link, useParams } from 'react-router-dom';
+import { marketingDetailDataApi } from '../../api/api';
 
 export default function Detail() {
     const responsive = useContext(ResponsiveContext);
     // 페이지 서브 데이터 이름
-    const { test } = useParams()
-    const [isImg , setIsImg] = useState(false);
-    const [classTest , setClassTest] = useState(()=>
-        (test !== 'consulting' && test !== 'marketing') ?
-        'textArea' :
-        ''
-    );
+    const params = useParams()
+    const [imgClass , setImgClass] = useState('');
+    const [detailData , setDetailData] = useState('');
 
     useEffect(()=>{
-        if(isImg && classTest !=='textArea'){
-            setClassTest((prev)=>{
-                return prev + ' active';
-            })
-        }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[isImg])
+        marketingDetailDataApi().then(setDetailData)
+    },[])
+    useEffect(()=>{
+        console.log(detailData);
+    },[detailData])
+
+    const imgMore = useCallback(()=>{
+        setImgClass((prev)=>{
+            return prev + ' active';
+        })
+    },[])
     return (
         <>
-            <div className='videoArea'>
+            {/* <div className='videoArea'>
                 <iframe title='동영상' src="https://www.youtube.com/embed/eIUIknTz3-8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
-            </div>
+            </div> */}
 
             <div className='detailArea'>
-                <div className={classTest}>
-                    {test === 'consulting' && <img src={require('../../images/detail-consulting.png')} alt=""/>}
-                    {test === 'marketing' && <img src={require('../../images/detail-marketing.png')} alt=""/>}
-                    {(test !== 'consulting' && test !== 'marketing') && '상세 영역'}
+                <div className={imgClass}>
+                    {detailData && <img src={detailData[params.id].marketing_detail_image_file} alt={detailData[params.id].title}/>}
                 </div>
-                <button onClick={()=>setIsImg(!isImg)}>더보기</button>
+                <button onClick={imgMore}>더보기</button>
             </div>
 
             <div className="fixedArea">
