@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useCallback, useContext, useRef, useState } from 'react';
 import { Navigation ,  Autoplay , Pagination } from "swiper";
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,10 +11,10 @@ export default function HomeSlider() {
     const mainSliderRef = useRef(null);
     const [mainSliderAuto , setMainSliderAuto] = useState(true);
     const responsive = useContext(ResponsiveContext);
-    const onAutoplayTimeLeft = (s, time, progress) => {
-        if(!responsive){return}
+    const onAutoplayTimeLeft = useCallback((s, time, progress) => {
+        if(!responsive || s.slides.length === 1){return}
         progressContent.current.style.width = (1 - Math.abs(progress)) * 100 + '%';
-    }
+    },[])
     const autoPlayEvent = () =>{
         if(!responsive){return}
         if(mainSliderAuto ){

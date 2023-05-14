@@ -14,9 +14,9 @@ export default function Home() {
         mainDataApi().then(setMainData)
     },[])
 
-    /* useEffect(()=>{
+    useEffect(()=>{
         console.log(mainData);
-    },[mainData]) */
+    },[mainData])
 
     return (
         <>
@@ -36,7 +36,7 @@ export default function Home() {
                             modules={[FreeMode ,Navigation]}
                             className="popularSwiper"
                         >
-                            {mainData?.categorys.map((c)=><SwiperSlide key={c.category_id}><Link to={'/'}>{c.category}</Link></SwiperSlide>)}
+                            {mainData?.categorys.map((data)=><SwiperSlide key={data.category_id}><Link to={`/category/show/id/${data.category_id}`}>{data.category}</Link></SwiperSlide>)}
                         </Swiper>
                         <div className="navigation-circle">
                             <div className='prev imgBox'></div>
@@ -116,7 +116,7 @@ export default function Home() {
                         >
                             {mainData?.hots.map((data)=>
                                 <SwiperSlide key={data.brand_id}>
-                                    <Item img={data.brand_main_store_file} type="best" bookMark={data.interest_yn} info={{brand_name : data.brand_name , category : data.category }} id={data.brand_id}/>
+                                    <Item img={data.brand_main_store_file} type="best" bookMark={data.interest_yn} info={{brand_name : data.brand_name , category : data.category , today_interest_cnt :data.today_interest_cnt}} id={data.brand_id}/>
                                 </SwiperSlide>
                             )}
                         </Swiper>
