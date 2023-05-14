@@ -29,8 +29,8 @@ export default function Detail() {
 
     useEffect(()=>{
         setContent(tabList[0].path)
-        // eslint-disable-next-line react-hooks/exhaustive-deps
         brandDetailDataApi(params.id).then(setDetailData)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     useEffect(()=>{

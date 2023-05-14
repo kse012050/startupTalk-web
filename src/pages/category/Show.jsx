@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import CategoryType from '../../components/CategoryType';
 import DropBox from '../../components/DropBox';
 import Item from '../../components/item/Item';
 import Horizontal4 from '../../components/layout/Horizontal4';

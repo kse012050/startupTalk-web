@@ -14,7 +14,7 @@ export default function HomeSlider() {
     const onAutoplayTimeLeft = useCallback((s, time, progress) => {
         if(!responsive || s.slides.length === 1){return}
         progressContent.current.style.width = (1 - Math.abs(progress)) * 100 + '%';
-    },[])
+    },[responsive])
     const autoPlayEvent = () =>{
         if(!responsive){return}
         if(mainSliderAuto ){

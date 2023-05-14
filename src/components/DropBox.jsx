@@ -1,6 +1,5 @@
-import React, { useCallback, useState } from 'react';
-import { Link, useNavigate  ,useParams } from 'react-router-dom';
-import { searchDataApi } from '../api/api';
+import React, { useState } from 'react';
+import { Link, useNavigate  } from 'react-router-dom';
 
 export default function DropBox({type , first , list , body}) {
     const navigate = useNavigate();
@@ -12,7 +11,7 @@ export default function DropBox({type , first , list , body}) {
         });
     }
 
-    const listClick = useCallback((e , text) =>{
+    const listClick = (e , text) =>{
         e.preventDefault();
         dropEvent();
         if(type==="big"){
@@ -25,7 +24,7 @@ export default function DropBox({type , first , list , body}) {
             first[1](text);
             body[1](data);
         }
-    })
+    }
     return (
         <div className={`dropBox-${type}`}>
             <button onClick={dropEvent}>{first[0]}</button>

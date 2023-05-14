@@ -1,5 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useCallback, useState } from 'react';
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Item from '../../components/item/Item';
