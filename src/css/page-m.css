@@ -49,6 +49,12 @@
     .categoryPage .mainPage .searchBox{margin-bottom: 20px;}
     .categoryPage .mainPage .categoryType:not(:last-of-type){box-shadow: inset 0 -1px 0 0 #eee;}
     .categoryPage .mainPage .categoryType ul{padding-bottom: 25px;}
+
+    /* 카테고리 - 메인 - 검색*/
+    .categoryPage .searchPage:has(.searchTotal) .searchBox{margin-bottom: 30px;}
+    .categoryPage .searchPage .searchTotal{font-size: 15px;}
+    .categoryPage .searchPage .searchFail{padding: 126px 0 120px; font-size: 15px;}
+    .categoryPage .searchPage .searchFail::before{width: 36px; height: 36px;}
     
     
     /* 카테고리 - 보기 */
