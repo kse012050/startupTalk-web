@@ -6,7 +6,7 @@ export default function Counsel({ detailData }) {
             <div>
                 <h3>
                     창업 비용
-                    <small>점포면적 50.0m 기준</small>
+                    <small>점포면적 {detailData.standard_store_area}{/* m */}㎡ 기준</small>
                 </h3>
                 <table>
                     <tbody>

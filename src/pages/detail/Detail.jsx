@@ -72,7 +72,7 @@ export default function Detail() {
                             창업비용
                         </li>
                         <li>
-                            <strong>50.0㎡</strong>
+                            <strong>{detailData.standard_store_area}㎡</strong>
                             면적 기준
                         </li>
                     </ul>

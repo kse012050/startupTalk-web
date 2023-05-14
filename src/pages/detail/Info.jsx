@@ -15,9 +15,11 @@ export default function Info({detailData}) {
     },[])
     return (
         <div className='infoArea'>
-           {/*  <div className='videoArea'>
-                <iframe title='동영상' src="https://www.youtube.com/embed/eIUIknTz3-8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
-            </div> */}
+            {detailData.brand_video_link &&
+                <div className='videoArea'>
+                    <iframe title='동영상' src={`https://www.youtube.com/embed/${detailData.brand_video_link.substring(detailData.brand_video_link.length - 11)}`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
+                </div>
+            }
 
             <div className='detailArea'>
                 <div className={imgClass}>
