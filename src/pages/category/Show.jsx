@@ -34,14 +34,13 @@ export default function Show() {
         })
     },[])
 
-    useEffect(()=>{
+    /* useEffect(()=>{
         console.log(searchData);
-    },[searchData])
+    },[searchData]) */
     const [firstOrder , setFirstOrder] = useState('톡순');
     const order = [
         '톡순' , '관심순' , '신규등록순' , '비용낮은순' , '비용높은순'
     ]
-
 
     return (
         <>

@@ -36,6 +36,7 @@ const router = createBrowserRouter([
       { path : '/sign/Find' , element : <Find />},
       { path : '/ranking' , element : <Ranking />},
       { path : '/category' , element : <CategoryMain />},
+      { path : '/category/search/:search' , element : <CategoryMain />},
       { path : '/category/show' , element : <Show />},
       { path : '/category/show/id/:id' , element : <Show />},
       { path : '/category/show/name/:name' , element : <Show />},

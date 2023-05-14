@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import InputLayout from '../../components/input/InputLayout';
 import InputName from '../../components/input/Name';
 import InputText from '../../components/input/Text';

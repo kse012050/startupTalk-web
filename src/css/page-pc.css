@@ -40,9 +40,13 @@
 
 
     /* 카테고리 - 메인 */
-    .categoryPage .mainPage .searchBox{margin-bottom: 50px;}
+    .categoryPage :is(.mainPage , .searchPage) .searchBox{margin-bottom: 50px;}
     .categoryPage .mainPage .categoryType:not(:last-of-type){margin-bottom: 60px;}
 
+    /* 카테고리 - 메인 - 검색*/
+    .categoryPage .searchPage .searchTotal{display: flex; justify-content: space-between; align-items: center; font-size: 17px; margin-bottom: 20px;}
+    .categoryPage .searchPage .searchTotal p{font-weight: 500;}
+    .categoryPage .searchPage .searchTotal p mark{font-weight: 700;}
 
     /* 카테고리 - 보기 */
     .categoryPage .showPage .totalArea{margin-bottom: 20px;}

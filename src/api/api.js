@@ -9,7 +9,6 @@ export function mainDataApi(){
 }
 
 export function categoryDataApi(){
-    // console.log('카테고리 api');
     let body = {
         "fucn":"list"
     }

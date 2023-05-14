@@ -14,9 +14,9 @@ export default function Home() {
         mainDataApi().then(setMainData)
     },[])
 
-    useEffect(()=>{
+/*     useEffect(()=>{
         console.log(mainData);
-    },[mainData])
+    },[mainData]) */
 
     return (
         <>
