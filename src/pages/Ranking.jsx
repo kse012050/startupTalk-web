@@ -50,7 +50,7 @@ export default function Ranking() {
                 <li>점포 수</li>
             </ul>
             <ol>
-                {rankingData?.list?.map((data)=><li key={data.brand_id}><Item img={data.brand_logo_file} type="rank" bookMark={data.interest_yn} rankType={rankType} info={data}/></li>)}
+                {rankingData?.list?.map((data)=><li key={data.brand_id}><Item img={data.brand_logo_file} type="rank" bookMark={data.interest_yn} rankType={rankType} info={data} id={data.brand_id}/></li>)}
                 {/* <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true} rankType='taik'/></li>
                 <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true} rankType='shop'/></li>
                 <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true} rankType='interest'/></li>

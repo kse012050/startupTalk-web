@@ -38,13 +38,17 @@ export default function Detail() {
     },[detailData])
 
     useEffect(() => {
-        window.addEventListener("scroll", () => {
+        const scrollEvent = () =>{
             if(window.scrollY > (scrollRef.current.offsetTop - 86)){
                 setIsScroll(true)
             }else{
                 setIsScroll(false)
             }
-        });
+        }
+        window.addEventListener("scroll", scrollEvent);
+        return ()=>{
+            window.removeEventListener('scroll' , scrollEvent);
+        }
     }, []);
 
     return (

@@ -40,7 +40,7 @@ const router = createBrowserRouter([
       { path : '/category/show/:parent_category' , element : <Show />},
       { path : '/category/show/:parent_category/:search' , element : <Show />},
       { path : '/marketing' , element : <MarketingMain />},
-      { path : '/marketing/detail/:test' , element : <MarketingDetail />},
+      { path : '/marketing/detail/:id' , element : <MarketingDetail />},
       { path : '/marketing/counsel' , element : <MarketingCounsel />},
       { path : '/detail/:id' , element : <Detail />},
       { path : '/receipt' , element : <SimpleReceipt />},

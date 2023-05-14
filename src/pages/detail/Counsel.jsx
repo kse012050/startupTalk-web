@@ -55,7 +55,7 @@ export default function Counsel({ detailData }) {
                     <table>
                         <tbody>
                             {detailData.company_paiement_money_list.map((data)=>
-                                <tr>
+                                <tr key={data.name}>
                                     <th>{data.name}</th>
                                     <td>{data.value}만원</td>
                                 </tr>

@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function ItemBest() {
+export default function ItemBest({info}) {
     return (
         <div className='itemText'>
-            <mark>양식</mark>
-            <strong>리얼 파스타</strong>
+            <mark>{info.category}</mark>
+            <strong>{info.brand_name}</strong>
             <span>200</span>
         </div>
     );

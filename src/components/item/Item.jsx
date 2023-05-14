@@ -23,7 +23,7 @@ export default function Item({img , type , info , support , bookMark , rankType 
                 }
             </div>
             {!type && <ItemBasic info={info}/>}
-            {type === 'best' && <ItemBest />}
+            {type === 'best' && <ItemBest info={info}/>}
             {type === 'rank' && <ItemRank info={info} rankType={rankType}/>}
             {type === 'price' && <ItemPrice info={info}/>}
         </Link>

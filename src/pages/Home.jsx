@@ -116,7 +116,7 @@ export default function Home() {
                         >
                             {mainData?.hots.map((data)=>
                                 <SwiperSlide key={data.brand_id}>
-                                    <Item img={data.brand_main_store_file} type="best" bookMark={data.interest_yn}/>
+                                    <Item img={data.brand_main_store_file} type="best" bookMark={data.interest_yn} info={{brand_name : data.brand_name , category : data.category }} id={data.brand_id}/>
                                 </SwiperSlide>
                             )}
                         </Swiper>
@@ -135,10 +135,10 @@ export default function Home() {
                                 <img src={data.marketing_image_file} alt={data.title} />
                             </Link>
                         )} */}
-                        <Link to={'/marketing/detail/marketing'}>
+                        <Link to={'/marketing/detail/marketing/1'}>
                             <img src={require('../images/main-marketing01.png')} alt="우리 매장에 딱! 필요한 최적화 마케팅" />
                         </Link>
-                        <Link to={'/marketing/detail/consulting'}>
+                        <Link to={'/marketing/detail/consulting/2'}>
                             <img src={require('../images/main-marketing02.png')} alt="창업톡만의 특별한 파워 전문 컨설팅"/>
                         </Link>
                     </div>
