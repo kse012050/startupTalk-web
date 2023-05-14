@@ -1,5 +1,6 @@
 
-const apiURL = 'http://changtalk.co.kr/api/web_v2/'
+const apiURL = process.env.REACT_APP_API_URL;
+console.log(apiURL);
 
 export function mainDataApi(){
     return fetch(`${apiURL}main`).then((res)=>{
