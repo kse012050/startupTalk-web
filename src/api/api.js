@@ -38,10 +38,24 @@ export function rankingDataApi(data){
         "fucn" : data
     }
     body = JSON.stringify(body);
-    return fetch(`${apiURL}search`,{
+    return fetch(`${apiURL}ranking`,{
         method : 'POST',
         body: body
     }).then((res)=>res.json()).then((data)=>{
         return data;
+    })
+}
+
+export function brandDetailDataApi(id){
+    let body = {
+        "fucn":"detail",
+        "brand_id": id
+    }
+    body = JSON.stringify(body);
+    return fetch(`${apiURL}brand`,{
+        method : 'POST',
+        body: body
+    }).then((res)=>res.json()).then((data)=>{
+        return data.data;
     })
 }

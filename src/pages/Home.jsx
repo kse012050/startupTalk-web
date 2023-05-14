@@ -11,11 +11,12 @@ import { mainDataApi } from '../api/api';
 export default function Home() {
     const [mainData , setMainData] = useState()
     useEffect(()=>{
-       /*  mainDataApi().then((data)=>{
-            setMainData(data.data)
-        }) */
         mainDataApi().then(setMainData)
     },[])
+
+    useEffect(()=>{
+        console.log(mainData);
+    },[mainData])
 
     return (
         <>
@@ -75,7 +76,7 @@ export default function Home() {
                         >
                             {mainData?.recommands.map((data)=>
                                 <SwiperSlide key={data.brand_id}>
-                                    <Item img={data.brand_main_store_file} info={{title : data.brand_name , shop : data.store_count , cost : data.start_up_money / 1000 , taik : data.chat_count}} support={data.promotion_yn}/>
+                                    <Item img={data.brand_main_store_file} info={{title : data.brand_name , shop : data.store_count , cost : data.start_up_money / 1000 , taik : data.chat_count}} support={data.promotion_yn} id={data.brand_id}/>
                                 </SwiperSlide>
                             )}
                         </Swiper>

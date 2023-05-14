@@ -1,19 +1,22 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import BackLink from '../../components/BackLink';
 import ScrollFixed from '../../components/ScrollFixed';
 import Tab from '../../components/Tab';
 import { ResponsiveContext } from '../../context/Responsive';
 import Counsel from './Counsel';
 import Info from './Info';
+import { brandDetailDataApi } from '../../api/api';
 // import * as Scroll from 'react-scroll';
 // import { Linka, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
 export default function Detail() {
+    const params = useParams();
     const responsive = useContext(ResponsiveContext);
-    const [isScroll , setIsScroll] = useState(false)
-    const [content , setContent] = useState('')
+    const [isScroll , setIsScroll] = useState(false);
+    const [content , setContent] = useState('');
+    const [detailData , setDetailData] = useState('');
     const scrollRef = useRef();
     const tabList = [{
             name : '브랜드 정보',
@@ -27,7 +30,12 @@ export default function Detail() {
     useEffect(()=>{
         setContent(tabList[0].path)
         // eslint-disable-next-line react-hooks/exhaustive-deps
+        brandDetailDataApi(params.id).then(setDetailData)
     },[])
+
+    useEffect(()=>{
+        console.log(detailData);
+    },[detailData])
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -42,21 +50,21 @@ export default function Detail() {
     return (
         <>
             <figure>
-                <div className='imgBox' style={{backgroundImage : `url(${require('../../images/item01.png')})`}}>
+                <div className='imgBox' style={{backgroundImage : `url(${detailData.brand_main_store_file})`}}>
                 </div>
                 <figcaption>
                     <h2>
-                        <mark>주점</mark>
-                        지금 보고싶다
+                        <mark>{detailData.category}</mark>
+                        {detailData.brand_name}
                     </h2>
-                    <p>현재 <mark>3천명</mark>이 Talk 중</p>
+                    <p>현재 <mark>{detailData.chat_count}명</mark>이 Talk 중</p>
                     <ul>
                         <li>
-                            <strong>150개</strong>
+                            <strong>{detailData.store_count}개</strong>
                             점포수
                         </li>
                         <li>
-                            <strong>1억원</strong>
+                            <strong>{detailData.start_up_money / 1000}억원</strong>
                             창업비용
                         </li>
                         <li>
@@ -72,8 +80,9 @@ export default function Detail() {
                     </ScrollFixed>
                 </figcaption>
             </figure>
-
-            <mark className='support'><strong>창업비 지원</strong>현재 프로모션을 진행 중인 업체입니다.</mark>
+            {detailData.promotion_yn === 'y' &&
+                <mark className='support'><strong>창업비 지원</strong>현재 프로모션을 진행 중인 업체입니다.</mark>
+            }
 
             <ScrollFixed isScroll={isScroll} type="top">
                 {(isScroll && !responsive) &&
@@ -83,8 +92,8 @@ export default function Detail() {
             </ScrollFixed>
 
             <div ref={scrollRef} className="contentArea">
-                {content === 'info' && <Info/>}
-                {content === 'counsel' && <Counsel />}
+                {content === 'info' && <Info detailData={detailData}/>}
+                {content === 'counsel' && <Counsel detailData={detailData}/>}
             </div>
         </>
     );

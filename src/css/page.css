@@ -103,7 +103,7 @@
 .detailPage .videoArea iframe{width: 100%; border-radius: 12px;}
 .detailPage .detailArea div{background-color: #f4f4f4; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 18%, #fff); display: flex; justify-content: center; font-size: var(--title01); overflow: hidden; position: relative;}
 .detailPage .detailArea div:not(.textArea){align-items: flex-start;}
-.detailPage .detailArea div.textArea{align-items: center;}
+.detailPage .detailArea div.textArea{align-items: flex-start;}
 .detailPage .detailArea div::after{content: ''; position: absolute; width: 100%; height: 100%; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 18%, #fff); z-index: 1;}
 .detailPage .detailArea div.active{height: auto;}
 .detailPage .detailArea div.active + button{display: none;}

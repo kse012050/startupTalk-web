@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function ItemPrice() {
+export default function ItemPrice({info}) {
     return (
         <div className='itemText'>
-            <p>목살스테이크</p>
-            <strong>리얼 파스타</strong>
+            <p>{info.menu_name}</p>
+            <strong>{info.menu_price}원</strong>
         </div>
     );
 }

@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Item from '../../components/item/Item';
 
-export default function Info() {
+export default function Info({detailData}) {
     // 페이지 서브 데이터 이름
     const { test } = useParams()
     const [isImg , setIsImg] = useState(false);
@@ -14,27 +14,33 @@ export default function Info() {
         ''
     );
 
-    useEffect(()=>{
-        if(isImg && classTest !=='textArea'){
-            setClassTest((prev)=>{
-                return prev + ' active';
-            })
-        }
+    // useEffect(()=>{
+    //     if(isImg && classTest !=='textArea'){
+    //         setClassTest((prev)=>{
+    //             return prev + ' active';
+    //         })
+    //     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[isImg])
+    // },[isImg])
+    const imgMore = useCallback(()=>{
+        setClassTest((prev)=>{
+            return prev + ' active';
+        })
+    },[])
     return (
         <div className='infoArea'>
-            <div className='videoArea'>
+           {/*  <div className='videoArea'>
                 <iframe title='동영상' src="https://www.youtube.com/embed/eIUIknTz3-8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
-            </div>
+            </div> */}
 
             <div className='detailArea'>
                 <div className={classTest}>
-                    {test === 'consulting' && <img src={require('../../images/detail-consulting.png')} alt=""/>}
-                    {test === 'marketing' && <img src={require('../../images/detail-marketing.png')} alt=""/>}
-                    {(test !== 'consulting' && test !== 'marketing') && '상세 영역'}
+                    {/* {test === 'consulting' && <img src={require('../../images/detail-consulting.png')} alt=""/>} */}
+                    {/* {test === 'marketing' && <img src={require('../../images/detail-marketing.png')} alt=""/>} */}
+                    {/* {(test !== 'consulting' && test !== 'marketing') && '상세 영역'} */}
+                    {<img src={detailData.brand_detail_image} alt=""/>}
                 </div>
-                <button onClick={()=>setIsImg(!isImg)}>더보기</button>
+                <button onClick={imgMore}>더보기</button>
             </div>
 
             <div className='menuArea'>
@@ -45,19 +51,7 @@ export default function Info() {
                         freeMode={true}
                         className="menuSwiper"
                     >
-                        <SwiperSlide><Item img={require('../../images/item02.png')} type='price'/></SwiperSlide>
-                        <SwiperSlide><Item img={require('../../images/item02.png')} type='price'/></SwiperSlide>
-                        <SwiperSlide><Item img={require('../../images/item02.png')} type='price'/></SwiperSlide>
-                        <SwiperSlide><Item img={require('../../images/item02.png')} type='price'/></SwiperSlide>
-                        <SwiperSlide><Item img={require('../../images/item02.png')} type='price'/></SwiperSlide>
-                        <SwiperSlide><Item img={require('../../images/item02.png')} type='price'/></SwiperSlide>
-                        <SwiperSlide><Item img={require('../../images/item02.png')} type='price'/></SwiperSlide>
-                        <SwiperSlide><Item img={require('../../images/item02.png')} type='price'/></SwiperSlide>
-                        <SwiperSlide><Item img={require('../../images/item02.png')} type='price'/></SwiperSlide>
-                        <SwiperSlide><Item img={require('../../images/item02.png')} type='price'/></SwiperSlide>
-                        <SwiperSlide><Item img={require('../../images/item02.png')} type='price'/></SwiperSlide>
-                        <SwiperSlide><Item img={require('../../images/item02.png')} type='price'/></SwiperSlide>
-                        <SwiperSlide><Item img={require('../../images/item02.png')} type='price'/></SwiperSlide>
+                        {detailData && detailData?.menus.map((data)=><SwiperSlide key={data.menu_id}><Item img={data.menu_file} info={data} type='price'/></SwiperSlide>)}
                     </Swiper>
                 </div>
             </div>
@@ -73,22 +67,22 @@ export default function Info() {
                         modules={[Navigation]}
                         className="interiorSwiper"
                     >
-                        <SwiperSlide><div className="imgBox" style={{backgroundImage : `url(${require('../../images/item02.png')})`}}></div></SwiperSlide>
-                        <SwiperSlide><div className="imgBox" style={{backgroundImage : `url(${require('../../images/item02.png')})`}}></div></SwiperSlide>
-                        <SwiperSlide><div className="imgBox" style={{backgroundImage : `url(${require('../../images/item02.png')})`}}></div></SwiperSlide>
-                        <div className="navigation-circle">
+                        <SwiperSlide><div className="imgBox" style={{backgroundImage : `url(${detailData.brand_interior_file})`}}></div></SwiperSlide>
+                        {/* <SwiperSlide><div className="imgBox" style={{backgroundImage : `url(${require('../../images/item02.png')})`}}></div></SwiperSlide>
+                        <SwiperSlide><div className="imgBox" style={{backgroundImage : `url(${require('../../images/item02.png')})`}}></div></SwiperSlide> */}
+                        {/* <div className="navigation-circle">
                             <div className='prev imgBox'></div>
                             <div className='next imgBox'></div>
-                        </div>
+                        </div> */}
                     </Swiper>
                 </div>
             </div>
 
-            <div className='locationArea'>
+            {/* <div className='locationArea'>
                 <h3>위치</h3>
                 <iframe title='서울특별시 관악구 남부순환로226길 31' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.2176335958457!2d126.95118987637785!3d37.47919032913109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9f89e6b36b9b%3A0x100d3f7b5575cbe3!2z7ISc7Jq47Yq567OE7IucIOq0gOyVheq1rCDrgqjrtoDsiJztmZjroZwyMjbquLggMzE!5e0!3m2!1sko!2skr!4v1678781851082!5m2!1sko!2skr" loading="lazy" ></iframe>
                 <p>서울특별시 관악구 남부순환로226길 31</p>
-            </div>
+            </div> */}
         </div>
     );
 }

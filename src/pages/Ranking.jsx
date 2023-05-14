@@ -23,7 +23,7 @@ export default function Ranking() {
     
     useEffect(()=>{
         rankingDataApi(rankType).then((data)=>{
-            data.list.sort((a , b)=>{
+            /* data.list.sort((a , b)=>{
                 if(rankType === 'interest') {
                     return b.interest_count - a.interest_count;
                 }else if(rankType === 'chat'){
@@ -31,15 +31,15 @@ export default function Ranking() {
                 }else if(rankType === 'store'){
                     return b.store_count - a.store_count;
                 }
-            })
+            }) */
             setRankingData(data)
            
         })
     },[rankType])
     
-    // useEffect(()=>{
-    //     console.log(rankingListData);
-    // },[rankingData])
+   /*  useEffect(()=>{
+        console.log(rankingData);
+    },[rankingData]) */
   
     return (
         <>
@@ -50,7 +50,7 @@ export default function Ranking() {
                 <li>점포 수</li>
             </ul>
             <ol>
-                {rankingData?.list?.map((data)=><li key={data.brand_id}><Item img={data.brand_main_store_file} type="rank" bookMark={data.interest_yn} rankType={rankType} info={data}/></li>)}
+                {rankingData?.list?.map((data)=><li key={data.brand_id}><Item img={data.brand_logo_file} type="rank" bookMark={data.interest_yn} rankType={rankType} info={data}/></li>)}
                 {/* <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true} rankType='taik'/></li>
                 <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true} rankType='shop'/></li>
                 <li><Item img={require('../images/item-best01.png')} type="rank" bookmark={true} rankType='interest'/></li>
