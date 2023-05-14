@@ -8,7 +8,7 @@ export default function DropBox({type , first , list , body}) {
     const dropEvent = () =>{
         setIsDrop((test)=>{
             return !test
-        });
+        }); 
     }
 
     const listClick = (e , text) =>{
