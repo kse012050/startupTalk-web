@@ -138,6 +138,9 @@
     header > div div{margin-left: auto; gap: 20px;}
     header > div div .icon-search{width: var(--iconSize02); height: var(--iconSize02);}
     header > div div a:not([class]){color: var(--colorGray);}
+    header > div div a.centerLink{padding-left: 20px;}
+    header > div div a.centerLink::after{width: 18px; margin-left: 8px;}
+
 
     
     /* 푸터 */

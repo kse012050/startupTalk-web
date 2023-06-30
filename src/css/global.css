@@ -197,6 +197,9 @@ header{position: sticky; top: 0; font-size: var(--font04); background-color: whi
 header > div{display: flex; align-items: center;}
 header > div h1 a{display: block; background-image: url('../images/logo.png');}
 header > div h1 a img{width: 100%;}
+header > div div a.centerLink{color: var(--colorPoint); font-weight: 700; display: flex; align-items: center; /* border-left: 1px solid #d8d8d8; */}
+/* border left 값 일단 주석 로그인 버튼이 없기 때문에 - 나중에 로그인 살릴 때 살려야 한다 */
+header > div div a.centerLink::after{content: ''; aspect-ratio: 1 / 1; background: url('../images/gopartner.png') no-repeat center / cover;}
 
 /* 푸터 */
 footer{box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.1);}

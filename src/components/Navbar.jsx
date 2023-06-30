@@ -38,17 +38,18 @@ export default function Navbar() {
                     </ul>
                 </nav>
                 {/* 로그인 */}
-                {/* {(pageName[0] === 'sign' || isMobileNavbar) ||
+                {(pageName[0] === 'sign' || isMobileNavbar) ||
                     <div>
-                        {responsive && 
+                        {/* {responsive && 
                             <NavLink to='/category' className='icon-search'>검색</NavLink>
                         }
                         {pageName[0] === 'my' ? 
                             <Link to='/my'>MY</Link> :
                             <Link to='/sign'>로그인</Link>
-                        }
+                        } */}
+                        <Link to='http://13.209.66.170:3000/' className='centerLink'>파트너센터</Link>
                     </div>
-                } */}
+                }
                 
             </div>
         </header>
