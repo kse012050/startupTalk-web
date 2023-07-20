@@ -6,7 +6,7 @@ import Tab from '../../components/Tab';
 import { ResponsiveContext } from '../../context/Responsive';
 import Counsel from './Counsel';
 import Info from './Info';
-import { brandDetailDataApi } from '../../api/api';
+import * as api from '../../api/api';
 // import * as Scroll from 'react-scroll';
 // import { Linka, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
@@ -14,6 +14,7 @@ import { brandDetailDataApi } from '../../api/api';
 export default function Detail() {
     const params = useParams();
     const responsive = useContext(ResponsiveContext);
+    const [firstDetailEntry, setFirstDetailEntry] = useState(true)
     const [isScroll , setIsScroll] = useState(false);
     const [content , setContent] = useState('');
     const [detailData , setDetailData] = useState('');
@@ -28,14 +29,22 @@ export default function Detail() {
     ]
 
     useEffect(()=>{
+        setFirstDetailEntry(api.getCookieBoolean('firstDetailEntry'))
         setContent(tabList[0].path)
-        brandDetailDataApi(params.id).then(setDetailData)
+        api.brandDetailDataApi(params.id).then(setDetailData)
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
-    useEffect(()=>{
+   /*  useEffect(()=>{
         console.log(detailData);
-    },[detailData])
+    },[detailData]) */
+
+    const onFirstEntry = () =>{
+        const expirationDate = new Date();
+        expirationDate.setDate(expirationDate.getDate() + 1);
+        document.cookie = `firstDetailEntry=false; days ?; expires=${expirationDate.toUTCString()}`
+        setFirstDetailEntry(false)
+    }
 
     useEffect(() => {
         const scrollEvent = () =>{
@@ -53,6 +62,22 @@ export default function Detail() {
 
     return (
         <>
+            {(!responsive && firstDetailEntry) &&
+                <div className="appView">
+                    <div>
+                        <p>
+                            이 창업아이템이<br/>
+                            마음에 드시나요?
+                            <small>
+                                창업톡앱에서 관심 브랜드사와<br/>
+                                무료 실시간 1:1채팅을 시작해보세요.
+                            </small>
+                        </p>
+                    </div>
+                    <a href="#">앱 다운로드</a>
+                    <button onClick={onFirstEntry}>오늘 하루 보지 않기</button>
+                </div>
+            }
             <figure>
                 <div className='imgBox' style={{backgroundImage : `url(${detailData.brand_main_store_file})`}}>
                 </div>

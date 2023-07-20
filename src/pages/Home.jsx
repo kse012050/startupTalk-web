@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import * as api from '../api/api'
 import { Navigation , FreeMode, } from "swiper";
 import { Link } from 'react-router-dom';
 import Item from '../components/item/Item';
@@ -7,19 +8,35 @@ import Item from '../components/item/Item';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { mainDataApi } from '../api/api';
+import { ResponsiveContext } from '../context/Responsive';
 
 export default function Home() {
+    const responsive = useContext(ResponsiveContext);
+    const [firstEntry, setFirstEntry] = useState(true)
     const [mainData , setMainData] = useState()
     useEffect(()=>{
         mainDataApi().then(setMainData)
+        setFirstEntry(localStorage.getItem('firstEntry') ? false : true)
     },[])
-
-/*     useEffect(()=>{
-        console.log(mainData);
-    },[mainData]) */
+    
+    const onFirstEntry = () =>{
+        localStorage.setItem('firstEntry', false)
+        setFirstEntry(false)
+    }
 
     return (
         <>
+            {(!responsive && firstEntry) &&
+                <div className="appView">
+                    <p>
+                        앱에서는<br/>
+                        관심 창업브랜드 관리와<br/>
+                        1:1채팅이 가능해요!
+                    </p>
+                    <a href="#">편리한 앱으로 보기</a>
+                    <button onClick={onFirstEntry}>괜찮아요. 모바일 웹으로 볼게요.</button>
+                </div>
+            }
             <h2 className='textHidden'>메인 페이지</h2>
 
             <div>

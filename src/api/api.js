@@ -1,6 +1,22 @@
 
 const apiURL = process.env.REACT_APP_API_URL;
-console.log(apiURL);
+
+export function getCookieValue(cookieName) {
+    const cookies = document.cookie;
+    const cookieArray = cookies.split(';');
+    for (let i = 0; i < cookieArray.length; i++) {
+        const cookie = cookieArray[i];
+        const trimmedCookie = cookie.trim();
+        if (trimmedCookie.startsWith(cookieName + '=')) {
+        return trimmedCookie.substring(cookieName.length + 1);
+      }
+    }
+    return null;
+  }
+
+export function getCookieBoolean(cookieName) {
+    return getCookieValue(cookieName) ? false : true
+}
 
 export function mainDataApi(){
     return fetch(`${apiURL}main`).then((res)=>{
