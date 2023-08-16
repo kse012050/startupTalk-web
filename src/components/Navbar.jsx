@@ -47,7 +47,7 @@ export default function Navbar() {
                             <Link to='/my'>MY</Link> :
                             <Link to='/sign'>로그인</Link>
                         } */}
-                        <Link to='http://13.209.66.170:3000/' className='centerLink'>파트너센터</Link>
+                        <Link to='http://partner.changtalk.co.kr/main' className='centerLink'>파트너센터</Link>
                     </div>
                 }
                 

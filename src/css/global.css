@@ -131,7 +131,7 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 /* 탭 */
 .tabBox{display: flex; background-color: #f1f4f6; border-radius: 14px;}
 .tabBox li{flex: 1; color: var(--colorGray); font-weight: 600; display: flex; justify-content: center; align-items: center; border-style: solid; border-color: transparent; cursor: pointer;}
-.tabBox li.active{border-color: #e6e6e6; color: inherit; background-color: white;}
+.tabBox li.active{border-color: #e6e6e6; /* color: inherit;  */background-color: white;}
 .tabBox li mark{color: var(--colorGray); white-space: pre-wrap;}
 .tabBox li mark::before{content: ' (';}
 .tabBox li mark::after{content: ')';}
