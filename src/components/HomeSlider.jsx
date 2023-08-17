@@ -55,7 +55,7 @@ export default function HomeSlider() {
                             관심 창업아이템<br />
                             저장하기
                         </strong>
-                        <Link to={'https://blog.naver.com/lenapower/222974469646'}>바로가기</Link>
+                        <Link to={'https://blog.naver.com/lenapower/222974469646'} target='__blank'>바로가기</Link>
                     </div>
                 </SwiperSlide>
                 {/* <SwiperSlide>
@@ -68,10 +68,10 @@ export default function HomeSlider() {
                         <Link>바로가기</Link>
                     </div>
                 </SwiperSlide> */}
-                <div className="navigation-basic">
+                {/* <div className="navigation-basic">
                     <div className='prev'></div>
                     <div className='next'></div>
-                </div>
+                </div> */}
                 <div className='playArea'>
                     <div>
                         <span className='progress' ref={progressCircle}>

@@ -145,9 +145,13 @@
     
     /* 푸터 */
     footer{padding: 30px 0 40px;}
-    footer div{display: flex; justify-content: space-between; align-items: center;}
+    footer div{display: flex; align-items: center;}
     footer div img{width: 80px;}
-    footer div ul{gap: 30px;}
+    footer div dl{margin-left: 30px;}
+    footer div dl dt{margin-right: 20px;}
+    footer div dl dd::before{width: 24px; margin-right: 6px;}
+    footer div dl dd:not(:last-child)::after{height: 18px; margin-inline: 20px;}
+    footer div ul{gap: 30px; margin-left: auto;}
 
     .detailPage footer , .marketingPage .detailPage + footer{margin-bottom: 100px;}
 }
