@@ -7,6 +7,7 @@ import { ResponsiveContext } from '../../context/Responsive';
 import Counsel from './Counsel';
 import Info from './Info';
 import * as api from '../../api/api';
+import Popup from '../../components/popup/Popup';
 // import * as Scroll from 'react-scroll';
 // import { Linka, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
@@ -27,6 +28,7 @@ export default function Detail() {
             path : 'counsel'
         },
     ]
+    const [popup, setPopup] = useState(false);
 
     useEffect(()=>{
         setFirstDetailEntry(api.getCookieBoolean('firstDetailEntry'))
@@ -104,11 +106,16 @@ export default function Detail() {
                     <ScrollFixed isScroll={isScroll} type="bottom">
                         <div className='receiptArea'>
                             <Link to={'/receipt'} className='btn-basic'>간편 상담 접수</Link>
-                            <button>관심저장</button>
+                            <button onClick={()=>setPopup(true)}>관심저장</button>
                         </div>
                     </ScrollFixed>
                 </figcaption>
             </figure>
+
+            {popup && 
+                <Popup type="bookMark" isPopup={[popup , setPopup]}/>
+            }
+
             {detailData.promotion_yn === 'y' &&
                 <mark className='support'><strong>창업비 지원</strong>현재 프로모션을 진행 중인 업체입니다.</mark>
             }

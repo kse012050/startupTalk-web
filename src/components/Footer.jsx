@@ -8,8 +8,8 @@ export default function Footer() {
                 <img src={require('../images/logo-footer.png')} alt="창업톡 회색 로고" />
                 <dl>
                     <dt>앱 다운로드</dt>
-                    <dd><a href="#" rel="noreferrer">안드로이드</a></dd>
-                    <dd><a href="#" rel="noreferrer">iPhone</a></dd>
+                    <dd><Link to="#" className='beforeIcon-gp' rel="noreferrer">안드로이드</Link></dd>
+                    <dd><Link to="#" className='beforeIcon-apple' rel="noreferrer">iPhone</Link></dd>
                 </dl>
                 <ul>
                     <li><Link to="http://partner.changtalk.co.kr/main" target='_blank'>파트너 센터</Link></li>

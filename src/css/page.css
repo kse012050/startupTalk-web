@@ -70,7 +70,7 @@
 .rankingPage .mainPage .tabArea li:is(.active , :hover){color: var(--colorPoint); font-weight: 700; box-shadow: inset 0 -2px 0 0 var(--colorPoint);}
 .rankingPage .mainPage ol{padding-top: 40px; display: flex; flex-wrap: wrap; position: relative;}
 .rankingPage .mainPage ol li{counter-increment: rankItem;}
-.rankingPage .mainPage ol li a::before{content: counter(rankItem); position: absolute; left: 0; top: 0; color: white; font-weight: 500; display: flex; justify-content: center; align-items: center; background-color: var(--colorPoint); border-radius: 20px 0;}
+.rankingPage .mainPage ol li > a::before{content: counter(rankItem); position: absolute; left: 0; top: 0; color: white; font-weight: 500; display: flex; justify-content: center; align-items: center; background-color: var(--colorPoint); border-radius: 20px 0;}
 
 
 /* 마케팅 - 메인 */

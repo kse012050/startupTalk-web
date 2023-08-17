@@ -190,6 +190,18 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 :is(.popupBox-confime , .popupBox-find) > div .btnArea *{flex: 1; height: 54px;}
 :is(.popupBox-confime , .popupBox-find) > div .btnArea button{color: white; background-color: var(--colorPoint);}
 :is(.popupBox-confime , .popupBox-find) > div .btnArea a{display: flex; justify-content: center; align-items: center; color: var(--colorPoint); background-color: #e6f8ee;}
+body:has(.popupBox-bookMark){overflow: hidden;}
+.swiper:has(.popupBox-bookMark){z-index: 10;}
+:is(.swiper-backface-hidden .swiper-slide, .swiper-wrapper, .sliderArea):has(.popupBox-bookMark){transform: none !important;}
+/* 나중에 다른 팝업이랑 합쳐야함 */
+.popupBox-bookMark div{max-width: 380px; padding: 50px 30px 24px; text-align: center; box-sizing: border-box;}
+.popupBox-bookMark div strong{display: block; font-size: var(--font03); font-weight: 700; line-height: 21px; margin-bottom: 31px;}
+.popupBox-bookMark div p{font-size: var(--font04); margin-bottom: 33px;}
+.popupBox-bookMark div a{font-size: var(--font06); font-weight: 700; height: 54px; display: flex; justify-content: center; align-items: center; border: 1px solid #e6e6e6; border-radius: 8px;}
+.popupBox-bookMark div a:not(:last-of-type){margin-bottom: 14px;}
+.popupBox-bookMark div a::before{margin-right: 10px;}
+.popupBox-bookMark div a span{width: 90px;}
+.popupBox-bookMark div button{font-size: var(--font06); font-weight: 600; color: var(--colorGray); text-decoration: underline; margin-top: 30px;}
 
 
 /* 해더 */
@@ -206,9 +218,10 @@ footer{box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.1);}
 footer div dl{font-size: var(--font06); display: flex; align-items: center;}
 footer div dl dt{font-weight: 400;}
 footer div dl dd{font-weight: 700; display: flex; align-items: center;}
-footer div dl dd::before{content: ''; aspect-ratio: 1; background-repeat: no-repeat; background-position: center; background-size: cover;}
-footer div dl dd:nth-of-type(1)::before{background-image: url('../images/icon-gp.png');}
-footer div dl dd:nth-of-type(2)::before{background-image: url('../images/icon-apple.png');}
+[class*='beforeIcon']{display: flex; align-items: center;}
+[class*='beforeIcon']::before{content: ''; aspect-ratio: 1; background-repeat: no-repeat; background-position: center; background-size: cover;}
+.beforeIcon-gp::before{background-image: url('../images/icon-gp.png');}
+.beforeIcon-apple::before{background-image: url('../images/icon-apple.png');}
 footer div dl dd:not(:last-child)::after{content: ''; width: 1px; background-color: #d8d8d8;}
 footer div ul{display: flex; align-items: center;}
 footer div ul li{font-size: var(--font06);}

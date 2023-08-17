@@ -61,8 +61,8 @@
     .rankingPage .mainPage ol li{width: 48.24%;}
     .rankingPage .mainPage ol li:not(:nth-child(2n)){margin-right: 3.38%;}
     .rankingPage .mainPage ol li:nth-last-child(n + 3){margin-bottom: 30px;}
-    .rankingPage .mainPage ol li a::before{width: 42px; height: 42px; font-size: var(--font02);}
-    .marketingPage .mainPage ul li a{height: 560px; padding: 45px 40px;}
+    .rankingPage .mainPage ol li > a::before{width: 42px; height: 42px; font-size: var(--font02);}
+    .marketingPage .mainPage ul li > a{height: 560px; padding: 45px 40px;}
 
 
     /* 마케팅 - 메인 */

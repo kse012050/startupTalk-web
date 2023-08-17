@@ -1,6 +1,7 @@
 import React from 'react';
 import Confime from './Confime';
 import TermsOfUse from './TermsOfUse';
+import BookMark from './BookMark';
 
 export default function Popup({type , isPopup , info}) {
     return (
@@ -9,6 +10,7 @@ export default function Popup({type , isPopup , info}) {
                 {type === 'termsOfUse' && <TermsOfUse isPopup={isPopup}/>}
                 {type === 'confime' && <Confime isPopup={isPopup} info={info} />}
                 {type === 'find' && <Confime isPopup={isPopup} info={info} type={type} />}
+                {type === 'bookMark' && <BookMark isPopup={isPopup}/>}
             </div>
         </div>
     );

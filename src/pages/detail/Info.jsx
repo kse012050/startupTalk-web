@@ -20,12 +20,14 @@ export default function Info({detailData}) {
                 </div>
             }
 
-            <div className='detailArea'>
-                <div className={imgClass}>
-                    {<img src={detailData.brand_detail_image} alt=""/>}
+            {detailData.brand_detail_image &&
+                <div className='detailArea'>
+                    <div className={imgClass}>
+                        {<img src={detailData.brand_detail_image} alt=""/>}
+                    </div>
+                    <button onClick={imgMore}>더보기</button>
                 </div>
-                <button onClick={imgMore}>더보기</button>
-            </div>
+            }
 
             <div className='menuArea'>
                 <h3>대표 메뉴</h3>
