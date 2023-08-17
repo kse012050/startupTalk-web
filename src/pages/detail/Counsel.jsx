@@ -1,4 +1,5 @@
 import React from 'react';
+import * as validation from '../../api/validation';
 
 export default function Counsel({ detailData }) {
     return (
@@ -33,14 +34,14 @@ export default function Counsel({ detailData }) {
                         {detailData.start_up_money_info_list.map((data)=>
                             <tr key={data.name}>
                                 <th>{data.name}</th>
-                                <td>{data.value}만원</td>
+                                <td>{validation.addCommas(data.value)}만원</td>
                             </tr>
                         )}
                     </tbody>
                     <tfoot>
                         <tr>
                             <th>
-                                <strong>총합 <mark>{detailData.start_up_money}만원</mark></strong>
+                                <strong>총합 <mark>{validation.addCommas(detailData.start_up_money)}만원</mark></strong>
                                 <small>*VAT별도</small>
                             </th>
                         </tr>
