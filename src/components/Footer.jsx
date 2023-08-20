@@ -8,8 +8,8 @@ export default function Footer() {
                 <img src={require('../images/logo-footer.png')} alt="창업톡 회색 로고" />
                 <dl>
                     <dt>앱 다운로드</dt>
-                    <dd><Link to="#" className='beforeIcon-gp' rel="noreferrer">안드로이드</Link></dd>
-                    <dd><Link to="#" className='beforeIcon-apple' rel="noreferrer">iPhone</Link></dd>
+                    <dd><Link to="https://play.google.com/store/apps/details?id=com.adcookco.foundationtalk" className='beforeIcon-gp' rel="noreferrer" target='_blank'>안드로이드</Link></dd>
+                    <dd><Link to="https://itunes.apple.com/app/id6443805038" className='beforeIcon-apple' rel="noreferrer" target='_blank'>iPhone</Link></dd>
                 </dl>
                 <ul>
                     <li><Link to="http://partner.changtalk.co.kr/main" target='_blank'>파트너 센터</Link></li>

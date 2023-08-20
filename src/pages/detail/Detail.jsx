@@ -62,6 +62,11 @@ export default function Detail() {
         }
     }, []);
 
+    const temporary = (e) =>{
+        e.preventDefault();
+        setPopup(true)
+    }
+
     return (
         <>
             {(!responsive && firstDetailEntry) &&
@@ -105,7 +110,8 @@ export default function Detail() {
                     </ul>
                     <ScrollFixed isScroll={isScroll} type="bottom">
                         <div className='receiptArea'>
-                            <Link to={'/receipt'} className='btn-basic'>간편 상담 접수</Link>
+                            <Link to={'/receipt'} className='btn-basic' onClick={temporary}>간편 상담 접수</Link>
+                            {/* <button onClick={()=>setPopup(true)} className='btn-basic'>간편 상담 접수</button> */}
                             <button onClick={()=>setPopup(true)}>관심저장</button>
                         </div>
                     </ScrollFixed>
