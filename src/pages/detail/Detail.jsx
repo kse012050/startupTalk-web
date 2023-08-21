@@ -30,11 +30,20 @@ export default function Detail() {
     ]
     const [popup, setPopup] = useState(false);
     const [cost, setCost] = useState();
+    const [scopes, setScopes] = useState();
 
     useEffect(()=>{
         setFirstDetailEntry(api.getCookieBoolean('firstDetailEntry'))
         setContent(tabList[0].path)
-        api.brandDetailDataApi(params.id).then(setDetailData)
+        api.brandDetailDataApi(params.id).then((data)=>{
+            setDetailData(data)
+            const scopesList = []
+            Object.keys(data.scopes).forEach(key => {
+                const value = data.scopes[key].value;
+                scopesList.push(value)
+            });
+            setScopes(scopesList)
+        })
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
@@ -80,6 +89,12 @@ export default function Detail() {
         setPopup(true)
     }
 
+    const appShow = (e) =>{
+        e.preventDefault();
+        setPopup(true)
+        setFirstDetailEntry(false)
+    }
+
     return (
         <>
             {(!responsive && firstDetailEntry) &&
@@ -94,7 +109,7 @@ export default function Detail() {
                             </small>
                         </p>
                     </div>
-                    <a href="#">앱 다운로드</a>
+                    <button onClick={appShow}>앱 다운로드</button>
                     <button onClick={onFirstEntry}>오늘 하루 보지 않기</button>
                 </div>
             }
@@ -149,7 +164,7 @@ export default function Detail() {
 
             <div ref={scrollRef} className="contentArea">
                 {content === 'info' && <Info detailData={detailData}/>}
-                {content === 'counsel' && <Counsel detailData={detailData}/>}
+                {content === 'counsel' && <Counsel detailData={detailData} scopes={scopes}/>}
             </div>
         </>
     );

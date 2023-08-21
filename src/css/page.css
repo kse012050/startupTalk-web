@@ -127,6 +127,7 @@
 .detailPage section .counselArea div table tbody tr{display: flex; justify-content: space-between;  border-bottom: 1px solid #dedede;}
 .detailPage section .counselArea div table tbody tr th{font-weight: 700;}
 .detailPage section .counselArea div table tbody tr td{text-align: center;}
+.detailPage section .counselArea div table tbody tr td s{text-decoration: none;}
 .detailPage section .counselArea div table tbody tr td.exemption{display: flex; justify-content: center; align-items: center;}
 .detailPage section .counselArea div table tbody tr td.exemption s{color: var(--colorGray); text-decoration: line-through; }
 .detailPage section .counselArea div table tbody tr td.exemption::after{content: '면제'; width: 45px; line-height: 23px; font-size: 14px; font-weight: 700; color: white; text-align: center; text-decoration: none; background-color: var(--colorPoint); border-radius: 11.5px; margin-left: 7px;}

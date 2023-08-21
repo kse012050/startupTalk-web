@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import * as api from '../api/api'
+// import * as api from '../api/api'
 import { Navigation , FreeMode, } from "swiper";
 import { Link } from 'react-router-dom';
 import Item from '../components/item/Item';
@@ -9,19 +9,40 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { mainDataApi } from '../api/api';
 import { ResponsiveContext } from '../context/Responsive';
+import Popup from '../components/popup/Popup';
 
 export default function Home() {
     const responsive = useContext(ResponsiveContext);
-    const [firstEntry, setFirstEntry] = useState(true)
-    const [mainData , setMainData] = useState()
+    const [firstEntry, setFirstEntry] = useState(true);
+    const [mainData , setMainData] = useState();
+    const [popup, setPopup] = useState(false);
+
     useEffect(()=>{
         mainDataApi().then(setMainData)
+
+        const date = new Date();
+        if(Number(localStorage.getItem('year')) !== date.getFullYear() || 
+            Number(localStorage.getItem('month')) !== date.getMonth() + 1 || 
+            Number(localStorage.getItem('day')) !== date.getDate()){
+                localStorage.removeItem('firstEntry')
+            }
+
         setFirstEntry(localStorage.getItem('firstEntry') ? false : true)
     },[])
     
     const onFirstEntry = () =>{
         localStorage.setItem('firstEntry', false)
+        const date = new Date();
+        localStorage.setItem('year', date.getFullYear())
+        localStorage.setItem('month', date.getMonth() + 1)
+        localStorage.setItem('day', date.getDate())
         setFirstEntry(false)
+    }
+
+    const appShow = (e) =>{
+        e.preventDefault();
+        setFirstEntry(false)
+        setPopup(true)
     }
 
     return (
@@ -33,15 +54,20 @@ export default function Home() {
                         관심 창업브랜드 관리와<br/>
                         1:1채팅이 가능해요!
                     </p>
-                    <a href="#">편리한 앱으로 보기</a>
+                    <a href="#" onClick={appShow}>편리한 앱으로 보기</a>
                     <button onClick={onFirstEntry}>괜찮아요. 모바일 웹으로 볼게요.</button>
                 </div>
             }
+
+            {popup && 
+                <Popup type="bookMark" isPopup={[popup , setPopup]}/>
+            }
+
             <h2 className='textHidden'>메인 페이지</h2>
 
             <div>
                 <div className='popularArea'>
-                    <h3 onClick={()=>console.log(mainData)}>인기 창업 키워드</h3>
+                    <h3>인기 창업 키워드</h3>
                     <div className='sliderArea'>
                         <Swiper 
                             navigation={{

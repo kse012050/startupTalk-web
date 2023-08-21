@@ -191,6 +191,7 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 :is(.popupBox-confime , .popupBox-find) > div .btnArea button{color: white; background-color: var(--colorPoint);}
 :is(.popupBox-confime , .popupBox-find) > div .btnArea a{display: flex; justify-content: center; align-items: center; color: var(--colorPoint); background-color: #e6f8ee;}
 body:has(.popupBox-bookMark){overflow: hidden;}
+.homePage:has(.mainPage):has(.popupBox-bookMark){overflow: hidden;}
 .swiper:has(.popupBox-bookMark){z-index: 10;}
 :is(.swiper-backface-hidden .swiper-slide, .swiper-wrapper, .sliderArea):has(.popupBox-bookMark){transform: none !important;}
 .homePage .mainPage > div .sliderArea .swiper:has(.popupBox-bookMark){padding: 0;}
