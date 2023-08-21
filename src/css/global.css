@@ -49,9 +49,9 @@ mark:not([class]){color: var(--colorPoint);}
 .itemBox.basic .itemText div span::before{content: ''; width: 18px; height: 18px; background-repeat: no-repeat; background-position: center; background-size: cover; margin-right: 3px;}
 .itemBox.basic .itemText div span:nth-child(1)::before{background-image: url('../images/icon-shop-gray.png');}
 .itemBox.basic .itemText div span:nth-child(2)::before{background-image: url('../images/icon-cost.png');}
-.itemBox.basic .itemText div span:nth-child(2)::after{content: '억원';}
+/* .itemBox.basic .itemText div span:nth-child(2)::after{content: '억원';} */
 .itemBox.basic .itemText div span:nth-child(3)::before{background-image: url('../images/icon-taik-gray.png');}
-.itemBox.basic .itemText div span:nth-child(3)::after{content: '천';}
+/* .itemBox.basic .itemText div span:nth-child(3)::after{content: '천';} */
 
 /* 아이템 - 베스트 */
 .itemBox.best .imgBox{height: var(--itemImgHieght01);}
@@ -193,6 +193,7 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 body:has(.popupBox-bookMark){overflow: hidden;}
 .swiper:has(.popupBox-bookMark){z-index: 10;}
 :is(.swiper-backface-hidden .swiper-slide, .swiper-wrapper, .sliderArea):has(.popupBox-bookMark){transform: none !important;}
+.homePage .mainPage > div .sliderArea .swiper:has(.popupBox-bookMark){padding: 0;}
 /* 나중에 다른 팝업이랑 합쳐야함 */
 .popupBox-bookMark div{max-width: 380px; padding: 50px 30px 24px; text-align: center; box-sizing: border-box;}
 .popupBox-bookMark div strong{display: block; font-size: var(--font03); font-weight: 700; line-height: 21px; margin-bottom: 31px;}

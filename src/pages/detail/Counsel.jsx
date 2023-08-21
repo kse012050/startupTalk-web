@@ -5,7 +5,7 @@ export default function Counsel({ detailData }) {
     return (
         <div className='counselArea'>
             <div>
-                <h3>
+                <h3 onClick={()=>console.log(detailData)}>
                     창업 비용
                     <small>점포면적 {detailData.standard_store_area}{/* m */}㎡ 기준</small>
                 </h3>

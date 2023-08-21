@@ -22,6 +22,7 @@ export default function Show() {
     useEffect(()=>{
         searchDataApi(body).then((data)=>{
             setSearchData(data);
+            console.log(data);
             setFirstCategory(()=>data.data.parent_category ? data.data.parent_category : '전체보기');
         })
     },[body])
@@ -53,7 +54,7 @@ export default function Show() {
             </div>
             
             <Horizontal4>
-                {searchData?.list?.map((data)=><li key={data.brand_id}><Item img={data.brand_main_store_file} info={{title : data.brand_name , shop : data.store_count , cost : data.start_up_money / 1000 , taik : data.chat_count}} support={data.promotion_yn} bookMark={data.interest_yn} id={data.brand_id}/></li>)}
+                {searchData?.list?.map((data)=><li key={data.brand_id}><Item img={data.brand_main_store_file} info={{title : data.brand_name , shop : data.store_count , cost : data.start_up_money , taik : data.chat_count}} support={data.promotion_yn} bookMark={data.interest_yn} id={data.brand_id}/></li>)}
             </Horizontal4>
         </>
     );

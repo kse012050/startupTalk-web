@@ -41,7 +41,7 @@ export default function Home() {
 
             <div>
                 <div className='popularArea'>
-                    <h3>인기 창업 키워드</h3>
+                    <h3 onClick={()=>console.log(mainData)}>인기 창업 키워드</h3>
                     <div className='sliderArea'>
                         <Swiper 
                             navigation={{
@@ -63,7 +63,8 @@ export default function Home() {
                 </div>
 
                 <div className='itemArea'>
-                    <h3>홍길동님에게 추천하는 창업아이템</h3>
+                    {/* <h3>홍길동님에게 추천하는 창업아이템</h3> */}
+                    <h3>창업톡에서 추천하는 창업 아이템</h3>
                     <div className='sliderArea'>
                         <Swiper 
                             navigation={{
@@ -93,7 +94,7 @@ export default function Home() {
                         >
                             {mainData?.recommands.map((data)=>
                                 <SwiperSlide key={data.brand_id}>
-                                    <Item img={data.brand_main_store_file} info={{title : data.brand_name , shop : data.store_count , cost : data.start_up_money / 1000 , taik : data.chat_count}} support={data.promotion_yn} id={data.brand_id}/>
+                                    <Item img={data.brand_main_store_file} info={{title : data.brand_name , shop : data.store_count , cost : data.start_up_money , taik : data.chat_count}} support={data.promotion_yn} id={data.brand_id}/>
                                 </SwiperSlide>
                             )}
                         </Swiper>

@@ -29,6 +29,7 @@ export default function Detail() {
         },
     ]
     const [popup, setPopup] = useState(false);
+    const [cost, setCost] = useState();
 
     useEffect(()=>{
         setFirstDetailEntry(api.getCookieBoolean('firstDetailEntry'))
@@ -40,6 +41,18 @@ export default function Detail() {
    /*  useEffect(()=>{
         console.log(detailData);
     },[detailData]) */
+
+    useEffect(()=>{
+        if(detailData.start_up_money >= 10000){
+            setCost(Math.floor(detailData.start_up_money / 10000) + '.0억원')
+        }else if(detailData.start_up_money >= 1000){
+            setCost(Math.floor(detailData.start_up_money / 1000) + '.0천만원')
+        }else if(detailData.start_up_money >= 100){
+            setCost(Math.floor(detailData.start_up_money / 100) + '.0백만원')
+        }else {
+            setCost(detailData.start_up_money + '원')
+        }
+    },[detailData])
 
     const onFirstEntry = () =>{
         const expirationDate = new Date();
@@ -100,7 +113,8 @@ export default function Detail() {
                             점포수
                         </li>
                         <li>
-                            <strong>{detailData.start_up_money / 1000}억원</strong>
+                            {/* <strong>{detailData.start_up_money / 1000}억원</strong> */}
+                            <strong>{cost}</strong>
                             창업비용
                         </li>
                         <li>

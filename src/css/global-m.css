@@ -172,7 +172,7 @@
     footer div img{width: 54px; margin-bottom: 20px;}
     footer div dl{margin-bottom: 15px;}
     footer div dl dt{margin-right: 18px;}
-    footer div dl dd::before{margin-right: 6px;}
+    footer div dl dd a::before{margin-right: 6px;}
     [class*='beforeIcon']::before{width: 20px;}
     footer div dl dd:not(:last-child)::after{height: 15px; margin-inline: 18px;}
     footer div ul{gap: 18px;}
