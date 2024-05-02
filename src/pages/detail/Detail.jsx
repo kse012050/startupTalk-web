@@ -29,6 +29,7 @@ export default function Detail() {
         },
     ]
     const [popup, setPopup] = useState(false);
+    const [consultPopup, setConsultPopup] = useState(false);
     const [cost, setCost] = useState();
     const [scopes, setScopes] = useState();
 
@@ -86,7 +87,7 @@ export default function Detail() {
 
     const temporary = (e) =>{
         e.preventDefault();
-        setPopup(true)
+        setConsultPopup(true)
     }
 
     const appShow = (e) =>{
@@ -140,7 +141,6 @@ export default function Detail() {
                     <ScrollFixed isScroll={isScroll} type="bottom">
                         <div className='receiptArea'>
                             <Link to={'/receipt'} className='btn-basic' onClick={temporary}>간편 상담 접수</Link>
-                            {/* <button onClick={()=>setPopup(true)} className='btn-basic'>간편 상담 접수</button> */}
                             <button onClick={()=>setPopup(true)}>관심저장</button>
                         </div>
                     </ScrollFixed>
@@ -149,6 +149,10 @@ export default function Detail() {
 
             {popup && 
                 <Popup type="bookMark" isPopup={[popup , setPopup]}/>
+            }
+
+            {consultPopup && 
+                <Popup type="easyConsult" isPopup={[consultPopup , setConsultPopup]}/>
             }
 
             {detailData.promotion_yn === 'y' &&

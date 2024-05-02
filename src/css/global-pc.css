@@ -126,6 +126,12 @@
     .popupBox-termsOfUse > div .btnArea button{background-image: url('../images/icon-close.png'); position: absolute; right: 30px; top: 30px; width: 18px; height: 18px;}
 
 
+    /* 간편 상담 접수 팝업 */
+    .popupBox-easyConsult > div{max-width: 490px; padding: 40px 50px; max-height: 80vh;}
+    .popupBox-easyConsult > div strong{font-size: 42px; margin-bottom: 50px;}
+    .popupBox-easyConsult > div .inputBox fieldset ul li div:has([type="radio"]) label{font-size: var(--font03); height: 60px; border-width: 1.5px; border-radius: 14px;}
+
+    
     /* 해더 */
     header > div nav ul,
     header > div :is(nav , div){display: flex; align-items: center;}

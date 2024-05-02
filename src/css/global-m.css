@@ -138,6 +138,12 @@
     .popupBox-termsOfUse > div .btnArea button{background-image: url('../images/m-icon-close.png'); width: 50px; height: 50px;}
 
 
+    /* 간편 상담 접수 팝업 */
+    .popupBox-easyConsult > div{width: 100%; padding: 40px 30px; height: 100%;}
+    .popupBox-easyConsult > div strong{font-size: var(--title01); margin-bottom: 18px;}
+    .popupBox-easyConsult > div .inputBox fieldset ul li div:has([type="radio"]) label{font-size: var(--font04); height: 50px; border-width: 1px; border-radius: 10px;}
+
+
     /* 해더 */
     header > div{justify-content: space-between; padding: 13px 0;}
     header > div h1{width: 68px;}

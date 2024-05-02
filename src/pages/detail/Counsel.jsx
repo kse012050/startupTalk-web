@@ -18,8 +18,6 @@ export default function Counsel({ detailData, scopes}) {
 
 
     useEffect(()=>{
-        console.log(detailData.start_up_money);
-        console.log(scopesPrice);
         setTotlePrice(detailData.start_up_money - scopesPrice)
     },[scopesPrice])
     return (
