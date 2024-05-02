@@ -29,7 +29,7 @@ export default function Main() {
     return (
         <>
             <h2>
-                카테고리
+                검색
                 {!params.search && <Link to={'/category/show'}>ALL</Link>}
             </h2>
             <Search body={[body , setBody]}/>

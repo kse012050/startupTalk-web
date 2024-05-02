@@ -13,8 +13,8 @@ export default function Footer() {
                 </dl>
                 <ul>
                     <li><Link to="http://partner.changtalk.co.kr/main" target='_blank'>파트너 센터</Link></li>
-                    <li><Link to="http://changtalk.co.kr/policy/service.html" target='_blank'>서비스 이용약관</Link></li>
-                    <li><Link to="http://changtalk.co.kr/policy/privacy.html" target='_blank'>개인정보 보호정책</Link></li>
+                    <li><Link to="https://api.changtalk.co.kr/policy/service.html" target='_blank'>서비스 이용약관</Link></li>
+                    <li><Link to="https://api.changtalk.co.kr/policy/privacy.html" target='_blank'>개인정보 보호정책</Link></li>
                 </ul>
             </div>
         </footer>

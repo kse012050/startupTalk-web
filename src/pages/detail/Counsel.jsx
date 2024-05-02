@@ -10,7 +10,7 @@ export default function Counsel({ detailData, scopes}) {
         Object.keys(detailData.start_up_money_info_list).forEach(key => {
             const value = detailData.start_up_money_info_list[key];
             if(scopes.indexOf(value.name) > -1){
-                scopesPriceList += value.value;
+                scopesPriceList += parseInt(value.value);
             }
         });
         setScopesPrice(scopesPriceList)
@@ -18,6 +18,8 @@ export default function Counsel({ detailData, scopes}) {
 
 
     useEffect(()=>{
+        console.log(detailData.start_up_money);
+        console.log(scopesPrice);
         setTotlePrice(detailData.start_up_money - scopesPrice)
     },[scopesPrice])
     return (
@@ -29,26 +31,6 @@ export default function Counsel({ detailData, scopes}) {
                 </h3>
                 <table>
                     <tbody>
-                        {/* <tr>
-                            <th>보증금</th>
-                            <td>1000만원</td>
-                        </tr>
-                        <tr>
-                            <th>교육비</th>
-                            <td className='exemption'><s>1000만원</s></td>
-                        </tr>
-                        <tr>
-                            <th>가맹비</th>
-                            <td className='exemption'><s>1000만원</s></td>
-                        </tr>
-                        <tr>
-                            <th>인테리어</th>
-                            <td>1000만원</td>
-                        </tr>
-                        <tr>
-                            <th>기타</th>
-                            <td>1000만원</td>
-                        </tr> */}
                         {detailData.start_up_money_info_list.map((data)=>
                             <tr key={data.name}>
                                 <th>{data.name}</th>
@@ -79,14 +61,6 @@ export default function Counsel({ detailData, scopes}) {
                                     <td>{data.value}만원</td>
                                 </tr>
                             )}
-                            {/* <tr>
-                                <th>로열티</th>
-                                <td>1000만원</td>
-                            </tr>
-                            <tr>
-                                <th>광고/판촉비</th>
-                                <td className='exemption'><s>1000만원</s></td>
-                            </tr> */}
                         </tbody>
                     </table>
                     <small>*창업 1년간 <mark>면제</mark></small>

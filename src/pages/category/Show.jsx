@@ -22,7 +22,7 @@ export default function Show() {
     useEffect(()=>{
         searchDataApi(body).then((data)=>{
             setSearchData(data);
-            console.log(data);
+            // console.log(data);
             setFirstCategory(()=>data.data.parent_category ? data.data.parent_category : '전체보기');
         })
     },[body])
