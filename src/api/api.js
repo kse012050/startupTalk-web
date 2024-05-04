@@ -54,6 +54,7 @@ export function rankingDataApi(data){
         method : 'POST',
         body: body
     }).then((res)=>res.json()).then((data)=>{
+        // console.log(data);
         return data;
     })
 }
@@ -95,4 +96,25 @@ export function counselApi(data){
     }).then((res)=>res.json()).then((data)=>{
         return data;
     })
+}
+
+export function api(url, func, data){
+    let body = {func, ...data}
+    console.log(body);
+    /* body = JSON.stringify(body);
+    return fetch(`${apiURL}${url}`, {
+        method: 'POST',
+        body: body
+    }).then((res)=>res.json()).then((data)=>{
+        return data;
+    }) */
+
+    
+    // return fetch(`${apiURL}ranking`,{
+    //     method : 'POST',
+    //     body: body
+    // }).then((res)=>res.json()).then((data)=>{
+    //     console.log(data);
+    //     return data;
+    // })
 }
