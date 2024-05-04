@@ -120,6 +120,7 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 .inputBox fieldset > ul > li :is(input , textarea)::placeholder,
 .searchBox input::placeholder{color: rgba(33, 33, 33, 0.3);}
 .inputBox fieldset > ul > li.requi label::after{content: '*'; color: var(--colorPoint);}
+.inputBox fieldset > ul > li:has([required]) label::after{content: '*'; color: var(--colorPoint);}
 
 
 /* 서치 박스 */

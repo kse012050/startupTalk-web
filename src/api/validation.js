@@ -13,6 +13,7 @@ export function isFormet(type, value){
 }
 
 export const inputChange = (e, setInputs) => {
+    console.log(11);
     const { value, name, checked, type, dataset: { formet } } = e.target;
 
     if(formet && !!value && !isFormet(formet, value)['is']){
@@ -20,7 +21,7 @@ export const inputChange = (e, setInputs) => {
         e.target.value = isFormet(formet, value)['value'];
         e.target.setSelectionRange(cur, cur);
     }
-    console.log(type);
+    
     if(type === 'checkbox'){
         setInputs((prev)=> ({...prev, [name]: checked ? 'y': 'n'}))
     }else{
@@ -32,6 +33,7 @@ export const requiredList = (setInputs) => {
     setInputs(()=>{
         const obj = {}
         document.querySelectorAll('[required]').forEach(function(e){
+            console.log(e.name);
             obj[e.name] = '';
         })
         return obj
