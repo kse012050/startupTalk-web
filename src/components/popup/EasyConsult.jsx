@@ -51,7 +51,7 @@ export default function EasyConsult() {
                             </div>
                         </li>
                         <li>
-                            <Identification />
+                            <Identification inputs={inputs} setInputs={setInputs}/>
                         </li>
                         <li>
                             <label htmlFor="area">창업 희망지역</label>
