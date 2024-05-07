@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { /* useContext, */ useEffect, useState } from 'react';
 // import * as api from '../api/api'
 import { Navigation , FreeMode, } from "swiper";
 import { Link } from 'react-router-dom';
@@ -8,12 +8,13 @@ import Item from '../components/item/Item';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { mainDataApi } from '../api/api';
-import { ResponsiveContext } from '../context/Responsive';
+// import { ResponsiveContext } from '../context/Responsive';
 import Popup from '../components/popup/Popup';
 
 export default function Home() {
-    const responsive = useContext(ResponsiveContext);
-    const [firstEntry, setFirstEntry] = useState(true);
+    // 주석 첫 화면 모바일 노출 팝업? 잠시 주석
+    /* const responsive = useContext(ResponsiveContext);
+    const [firstEntry, setFirstEntry] = useState(true); */
     const [mainData , setMainData] = useState();
     const [popup, setPopup] = useState(false);
 
@@ -27,10 +28,10 @@ export default function Home() {
                 localStorage.removeItem('firstEntry')
             }
 
-        setFirstEntry(localStorage.getItem('firstEntry') ? false : true)
+        // setFirstEntry(localStorage.getItem('firstEntry') ? false : true)
     },[])
     
-    const onFirstEntry = () =>{
+   /*  const onFirstEntry = () =>{
         localStorage.setItem('firstEntry', false)
         const date = new Date();
         localStorage.setItem('year', date.getFullYear())
@@ -43,11 +44,11 @@ export default function Home() {
         e.preventDefault();
         setFirstEntry(false)
         setPopup(true)
-    }
+    } */
 
     return (
         <>
-            {(!responsive && firstEntry) &&
+            {/* {(!responsive && firstEntry) &&
                 <div className="appView">
                     <p>
                         앱에서는<br/>
@@ -57,7 +58,7 @@ export default function Home() {
                     <a href="#" onClick={appShow}>편리한 앱으로 보기</a>
                     <button onClick={onFirstEntry}>괜찮아요. 모바일 웹으로 볼게요.</button>
                 </div>
-            }
+            } */}
 
             {popup && 
                 <Popup type="bookMark" isPopup={[popup , setPopup]}/>

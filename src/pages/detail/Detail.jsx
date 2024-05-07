@@ -8,14 +8,13 @@ import Counsel from './Counsel';
 import Info from './Info';
 import * as api from '../../api/api';
 import Popup from '../../components/popup/Popup';
-// import * as Scroll from 'react-scroll';
-// import { Linka, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
 export default function Detail() {
     const params = useParams();
     const responsive = useContext(ResponsiveContext);
-    const [firstDetailEntry, setFirstDetailEntry] = useState(true)
+    // 주석 첫 화면 모바일 노출 팝업? 잠시 주석
+    // const [firstDetailEntry, setFirstDetailEntry] = useState(true)
     const [isScroll , setIsScroll] = useState(false);
     const [content , setContent] = useState('');
     const [detailData , setDetailData] = useState('');
@@ -34,7 +33,7 @@ export default function Detail() {
     const [scopes, setScopes] = useState();
 
     useEffect(()=>{
-        setFirstDetailEntry(api.getCookieBoolean('firstDetailEntry'))
+        // setFirstDetailEntry(api.getCookieBoolean('firstDetailEntry'))
         setContent(tabList[0].path)
         api.brandDetailDataApi(params.id).then((data)=>{
             setDetailData(data)
@@ -48,10 +47,7 @@ export default function Detail() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
-   /*  useEffect(()=>{
-        console.log(detailData);
-    },[detailData]) */
-
+ 
     useEffect(()=>{
         if(detailData.start_up_money >= 10000){
             setCost(Math.floor(detailData.start_up_money / 10000) + '.0억원')
@@ -64,12 +60,19 @@ export default function Detail() {
         }
     },[detailData])
 
-    const onFirstEntry = () =>{
+    /* const onFirstEntry = () =>{
         const expirationDate = new Date();
         expirationDate.setDate(expirationDate.getDate() + 1);
         document.cookie = `firstDetailEntry=false; days ?; expires=${expirationDate.toUTCString()}`
         setFirstDetailEntry(false)
+    } */
+
+     /*  const appShow = (e) =>{
+        e.preventDefault();
+        setPopup(true)
+        setFirstDetailEntry(false)
     }
+ */
 
     useEffect(() => {
         const scrollEvent = () =>{
@@ -89,16 +92,10 @@ export default function Detail() {
         e.preventDefault();
         setConsultPopup(true)
     }
-
-    const appShow = (e) =>{
-        e.preventDefault();
-        setPopup(true)
-        setFirstDetailEntry(false)
-    }
-
+  
     return (
         <>
-            {(!responsive && firstDetailEntry) &&
+            {/* {(!responsive && firstDetailEntry) &&
                 <div className="appView">
                     <div>
                         <p>
@@ -113,7 +110,7 @@ export default function Detail() {
                     <button onClick={appShow}>앱 다운로드</button>
                     <button onClick={onFirstEntry}>오늘 하루 보지 않기</button>
                 </div>
-            }
+            } */}
             <figure>
                 <div className='imgBox' style={{backgroundImage : `url(${detailData.brand_main_store_file})`}}>
                 </div>
