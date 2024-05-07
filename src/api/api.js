@@ -78,7 +78,6 @@ export function marketingDetailDataApi(){
         "fucn":"list",
     }
     body = JSON.stringify(body);
-    console.log(body);
     return fetch(`${apiURL}marketing`,{
         method : 'POST',
         body: body
@@ -98,19 +97,30 @@ export function counselApi(data){
     })
 }
 
-export function api(url, func, data){
-    let body = {func, ...data}
+export function api(url, fucn, data){
+    
+    let body = {
+        // "fucn":"req", 
+        // "mobile":"01092931656"
+        fucn,
+        ...data
+    }
     console.log(body);
-    /* body = JSON.stringify(body);
-    return fetch(`${apiURL}${url}`, {
-        method: 'POST',
+    body = JSON.stringify(body);
+    return fetch(`${apiURL}${url}`,{
+        method : 'POST',
         body: body
     }).then((res)=>res.json()).then((data)=>{
+        console.log(data);
         return data;
-    }) */
+    })
 
-    
-    // return fetch(`${apiURL}ranking`,{
+
+    // let body = {func, ...data}
+    // // console.log(body);
+   
+    // body = JSON.stringify(body);
+    // return fetch(`${apiURL}${url}`,{
     //     method : 'POST',
     //     body: body
     // }).then((res)=>res.json()).then((data)=>{

@@ -29,11 +29,13 @@ export default function Counsel() {
             }
         })
         if(!Object.values(inputs).some((value)=>!value)){
-            console.log(inputs);
-           /*  api('counsel', 'counsel', inputs)
-                .then((data)=>{
-                    console.log(data);
-                }) */
+            api('counsel', 'counsel', inputs)
+                .then(({ result, error_message })=>{
+                    if(result){
+                        setIsPopup(true)
+                        setInfo(error_message)
+                    }
+                })
         }
     }
 
