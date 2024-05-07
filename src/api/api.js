@@ -105,15 +105,12 @@ export function api(url, fucn, data){
         fucn,
         ...data
     }
-    console.log(body);
+    // console.log(body);
     body = JSON.stringify(body);
     return fetch(`${apiURL}${url}`,{
         method : 'POST',
         body: body
-    }).then((res)=>res.json()).then((data)=>{
-        console.log(data);
-        return data;
-    })
+    }).then((res)=>res.json()).then((data)=> data)
 
 
     // let body = {func, ...data}

@@ -152,7 +152,7 @@ export default function Detail() {
             }
 
             {consultPopup && 
-                <Popup type="easyConsult" isPopup={[consultPopup , setConsultPopup]}/>
+                <Popup type="easyConsult" isPopup={[consultPopup , setConsultPopup]} id={params.id}/>
             }
 
             {detailData.promotion_yn === 'y' &&

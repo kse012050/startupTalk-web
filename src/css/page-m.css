@@ -122,8 +122,8 @@
     .detailPage section figure figcaption .scrollFixed-bottom {position: fixed; left: 0; bottom: 84px; width: 100%; z-index: 10;}
     .detailPage section figure figcaption .scrollFixed-bottom > div{width: var(--mobileWidth); margin: 0 auto;}
     .detailPage section figure figcaption .scrollFixed-bottom > div .receiptArea a{box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);}
-    .detailPage section figure figcaption .scrollFixed-bottom > div .receiptArea button{overflow: hidden; box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);}
-    .detailPage section figure figcaption .scrollFixed-bottom > div .receiptArea button::before{width: 48px; height: 48px;}
+    .detailPage section figure figcaption .scrollFixed-bottom > div .receiptArea button{width: 50px; aspect-ratio: 1; justify-content: flex-start; overflow: hidden; background:#e6f8ee url('../images/icon-bookmark-green.png') no-repeat center / 24px; box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1); text-indent: -9999px;}
+    /* .detailPage section figure figcaption .scrollFixed-bottom > div .receiptArea button::before{width: 48px; height: 48px;} */
     .detailPage section mark.support strong{padding: 7px 10px; margin-right: 20px;}
     .detailPage section .tabBox{margin-bottom: 30px;}
     .detailPage section > div > div > div:not(:last-child){margin-bottom: 40px;}

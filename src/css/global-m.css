@@ -139,9 +139,12 @@
 
 
     /* 간편 상담 접수 팝업 */
-    .popupBox-easyConsult > div{width: 100%; padding: 40px 30px; height: 100%;}
-    .popupBox-easyConsult > div strong{font-size: var(--title01); margin-bottom: 18px;}
-    .popupBox-easyConsult > div .inputBox fieldset ul li div:has([type="radio"]) label{font-size: var(--font04); height: 50px; border-width: 1px; border-radius: 10px;}
+    .popupBox-easyConsult > div{width: 100%; height: 100%;}
+    .popupBox-easyConsult > div > div{padding: 40px 30px; max-height: 100%;}
+    .popupBox-easyConsult > div > div strong{font-size: var(--title01); margin-bottom: 18px;}
+    .popupBox-easyConsult > div > div .inputBox fieldset ul li div:has([type="radio"]) label{font-size: var(--font04); height: 50px; border-width: 1px; border-radius: 10px;}
+    .popupBox-easyConsult > div > div .inputBox fieldset ul li div mark{margin-top: 10px;}
+    .popupBox-easyConsult > div > div > button{width: 20px; right: 10px; top: 10px;}
 
 
     /* 해더 */

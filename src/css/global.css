@@ -121,7 +121,7 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 .searchBox input::placeholder{color: rgba(33, 33, 33, 0.3);}
 .inputBox fieldset > ul > li.requi label::after{content: '*'; color: var(--colorPoint);}
 .inputBox fieldset > ul > li:has([required]) label::after{content: '*'; color: var(--colorPoint);}
-.inputBox fieldset > ul > li div input:disabled{background-color: #e9ebec; color: rgba(33, 33, 33, 0.3);}
+.inputBox fieldset > ul > li div input:read-only{background-color: #e9ebec; color: rgba(33, 33, 33, 0.3);}
 
 
 /* 서치 박스 */
@@ -183,7 +183,7 @@ input[type="checkbox"]:checked + label::before{background-image: url('../images/
 .popupBox-termsOfUse > div .textArea ol li{line-height: 24px;}
 .popupBox-termsOfUse > div .textArea ol li b{display: block; font-weight: 700;}
 .popupBox-termsOfUse > div .btnArea button{background-repeat: no-repeat; background-position: center; background-size: cover; text-indent: -9999px;}
-:is(.popupBox-confime , .popupBox-find) > div{width: 380px; text-align: center; overflow: hidden;}
+:is(.popupBox-confime , .popupBox-find) > div{max-width: 380px; text-align: center; overflow: hidden;}
 :is(.popupBox-confime , .popupBox-find) > div .textArea{padding: 50px 30px; font-size: var(--font03);}
 :is(.popupBox-confime , .popupBox-find) > div .textArea b{display: block; font-weight: 700; margin-bottom: 30px;}
 :is(.popupBox-confime , .popupBox-find) > div .textArea b + p{font-size: var(--font04);}
@@ -209,12 +209,17 @@ body:has(.popupBox-bookMark, .popupBox-easyConsult){overflow: hidden;}
 
 
 /* 간편 상담 접수 팝업 */
-.popupBox-easyConsult > div{overflow: auto; box-sizing: border-box;}
-.popupBox-easyConsult > div strong{font-weight: 700; text-align: center; display: block;}
-.popupBox-easyConsult > div .inputBox fieldset > div{margin-top: 30px;}
-.popupBox-easyConsult > div .inputBox fieldset ul li div:has([type="radio"]){display: flex; background-color: #f1f4f6; border-radius: 14px;}
-.popupBox-easyConsult > div .inputBox fieldset ul li div:has([type="radio"]) label{flex: 1; color: var(--colorGray); font-weight: 600; display: flex; justify-content: center; align-items: center; border-width: 1.5px; border-style: solid; border-color: transparent; cursor: pointer; border-radius: 14px;}
-.popupBox-easyConsult > div .inputBox fieldset ul li div:has([type="radio"]) [type="radio"]:checked + label{border-color: #e6e6e6; background-color: white;}
+.popupBox-easyConsult > div{position: relative;}
+.popupBox-easyConsult > div > div{overflow: auto; box-sizing: border-box;}
+.popupBox-easyConsult > div >  div::-webkit-scrollbar{width: 5px;}
+.popupBox-easyConsult > div >  div::-webkit-scrollbar-thumb{background-color: var(--colorPoint);}
+.popupBox-easyConsult > div > div strong{font-weight: 700; text-align: center; display: block;}
+.popupBox-easyConsult > div > div .inputBox fieldset > div{margin-top: 30px;}
+.popupBox-easyConsult > div > div .inputBox fieldset ul li div:has([type="radio"]){display: flex; background-color: #f1f4f6; border-radius: 14px;}
+.popupBox-easyConsult > div > div .inputBox fieldset ul li div:has([type="radio"]) label{flex: 1; color: var(--colorGray); font-weight: 600; display: flex; justify-content: center; align-items: center; border-width: 1.5px; border-style: solid; border-color: transparent; cursor: pointer; border-radius: 14px;}
+.popupBox-easyConsult > div > div .inputBox fieldset ul li div:has([type="radio"]) [type="radio"]:checked + label{border-color: #e6e6e6; background-color: white;}
+.popupBox-easyConsult > div > div .inputBox fieldset ul li div mark{display: block;}
+.popupBox-easyConsult > div > div > button{position: absolute; aspect-ratio: 1; background: url(../images/icon-close.png) no-repeat center / cover; text-indent: -9999px;}
 
 
 /* 해더 */

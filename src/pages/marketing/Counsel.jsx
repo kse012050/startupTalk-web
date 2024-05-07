@@ -28,12 +28,16 @@ export default function Counsel() {
                 setIsPopup(true)
             }
         })
+        
         if(!Object.values(inputs).some((value)=>!value)){
             api('counsel', 'counsel', inputs)
                 .then(({ result, error_message })=>{
                     if(result){
                         setIsPopup(true)
                         setInfo(error_message)
+                        Object.entries(inputs).forEach(([keys])=>{
+                            setInputs((prev)=>({...prev, [keys]: ''}))
+                        })
                     }
                 })
         }
@@ -41,32 +45,32 @@ export default function Counsel() {
 
     return (
         <>
-            <h2>창업톡 상담</h2>
-            <form className='inputBox' onChange={(e)=>inputChange(e, setInputs)}>
+            <h2 onClick={()=> console.log(inputs)}>창업톡 상담</h2>
+            <form className='inputBox'>
                 <fieldset>
                     <ul>
                         <li>
                             <label htmlFor="company_info">업체명/직함</label>
                             <div>
-                                <input type="text" placeholder='업체명/직함을 입력해주세요' name='company_info' required/>
+                                <input type="text" placeholder='업체명/직함을 입력해주세요'  name='company_info' value={inputs?.company_info || ''} onChange={(e)=>inputChange(e, setInputs)} required/>
                             </div>
                         </li>
                         <li>
                             <label htmlFor="name">담당자 성함</label>
                             <div>
-                                <input type="text" placeholder='성함을 입력해주세요' name='name' required/>
+                                <input type="text" placeholder='성함을 입력해주세요' name='name' value={inputs?.name || ''} onChange={(e)=>inputChange(e, setInputs)} required/>
                             </div>
                         </li>
                         <li>
                             <label htmlFor="mobile">연락처</label>
                             <div>
-                                <input type="text" placeholder='연락처를 입력해주세요' name='mobile' data-formet="numb" maxLength="11" required/>
+                                <input type="text" placeholder='연락처를 입력해주세요' name='mobile' value={inputs?.mobile || ''} onChange={(e)=>inputChange(e, setInputs)} data-formet="numb"  maxLength="11" required/>
                             </div>
                         </li>
                         <li>
                             <label htmlFor="comment">신청서</label>
                             <div>
-                                <textarea name="comment" required
+                                <textarea name="comment" value={inputs?.comment || ''} onChange={(e)=>inputChange(e, setInputs)} required
                                     placeholder='- 사업장 주소지(예정) 또는 홈페이지 링크
                                     - 개업일(예정일) 
                                     - 네이버, SNS, 유튜브 등 관심 마케팅

@@ -98,7 +98,7 @@
 .detailPage section figure figcaption > div{margin-top: auto;}
 .detailPage section figure figcaption .scrollFixed-bottom div .receiptArea{display: flex;}
 .detailPage section figure figcaption .scrollFixed-bottom div .receiptArea button{flex-shrink: 0; background:#e6f8ee; border: 1.2px solid #c5f0d8; border-radius: 10px; text-indent: -9999px; margin-left: 8px; display: flex; align-items: center; justify-content: center;}
-.detailPage section figure figcaption .scrollFixed-bottom div .receiptArea button::before{content: ''; background:#e6f8ee url('../images/icon-bookmark-green.png') no-repeat center / 24px;}
+/* .detailPage section figure figcaption .scrollFixed-bottom div .receiptArea button::before{content: ''; background:#e6f8ee url('../images/icon-bookmark-green.png') no-repeat center / 24px;} */
 .detailPage section mark.support{display: flex; align-items: center; font-size: var(--font06); font-weight: 700; color: var(--colorPoint); background-color: rgba(12, 191, 93, 0.1); border-radius: 14px 0; margin-bottom: 30px;}
 .detailPage section mark.support strong{color: white; background-color: var(--colorPoint); border-radius: 14px 0;}
 

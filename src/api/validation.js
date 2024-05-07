@@ -29,12 +29,12 @@ export const inputChange = (e, setInputs) => {
 }
 
 export const requiredList = (setInputs) => {
-    setInputs(()=>{
+    setInputs((prev)=>{
         const obj = {}
         document.querySelectorAll('[required]').forEach(function(e){
             obj[e.name] = '';
         })
-        return obj
+        return {...prev, ...obj}
     })
 }
 
